@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<item type="id" name="position"/>
+    <item type="id" name="expandable_text"/>
+    <item type="id" name="expand_collapse"/>
+    <item type="id" name="park_service_name"/>
+    <item type="id" name="park_service_type"/>
+    <item type="id" name="park_service_phone"/>
+    <item type="id" name="park_service_id"/>
+    <item type="id" name="park_service_title"/>
+</resources>

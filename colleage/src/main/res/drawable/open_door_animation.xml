@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    android:oneshot="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/open_door_f1" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f2" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f3" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f4" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f5" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f7" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f8" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f9" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f10" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f11" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f12" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f14" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f15" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f16" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f17" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f18" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f19" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f20" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f21" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f22" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f23" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f24" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f25" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f26" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f27" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f28" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f29" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f30" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f31" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f32" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f33" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f34" android:duration="100"/>
+    <item android:drawable="@drawable/open_door_f35" android:duration="100"/>
+
+
+
+
+</animation-list>

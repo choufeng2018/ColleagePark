@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_above="@+id/pay_layout">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/service_category_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="145px">
+
+                <ImageView
+                    android:id="@+id/service_icon"
+                    android:layout_width="70px"
+                    android:layout_height="70px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="42px"
+                    android:background="@drawable/service_icon"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/select_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="157px"
+                    android:layout_marginRight="46px"
+                    android:maxLines="3"
+                    android:text="@string/please_select_service_category"
+                    android:textColor="@color/dark_color"
+                    android:textSize="28px" />
+
+                <TextView
+                    android:id="@+id/service_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="157px"
+                    android:layout_marginRight="46px"
+                    android:layout_marginTop="32px"
+                    android:textColor="@color/dark_color"
+                    android:textSize="28px"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/service_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/service_name"
+                    android:layout_marginBottom="16px"
+                    android:layout_marginLeft="157px"
+                    android:layout_marginRight="46px"
+                    android:layout_marginTop="15px"
+                    android:maxLines="3"
+                    android:textColor="@color/dark_color"
+                    android:textSize="26px"
+                    android:visibility="gone" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray_eb" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10px"
+                android:background="@color/gray_f3" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray_eb" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/contact_phone_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px">
+
+                <View
+                    android:layout_width="21px"
+                    android:layout_height="25px"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/property_service_phone_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35px"
+                    android:text="@string/contact_phone"
+                    android:textColor="@color/dark_color"
+                    android:textSize="28px" />
+
+                <View
+                    android:layout_width="17px"
+                    android:layout_height="28px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/login_apartment_right_icon" />
+
+                <TextView
+                    android:id="@+id/phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35px"
+                    android:layout_marginRight="54px"
+                    android:textColor="@color/dark_color"
+                    android:textSize="28px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_eb" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/contact_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px">
+
+                <View
+                    android:layout_width="21px"
+                    android:layout_height="21px"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/property_service_contact_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35px"
+                    android:text="@string/contact"
+                    android:textColor="@color/dark_color"
+                    android:textSize="28px" />
+
+                <View
+                    android:layout_width="17px"
+                    android:layout_height="28px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/login_apartment_right_icon" />
+
+                <TextView
+                    android:id="@+id/contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35px"
+                    android:layout_marginRight="54px"
+                    android:textColor="@color/dark_color"
+                    android:textSize="28px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_eb" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/repair_address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px">
+
+                <View
+                    android:layout_width="18px"
+                    android:layout_height="26px"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/property_service_position_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35px"
+                    android:text="@string/repair_address"
+                    android:textColor="@color/dark_color"
+                    android:textSize="28px" />
+
+                <View
+                    android:layout_width="17px"
+                    android:layout_height="28px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/login_apartment_right_icon" />
+
+                <TextView
+                    android:id="@+id/repair_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="54px"
+                    android:gravity="right"
+                    android:hint="@string/please_input_repair_address"
+                    android:textColor="@color/dark_color"
+                    android:textSize="28px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_eb" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="31px"
+                    android:text="@string/make_a_blueprint"
+                    android:textColor="@color/gray_c"
+                    android:textSize="28px" />
+
+                <GridLayout
+                    android:id="@+id/service_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25px"
+                    android:layout_marginTop="102px"
+
+                    android:columnCount="4">
+
+                </GridLayout>
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray_eb" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6px"
+                android:background="@color/gray_f3" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray_eb" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28px"
+                    android:text="@string/want_say"
+                    android:textColor="@color/dark_color" />
+
+                <EditText
+                    android:id="@+id/service_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="160px"
+                    android:layout_marginBottom="24px"
+                    android:layout_marginTop="18px"
+                    android:background="@color/transparent"
+                    android:gravity="top"
+                    android:maxLength="200"
+                    android:hint="@string/add_service_description"
+                    android:nextFocusDown="@id/repair_time"
+                    android:textColor="@color/dark_color"
+                    android:textColorHint="#cccccc"
+                    android:textSize="28px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/remark_layout"
+                android:visibility="gone"
+                android:paddingBottom="48px"
+                android:layout_marginTop="24px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_f3">
+
+                <View
+                    android:layout_width="21px"
+                    android:layout_height="21px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="34px"
+                    android:background="@drawable/property_complaint_describe_icon" />
+
+                <TextView
+                    android:id="@+id/repair_describe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="68px"
+                    android:layout_marginTop="32px"
+                    android:lineSpacingExtra="4px"
+                    android:textColor="@color/dark_color"
+                    android:textSize="26px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </ScrollView>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/pay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/gray_eb" />
+
+
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_property_service_submit_btn_bg"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="34px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

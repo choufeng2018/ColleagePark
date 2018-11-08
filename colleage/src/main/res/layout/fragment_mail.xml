@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    >
+
+<include layout="@layout/app_title_layout"/>
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:background="@color/app_title_color">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginTop="40px">
+
+
+                <TextView
+                    android:id="@+id/title_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:layout_centerHorizontal="true"
+                    android:ellipsize="end"
+
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:maxWidth="400px"
+                    android:text="@string/mail"
+                    android:textColor="@color/white"
+                    android:textSize="32px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1096px"
+    android:background="@drawable/mail_expect_bg"
+    />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

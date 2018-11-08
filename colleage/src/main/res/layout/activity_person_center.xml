@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title_layout" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/head_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_marginTop="15px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="62px"
+            android:text="@string/head_image"
+            android:textColor="@color/gray_text46"
+            android:textSize="28px"
+
+            />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/head_image"
+            app:layout_auto_basewidth="height"
+            android:layout_width="70px"
+            android:layout_height="70px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60px"
+            android:background="@drawable/ic_launcher"
+            android:scaleType="fitXY"
+            app:riv_border_color="@color/white"
+            app:riv_border_width="2px"
+            app:riv_corner_radius="80px"
+            app:riv_mutate_background="true"
+            app:riv_oval="true" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_marginTop="15px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="62px"
+            android:text="@string/nick_name"
+            android:textColor="@color/gray_text46"
+            android:textSize="28px"
+
+            />
+
+        <EditText
+            android:id="@+id/nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="62px"
+            android:background="@color/transparent"
+            android:gravity="right|center"
+            android:hint="@string/please_input_nick_name"
+            android:textColor="@color/gray_text46"
+            android:textSize="28px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20px"
+            android:background="@color/myself_divide_line" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/sex_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="62px"
+            android:text="@string/sex"
+            android:textColor="@color/gray_text46"
+            android:textSize="28px"
+
+            />
+
+
+        <TextView
+            android:id="@+id/sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="98px"
+            android:textColor="@color/gray_text46"
+            android:textSize="28px"
+
+            />
+
+        <View
+            android:layout_width="14px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="62px"
+            android:background="@drawable/myself_right_arrow_icon" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/apartment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_marginTop="15px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="62px"
+            android:text="@string/park"
+            android:textColor="@color/gray_text46"
+            android:textSize="28px"
+
+            />
+
+
+        <TextView
+            android:id="@+id/apartment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="98px"
+            android:textColor="@color/gray_text46"
+            android:textSize="28px"
+
+            />
+
+        <View
+            android:layout_width="14px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="62px"
+            android:background="@drawable/myself_right_arrow_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20px"
+            android:background="@color/myself_divide_line" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="62px"
+            android:text="@string/account"
+            android:textColor="@color/gray_text46"
+            android:textSize="28px"
+
+            />
+
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="62px"
+            android:textColor="@color/gray_9"
+            android:textSize="28px"
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20px"
+            android:background="@color/myself_divide_line" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="62px"
+            android:text="@string/real_name"
+            android:textColor="@color/gray_text46"
+            android:textSize="28px"
+
+            />
+
+
+        <EditText
+            android:id="@+id/real_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="98px"
+            android:background="@color/transparent"
+            android:gravity="right|center"
+            android:hint="@string/please_input_real_name"
+            android:textColor="@color/gray_text46"
+            android:textSize="28px" />
+
+        <View
+            android:layout_width="25px"
+            android:layout_height="25px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="62px"
+            android:background="@drawable/myself_pen_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20px"
+            android:background="@color/myself_divide_line" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/birthday_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="62px"
+            android:text="@string/birthday"
+            android:textColor="@color/gray_text46"
+            android:textSize="28px"
+
+            />
+
+
+        <TextView
+            android:id="@+id/birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="98px"
+            android:textColor="@color/gray_text46"
+            android:textSize="28px"
+
+            />
+
+        <View
+            android:layout_width="14px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="62px"
+            android:background="@drawable/myself_right_arrow_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20px"
+            android:background="@color/myself_divide_line" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

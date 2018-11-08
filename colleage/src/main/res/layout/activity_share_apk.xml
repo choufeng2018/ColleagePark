@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f3"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title_layout" />
+
+
+    <View
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150px"
+        android:background="@drawable/share_ic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="62px"
+        android:text="@string/invite_download"
+        android:textColor="#3e3638"
+        android:textSize="26px" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100px">
+
+        <View
+            android:layout_width="165px"
+            android:layout_height="1px"
+            android:layout_gravity="center_vertical"
+            android:background="@color/gray_9" />
+
+        <TextView
+            android:layout_width="75px"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18px"
+            android:textColor="@color/gray_9"
+            android:text="@string/share_for" />
+
+        <View
+            android:layout_width="165px"
+            android:layout_height="1px"
+            android:layout_gravity="center_vertical"
+            android:background="@color/gray_9" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="405px"
+        android:layout_height="wrap_content"
+       android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24px"
+        >
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/wChat"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="70px"
+                android:layout_height="70px"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/share_wchat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px"
+                android:text="@string/wchat"
+                android:textColor="@color/gray_text97"
+                android:textSize="28px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/QQ"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="70px"
+                android:layout_height="70px"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/share_qq" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px"
+                android:text="QQ"
+                android:textColor="@color/gray_text97"
+                android:textSize="28px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/message"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="70px"
+                android:layout_height="70px"
+                android:background="@drawable/share_msg"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px"
+                android:text="@string/message"
+                android:textColor="@color/gray_text97"
+                android:textSize="28px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/moment"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="70px"
+                android:layout_height="70px"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/share_moment" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px"
+                android:text="@string/moment"
+
+                android:textColor="@color/gray_text97"
+                android:textSize="28px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

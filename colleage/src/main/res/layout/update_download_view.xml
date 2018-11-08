@@ -1,0 +1,76 @@
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7F000000"
+    android:alpha="100">
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="518px"
+        android:layout_height="360px"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:orientation="vertical"
+     >
+
+<com.zhy.autolayout.AutoRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="254px"
+    android:background="@drawable/update_view_bg"
+
+
+    >
+   <ProgressBar
+       android:layout_width="76px"
+       android:layout_height="76px"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="47px"
+       style="@style/update_style"
+       android:id="@+id/update_circle"
+       android:indeterminateDrawable="@anim/progressbar_rotate"
+       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_color"
+        android:textSize="24px"
+        android:layout_below="@+id/update_circle"
+        android:layout_marginTop="35px"
+        android:text=""
+        android:id="@+id/update_progress"
+        android:layout_centerHorizontal="true"
+        />
+   <ProgressBar
+       android:layout_width="362px"
+       android:layout_height="12px"
+       android:layout_alignParentBottom="true"
+       style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+       android:layout_marginBottom="28px"
+       android:layout_centerHorizontal="true"
+       android:progressDrawable="@drawable/progressbar_color"
+       android:id="@+id/progress_bar"
+       />
+</com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="105px"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="正在更新"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/selector_app_click"
+                android:textColor="@color/white"
+                android:textSize="24px" />
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

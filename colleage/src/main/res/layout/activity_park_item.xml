@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="mode"
+            type="com.college.common_libs.domain.news.NewsTo"/>
+    </data>
+    <com.zhy.autolayout.AutoRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="#e7e7e7"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_height="wrap_content">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:orientation="vertical"
+            android:background="#fff"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/notice_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="22px"
+                    android:layout_marginTop="35px"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@{mode.title}"
+                    android:textColor="#464646"
+                    android:textSize="30px"/>
+
+                <TextView
+                    android:layout_below="@+id/notice_title"
+                    android:id="@+id/notice_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="30px"
+                    android:layout_marginRight="22px"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:textSize="24px"
+                    android:textColor="#969696"
+                    />
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_marginTop="18px"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+                <TextView
+
+                    android:id="@+id/state"
+                    android:background="#6c76a6"
+                    android:layout_marginRight="20px"
+                    android:text="预热中"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="16px"
+                    android:layout_toLeftOf="@+id/isTop"
+                    android:layout_width="70px"
+                    android:layout_height="30px"/>
+                <ImageView
+
+                    android:id="@+id/isTop"
+                    android:layout_marginRight="20px"
+                    android:background="@drawable/istop"
+                    android:layout_width="20px"
+                    android:layout_height="23px"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="25px"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/image_pic"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/app_name"
+                    android:layout_marginRight="30px"
+                    android:layout_marginLeft="30px"
+                    android:layout_height="328px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="50px"
+                android:layout_marginBottom="28px"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:id="@+id/notice_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:drawableLeft="@drawable/news_time"
+                    android:drawablePadding="5dp"
+                    android:textSize="16px"
+                    android:text="@{mode.lastModTime}"
+                    android:textColor="#969696"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="12dp"/>
+
+                <TextView
+                    android:id="@+id/browse_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30px"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/news_browse"
+                    android:drawablePadding="5dp"
+                    android:text="@{mode.browseTimes}"
+                    android:textColor="#969696"
+                    android:textSize="16px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+</layout>

@@ -1,0 +1,245 @@
+{
+    "android_gradle_plugin_version": "2.3.2",
+    "apk_path": "E:\\SecondPark\\park\\build\\outputs\\apk\\park-debug.apk",
+    "apt": {
+        "common-libs": {
+            "aptArgs": [
+                "-Aandroid.databinding.minApi=19",
+                "-Aandroid.databinding.enableDebugLogs=0",
+                "-Aandroid.databinding.sdkDir=C:\\Users\\xzz\\AppData\\Local\\Android\\Sdk",
+                "-Aandroid.databinding.bindingBuildFolder=E:\\SecondPark\\common-libs\\build\\intermediates\\data-binding-compiler\\release",
+                "-Aandroid.databinding.enableForTests=0",
+                "-Aandroid.databinding.modulePackage=com.college.common_libs",
+                "-Aandroid.databinding.generationalFileOutDir=E:\\SecondPark\\common-libs\\build\\intermediates\\bundles\\default\\data-binding",
+                "-Aandroid.databinding.xmlOutDir=E:\\SecondPark\\common-libs\\build\\intermediates\\data-binding-info\\release",
+                "-Aandroid.databinding.artifactType=LIBRARY",
+                "-Aandroid.databinding.printEncodedErrors=0",
+                "-Aandroid.databinding.isTestVariant=0",
+                "-Aandroid.databinding.exportClassListTo=E:\\SecondPark\\common-libs\\build\\intermediates\\data-binding-info\\release\\_generated.txt"
+            ],
+            "aptOutput": "E:\\SecondPark\\common-libs\\build\\generated\\source\\apt\\release",
+            "disableDiscovery": false,
+            "enabled": true,
+            "processor": null,
+            "processorPath": "C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.github.bumptech.glide\\glide\\3.7.0\\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\\glide-3.7.0.jar;C:\\Users\\xzz\\.android\\build-cache\\080c983139d3516a96cce12d0417dc3514ab2c3f\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\adcae05dc3c78d7c4fe56c16628f5d80bc6ea578\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\65d688f580ba84e60f60b25152cf32ec1d4f889e\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\12cdb8166cd63da6b72b6fd771cda8f64b52a54f\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\2a87b2829faabc1906f76b71a04ea918447b3019\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\6e68c9dd5ce11224c7d21c89d14fce06ffd9bdc8\\output\\jars\\classes.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.okhttp3\\logging-interceptor\\3.8.1\\feab46062803513d6a8307c74b0084265855de1a\\logging-interceptor-3.8.1.jar;C:\\Users\\xzz\\.android\\build-cache\\5db27219dfbba7c998d3167c1ea0c68ce15bc7b3\\output\\jars\\classes.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.retrofit2\\converter-gson\\2.0.0-beta4\\de5935a367ba5e343e9df786ac8fc0c7d52b5f0c\\converter-gson-2.0.0-beta4.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.retrofit2\\adapter-rxjava\\2.0.0-beta4\\bd49baf667542c7d06f71e598bdee7fe57272013\\adapter-rxjava-2.0.0-beta4.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.retrofit2\\retrofit\\2.0.0-beta4\\739e00dea1f0ac04fdb9b6160d667e23cc50a791\\retrofit-2.0.0-beta4.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.okhttp3\\okhttp\\3.8.1\\4d060ca3190df0eda4dc13415532a12e15ca5f11\\okhttp-3.8.1.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.okio\\okio\\1.13.0\\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\\okio-1.13.0.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\io.reactivex\\rxjava\\1.1.0\\748f0546d5c3c27f1aef07270ffea0c45f0c42a4\\rxjava-1.1.0.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.google.code.gson\\gson\\2.7\\751f548c85fa49f330cecbb1875893f971b33c4e\\gson-2.7.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.alibaba\\fastjson\\1.2.33\\8aaa34df74eec2344d761c874d535858b62354d4\\fastjson-1.2.33.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\javax.annotation\\javax.annotation-api\\1.2\\479c1e06db31c432330183f5cae684163f186146\\javax.annotation-api-1.2.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\org.projectlombok\\lombok\\1.16.18\\557d13dcb647038dc687390711ccb5c9b3ffbd60\\lombok-1.16.18.jar;C:\\Users\\xzz\\.android\\build-cache\\c5c5e86f948b93a5f77e3fd5c244110548a094d8\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\21686f5ba15cb07c7b6a4a23678a5ab310a65703\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\d24e7437bd6fca6a0bca5eb88735be04c37e90cb\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\a5a38762233d4dfe0e92165b01f10b287ef441fb\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\a2ff2c43540850b485f2e5c991437f6ed8a5a5ab\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\ccb8dca574f1c1589c7c9f4cbce4e6bc2697ae03\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\aa2ab539bce859f6d90775e41c174465cb06e0e2\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\661ed4e562b792e1394a20284590ae7766cb4c99\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\d9cb2343b9014ca1edf08cb024728cd5221647a6\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\5bc6d5e658ab5083be0e88666cfbc310cff2d817\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\6ff9b0f1114df36927fca54c32a0e143c4bbb809\\output\\jars\\classes.jar;C:\\Users\\xzz\\AppData\\Local\\Android\\Sdk\\extras\\android\\m2repository\\com\\android\\support\\support-annotations\\25.3.1\\support-annotations-25.3.1.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.android.databinding\\baseLibrary\\2.3.2\\64d8dd1d16035a16928e74269b7b66af9a229f02\\baseLibrary-2.3.2.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.android.databinding\\compiler\\2.3.2\\c7125acfcb525b30fef7ee8bfecb0f7695931303\\compiler-2.3.2.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.googlecode.juniversalchardet\\juniversalchardet\\1.0.3\\cd49678784c46aa8789c060538e0154013bb421b\\juniversalchardet-1.0.3.jar"
+        },
+        "park": {
+            "aptArgs": [
+                "-Aandroid.databinding.artifactType=APPLICATION",
+                "-Aandroid.databinding.printEncodedErrors=0",
+                "-Aandroid.databinding.minApi=21",
+                "-Aandroid.databinding.isTestVariant=0",
+                "-Aandroid.databinding.enableDebugLogs=0",
+                "-Aandroid.databinding.sdkDir=C:\\Users\\xzz\\AppData\\Local\\Android\\Sdk",
+                "-Aandroid.databinding.bindingBuildFolder=E:\\SecondPark\\park\\build\\intermediates\\data-binding-compiler\\debug",
+                "-Aandroid.databinding.enableForTests=0",
+                "-Aandroid.databinding.modulePackage=com.joypark.nacity",
+                "-Aandroid.databinding.generationalFileOutDir=E:\\SecondPark\\park\\build\\intermediates\\bundles\\debug\\data-binding",
+                "-Aandroid.databinding.xmlOutDir=E:\\SecondPark\\park\\build\\intermediates\\data-binding-info\\debug"
+            ],
+            "aptOutput": "E:\\SecondPark\\park\\build\\generated\\source\\apt\\debug",
+            "disableDiscovery": false,
+            "enabled": true,
+            "processor": null,
+            "processorPath": "C:\\Users\\xzz\\.android\\build-cache\\fd9ba0668c811088ddfd0dce9b35903b3b75f665\\output\\jars\\classes.jar;C:\\Users\\xzz\\AppData\\Local\\Android\\Sdk\\extras\\m2repository\\com\\android\\support\\constraint\\constraint-layout-solver\\1.0.2\\constraint-layout-solver-1.0.2.jar;E:\\SecondPark\\photopicker\\build\\intermediates\\bundles\\default\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\26e223167815cc706a8b9a5416efead6ae97240b\\output\\jars\\classes.jar;E:\\SecondPark\\common-libs\\build\\intermediates\\bundles\\default\\classes.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.github.bumptech.glide\\glide\\3.7.0\\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\\glide-3.7.0.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.okhttp3\\logging-interceptor\\3.8.1\\feab46062803513d6a8307c74b0084265855de1a\\logging-interceptor-3.8.1.jar;C:\\Users\\xzz\\.android\\build-cache\\5db27219dfbba7c998d3167c1ea0c68ce15bc7b3\\output\\jars\\classes.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.retrofit2\\converter-gson\\2.0.0-beta4\\de5935a367ba5e343e9df786ac8fc0c7d52b5f0c\\converter-gson-2.0.0-beta4.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.retrofit2\\adapter-rxjava\\2.0.0-beta4\\bd49baf667542c7d06f71e598bdee7fe57272013\\adapter-rxjava-2.0.0-beta4.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.retrofit2\\retrofit\\2.0.0-beta4\\739e00dea1f0ac04fdb9b6160d667e23cc50a791\\retrofit-2.0.0-beta4.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\io.reactivex\\rxjava\\1.1.0\\748f0546d5c3c27f1aef07270ffea0c45f0c42a4\\rxjava-1.1.0.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.google.code.gson\\gson\\2.7\\751f548c85fa49f330cecbb1875893f971b33c4e\\gson-2.7.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.alibaba\\fastjson\\1.2.33\\8aaa34df74eec2344d761c874d535858b62354d4\\fastjson-1.2.33.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\javax.annotation\\javax.annotation-api\\1.2\\479c1e06db31c432330183f5cae684163f186146\\javax.annotation-api-1.2.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\org.projectlombok\\lombok\\1.16.18\\557d13dcb647038dc687390711ccb5c9b3ffbd60\\lombok-1.16.18.jar;C:\\Users\\xzz\\.android\\build-cache\\c5c5e86f948b93a5f77e3fd5c244110548a094d8\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\21686f5ba15cb07c7b6a4a23678a5ab310a65703\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\d24e7437bd6fca6a0bca5eb88735be04c37e90cb\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\a7689637635bb39746a3dd3836a0cddaef2ddd9a\\output\\jars\\classes.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.jakewharton\\butterknife-compiler\\8.6.0\\d3defb48a63aa0591117d0cec09f47a13fffda19\\butterknife-compiler-8.6.0.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.jakewharton\\butterknife-annotations\\8.6.0\\48efa6f14074e1a6b16e02ac05eba3fc5c7c7ec8\\butterknife-annotations-8.6.0.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.google.auto\\auto-common\\0.6\\cf7212b0f8bfef12657b942df8f4f2cf032d3f41\\auto-common-0.6.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\guava\\18.0\\cce0823396aa693798f8882e64213b1772032b09\\guava-18.0.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup\\javapoet\\1.8.0\\e858dc62ef484048540d27d36f3ec2177a3fa9b1\\javapoet-1.8.0.jar;C:\\Users\\xzz\\.android\\build-cache\\cb99c3cb60b91dd97a5beff598c8c64e88ef3dc4\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\d06e68c557f6e8d651546fcc96f411cbee888c31\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\66b5db73f39e7637cd659da9120c63ea66715c19\\output\\jars\\classes.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.nineoldandroids\\library\\2.4.0\\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\\library-2.4.0.jar;C:\\Users\\xzz\\.android\\build-cache\\86c73bbf1985da1cf97343b55d3b72b285d1885a\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\9c91b1a77ce42baeb88ced00f2261d5e5539b818\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\bcc4ab31ed2540fb6a806df1acd3dd9b4c005828\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\2f0edb8b5eb23826f3f80378c198bb0f355802b9\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\49377b70106902a056c4719251c452f1d6008e85\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\35f4c5b8cbbe8fb67c6941dbcb9cb80238ccffd8\\output\\jars\\classes.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\de.greenrobot\\eventbus\\3.0.0-beta1\\d4a559b2dfb3e8a00ed37c440e118584f60db046\\eventbus-3.0.0-beta1.jar;C:\\Users\\xzz\\.android\\build-cache\\f36fbd9a689d6da840e789da6a2674fd8bc77eb3\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\080c983139d3516a96cce12d0417dc3514ab2c3f\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\2a87b2829faabc1906f76b71a04ea918447b3019\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\6e68c9dd5ce11224c7d21c89d14fce06ffd9bdc8\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\f6cd57eb6a60b9afa3716fd0690ba4256ecd1f37\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\f6cd57eb6a60b9afa3716fd0690ba4256ecd1f37\\output\\jars\\libs\\jpush-android_v3.0.3.jar;C:\\Users\\xzz\\.android\\build-cache\\d8effd74c9beac7804b09d11bfc47839ce7ecb63\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\d8effd74c9beac7804b09d11bfc47839ce7ecb63\\output\\jars\\libs\\jcore-android_v1.1.1.jar;C:\\Users\\xzz\\.android\\build-cache\\b46e9fd2c2c1ffcff04d74feb9136402715b71dc\\output\\jars\\classes.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.qiniu\\qiniu-android-sdk\\7.3.6\\43204fa99b820bf8ca8ed16ac8830b51c105b805\\qiniu-android-sdk-7.3.6.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.okhttp3\\okhttp\\3.8.1\\4d060ca3190df0eda4dc13415532a12e15ca5f11\\okhttp-3.8.1.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.okio\\okio\\1.13.0\\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\\okio-1.13.0.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.qiniu\\happy-dns\\0.2.11\\167d00c3da419367bdcc42f39a8fbf96c24fbbaf\\happy-dns-0.2.11.jar;C:\\Users\\xzz\\.android\\build-cache\\18a97bc1b9c9fd1fe77629a367397d64bf303897\\output\\jars\\classes.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.nostra13.universalimageloader\\universal-image-loader\\1.9.4\\dd9eeb557650c4ad7394df23f0f5cf27a7cfc697\\universal-image-loader-1.9.4.jar;C:\\Users\\xzz\\.android\\build-cache\\ad9800209aee840ea8e91ec5e896e150c9bd4c5b\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\e1e7dfb5a4365ab9496a647103b6f4aabee90a92\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\3aa9d5793d33501efe8c1b7b3024170748ae76c2\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\a1262f7f7ae11a2af418f0d55d6bd9fbecc1d5d0\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\83fd1d4b5fdea5cfbf2208183a1558c47109abbe\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\27daaceec8589aade16441e51edc798ff20f694c\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\adcae05dc3c78d7c4fe56c16628f5d80bc6ea578\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\65d688f580ba84e60f60b25152cf32ec1d4f889e\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\12cdb8166cd63da6b72b6fd771cda8f64b52a54f\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\a5a38762233d4dfe0e92165b01f10b287ef441fb\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\a2ff2c43540850b485f2e5c991437f6ed8a5a5ab\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\ccb8dca574f1c1589c7c9f4cbce4e6bc2697ae03\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\aa2ab539bce859f6d90775e41c174465cb06e0e2\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\661ed4e562b792e1394a20284590ae7766cb4c99\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\d9cb2343b9014ca1edf08cb024728cd5221647a6\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\5bc6d5e658ab5083be0e88666cfbc310cff2d817\\output\\jars\\classes.jar;C:\\Users\\xzz\\.android\\build-cache\\6ff9b0f1114df36927fca54c32a0e143c4bbb809\\output\\jars\\classes.jar;C:\\Users\\xzz\\AppData\\Local\\Android\\Sdk\\extras\\android\\m2repository\\com\\android\\support\\support-annotations\\25.3.1\\support-annotations-25.3.1.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.android.databinding\\baseLibrary\\2.3.2\\64d8dd1d16035a16928e74269b7b66af9a229f02\\baseLibrary-2.3.2.jar;C:\\Users\\xzz\\.android\\build-cache\\9d89ebd86b0545fc8ddaddd0a3aaafff6ae146fb\\output\\jars\\classes.jar;E:\\SecondPark\\park\\libs\\MobCommons-2017.0823.1556.jar;E:\\SecondPark\\park\\libs\\MobTools-2017.0823.1556.jar;E:\\SecondPark\\park\\libs\\ShareSDK-Core-3.0.2.jar;E:\\SecondPark\\park\\libs\\ShareSDK-QQ-3.0.2.jar;E:\\SecondPark\\park\\libs\\ShareSDK-ShortMessage-3.0.2.jar;E:\\SecondPark\\park\\libs\\ShareSDK-Wechat-3.0.2.jar;E:\\SecondPark\\park\\libs\\ShareSDK-Wechat-Core-3.0.2.jar;E:\\SecondPark\\park\\libs\\ShareSDK-Wechat-Moments-3.0.2.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.android.databinding\\compiler\\2.3.2\\c7125acfcb525b30fef7ee8bfecb0f7695931303\\compiler-2.3.2.jar;C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.googlecode.juniversalchardet\\juniversalchardet\\1.0.3\\cd49678784c46aa8789c060538e0154013bb421b\\juniversalchardet-1.0.3.jar"
+        }
+    },
+    "apt_libraries": {
+        "dagger": false,
+        "butterknife": true
+    },
+    "auto_dependency": true,
+    "build_cache_dir": "E:\\SecondPark\\park\\build\\freeline",
+    "build_directory": "E:\\SecondPark\\park\\build",
+    "build_script": "gradlew.bat :park:assembleDebug",
+    "build_script_work_directory": "",
+    "build_tools_directory": "C:\\Users\\xzz\\AppData\\Local\\Android\\Sdk\\build-tools\\26.0.0",
+    "build_tools_version": "26.0.0",
+    "check_sources_md5": [
+        
+    ],
+    "compile_sdk_directory": "C:\\Users\\xzz\\AppData\\Local\\Android\\Sdk\\platforms\\android-25",
+    "compile_sdk_version": "android-25",
+    "databinding": [
+        {
+            "isLibrary": true,
+            "minSdkVersion": 19,
+            "name": "common-libs",
+            "packageName": "com.college.common_libs"
+        },
+        {
+            "isLibrary": false,
+            "minSdkVersion": 21,
+            "name": "park",
+            "packageName": "com.joypark.nacity"
+        }
+    ],
+    "databinding_compiler_jar": "C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\com.android.databinding\\compiler\\2.3.2\\c7125acfcb525b30fef7ee8bfecb0f7695931303\\compiler-2.3.2.jar",
+    "databinding_modules": [
+        "common-libs",
+        "park"
+    ],
+    "debug_package": "com.joypark.nacity",
+    "exclude_dep_res_paths": [
+        
+    ],
+    "extra_dep_res_paths": [
+        
+    ],
+    "freeline_cache_dir": "E:\\SecondPark",
+    "freeline_gradle_plugin_version": "0.8.7",
+    "ignore_resource_ids": [
+        "avd_hide_password_1",
+        "avd_hide_password_2",
+        "avd_hide_password_3",
+        "avd_show_password_1",
+        "avd_show_password_2",
+        "avd_show_password_3"
+    ],
+    "java_home": "C:\\Program Files\\Java\\jdk1.8.0_131",
+    "launcher": "com.joypark.nacity.login.SplashActivity",
+    "main_assets_directory": [
+        "E:\\SecondPark\\park\\src\\debug\\assets",
+        "E:\\SecondPark\\park\\src\\main\\assets"
+    ],
+    "main_jniLibs_directory": [
+        "E:\\SecondPark\\park\\src\\debug\\jniLibs",
+        "E:\\SecondPark\\park\\src\\main\\jniLibs"
+    ],
+    "main_jni_directory": [
+        "E:\\SecondPark\\park\\src\\debug\\jni",
+        "E:\\SecondPark\\park\\src\\main\\jni"
+    ],
+    "main_manifest_path": "E:\\SecondPark\\park\\src\\main\\AndroidManifest.xml",
+    "main_project_dir": "park",
+    "main_project_name": "park",
+    "main_r_path": "E:\\SecondPark\\park\\build\\generated\\source\\r\\debug\\R.java",
+    "main_res_directory": [
+        "E:\\SecondPark\\park\\src\\debug\\res",
+        "E:\\SecondPark\\park\\src\\main\\res"
+    ],
+    "main_src_directory": [
+        "E:\\SecondPark\\park\\src\\debug\\java",
+        "E:\\SecondPark\\park\\src\\main\\java"
+    ],
+    "module_dependencies": {
+        "common-libs": [
+            
+        ],
+        "park": [
+            "common-libs",
+            "photopicker"
+        ],
+        "photopicker": [
+            "common-libs"
+        ]
+    },
+    "modules": [
+        {
+            "name": "park",
+            "path": "E:\\SecondPark\\park"
+        },
+        {
+            "name": "common-libs",
+            "path": "E:\\SecondPark\\common-libs"
+        },
+        {
+            "name": "photopicker",
+            "path": "E:\\SecondPark\\photopicker"
+        }
+    ],
+    "package": "com.joypark.nacity",
+    "product_flavor": "",
+    "project_source_sets": {
+        "common-libs": {
+            "main_assets_directory": [
+                "E:\\SecondPark\\common-libs\\src\\release\\assets",
+                "E:\\SecondPark\\common-libs\\src\\main\\assets"
+            ],
+            "main_jniLibs_directory": [
+                "E:\\SecondPark\\common-libs\\src\\release\\jniLibs",
+                "E:\\SecondPark\\common-libs\\src\\main\\jniLibs"
+            ],
+            "main_jni_directory": [
+                "E:\\SecondPark\\common-libs\\src\\release\\jni",
+                "E:\\SecondPark\\common-libs\\src\\main\\jni"
+            ],
+            "main_manifest_path": "E:\\SecondPark\\common-libs\\src\\main\\AndroidManifest.xml",
+            "main_res_directory": [
+                "E:\\SecondPark\\common-libs\\src\\release\\res",
+                "E:\\SecondPark\\common-libs\\src\\main\\res"
+            ],
+            "main_src_directory": [
+                "E:\\SecondPark\\common-libs\\src\\release\\java",
+                "E:\\SecondPark\\common-libs\\src\\main\\java"
+            ]
+        },
+        "park": {
+            "main_assets_directory": [
+                "E:\\SecondPark\\park\\src\\debug\\assets",
+                "E:\\SecondPark\\park\\src\\main\\assets"
+            ],
+            "main_jniLibs_directory": [
+                "E:\\SecondPark\\park\\src\\debug\\jniLibs",
+                "E:\\SecondPark\\park\\src\\main\\jniLibs"
+            ],
+            "main_jni_directory": [
+                "E:\\SecondPark\\park\\src\\debug\\jni",
+                "E:\\SecondPark\\park\\src\\main\\jni"
+            ],
+            "main_manifest_path": "E:\\SecondPark\\park\\src\\main\\AndroidManifest.xml",
+            "main_res_directory": [
+                "E:\\SecondPark\\park\\src\\debug\\res",
+                "E:\\SecondPark\\park\\src\\main\\res"
+            ],
+            "main_src_directory": [
+                "E:\\SecondPark\\park\\src\\debug\\java",
+                "E:\\SecondPark\\park\\src\\main\\java"
+            ]
+        },
+        "photopicker": {
+            "main_assets_directory": [
+                "E:\\SecondPark\\photopicker\\src\\release\\assets",
+                "E:\\SecondPark\\photopicker\\src\\main\\assets"
+            ],
+            "main_jniLibs_directory": [
+                "E:\\SecondPark\\photopicker\\src\\release\\jniLibs",
+                "E:\\SecondPark\\photopicker\\src\\main\\jniLibs"
+            ],
+            "main_jni_directory": [
+                "E:\\SecondPark\\photopicker\\src\\release\\jni",
+                "E:\\SecondPark\\photopicker\\src\\main\\jni"
+            ],
+            "main_manifest_path": "E:\\SecondPark\\photopicker\\src\\main\\AndroidManifest.xml",
+            "main_res_directory": [
+                "E:\\SecondPark\\photopicker\\src\\release\\res",
+                "E:\\SecondPark\\photopicker\\src\\main\\res"
+            ],
+            "main_src_directory": [
+                "E:\\SecondPark\\photopicker\\src\\release\\java",
+                "E:\\SecondPark\\photopicker\\src\\main\\java"
+            ]
+        }
+    },
+    "project_type": "gradle",
+    "retrolambda": {
+        "common-libs": {
+            "enabled": true,
+            "mainClass": "net.orfjackal.retrolambda.Main",
+            "rtJar": "C:\\Program Files\\Java\\jdk1.8.0_131/jre/lib/rt.jar",
+            "supportIncludeFiles": false,
+            "targetJar": "C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\net.orfjackal.retrolambda\\retrolambda\\2.0.2\\dcf507a8e79c004d7a04c73472fffc6bd853d3f2\\retrolambda-2.0.2.jar"
+        },
+        "park": {
+            "enabled": true,
+            "mainClass": "net.orfjackal.retrolambda.Main",
+            "rtJar": "C:\\Program Files\\Java\\jdk1.8.0_131/jre/lib/rt.jar",
+            "supportIncludeFiles": false,
+            "targetJar": "C:\\Users\\xzz\\.gradle\\caches\\modules-2\\files-2.1\\net.orfjackal.retrolambda\\retrolambda\\2.0.2\\dcf507a8e79c004d7a04c73472fffc6bd853d3f2\\retrolambda-2.0.2.jar"
+        }
+    },
+    "root_dir": "E:\\SecondPark",
+    "sdk_directory": "C:\\Users\\xzz\\AppData\\Local\\Android\\Sdk",
+    "use_jdk8": true,
+    "use_system_gradle": false
+}

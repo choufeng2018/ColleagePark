@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                       android:orientation="vertical"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent"
+                                       android:background="#5f000000">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <ImageView
+            android:layout_width="518px"
+            android:layout_height="254px"
+            android:background="@drawable/dialog_express_confirm_bg"
+            android:scaleType="fitXY"
+            android:id="@+id/code_register"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            android:layout_width="113px"
+            android:layout_height="113px"
+            android:background="@drawable/dialog_finish_icon"
+            android:layout_marginTop="30px"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="170px"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="26px"
+            android:textColor="@color/app_text_color"
+            android:text="你的申请已提交!"/>
+
+ <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="215px"
+            android:gravity="center"
+            android:id="@+id/dialogText"
+            android:layout_centerHorizontal="true"
+            android:textSize="20px"
+            android:textColor="@color/gray_b4"
+            android:text="等待工作人员反馈"/>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="520px"
+            android:layout_height="105px"
+
+            android:id="@+id/ll"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/code_register"
+            >
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="24px"
+                android:layout_alignParentRight="true"
+                android:text="关闭"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/dialogbutton"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

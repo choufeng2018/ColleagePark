@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+     <variable
+         name="mode"
+         type="com.college.common_libs.domain.AdInfoTo"/>
+    </data>
+<com.zhy.autolayout.AutoRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+ <com.zhy.autolayout.AutoLinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:id="@+id/ad_name"
+     />
+ </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>
+</layout>

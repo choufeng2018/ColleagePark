@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<com.zhy.autolayout.AutoLinearLayout
+    android:layout_width="246px"
+    android:layout_height="278px"
+    android:background="@drawable/open_door_item_bg"
+    android:orientation="vertical"
+    android:layout_marginTop="2px"
+    android:layout_marginLeft="22px"
+    android:layout_marginBottom="18px"
+    >
+<View
+    android:layout_width="114px"
+    android:layout_height="114px"
+    android:background="@drawable/open_door_item_icon"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="42px"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="21px"
+        android:layout_marginTop="21px"
+        android:textColor="@color/black"
+        android:text=""
+        android:maxLines="1"
+        android:layout_marginLeft="5px"
+        android:layout_margin="5px"
+        android:ellipsize="end"
+        android:id="@+id/door_name"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14px"
+        android:textColor="#aaaaaa"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:layout_marginTop="12px"
+        android:id="@+id/open_time"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14px"
+        android:textColor="@color/app_color"
+        android:layout_gravity="center_horizontal"
+        android:text="开门次数：1226"
+        android:layout_marginTop="8px"
+        android:id="@+id/open_number"
+        />
+</com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

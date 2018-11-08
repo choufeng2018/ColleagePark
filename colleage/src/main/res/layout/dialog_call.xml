@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="100"
+    android:background="#7F000000">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="730px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20px"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="78px"
+            android:id="@+id/title"
+            android:text="确认拨打电话"
+            android:gravity="center"
+            android:textSize="26px"
+            android:textColor="#25293c"
+            android:background="@drawable/call_top"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="98px"
+            android:background="@drawable/call_comfirm"
+            android:id="@+id/btn_add"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="98px"
+            android:background="@drawable/call_cancel"
+            android:layout_marginTop="14px"
+
+            android:id="@+id/btn_cancel"
+            />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoRelativeLayout>

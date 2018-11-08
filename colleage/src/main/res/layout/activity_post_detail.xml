@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mode"
+            type="com.college.common_libs.domain.circle.NeighborPostTo" />
+    </data>
+
+    <com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_title_layout" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="126px">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/head_image"
+                            android:layout_width="78px"
+                            android:layout_height="78px"
+                            android:layout_marginLeft="26px"
+                            android:layout_marginTop="28px"
+                            android:background="@drawable/default_head_image"
+                            android:scaleType="fitXY"
+                            app:layout_auto_basewidth="height"
+                            app:riv_oval="true" />
+                        <View
+                            android:layout_width="21px"
+                            android:layout_height="21px"
+                            android:background="@drawable/v_icon"
+                            android:layout_marginLeft="88px"
+                            android:layout_marginTop="82px"
+                            app:layout_auto_basewidth="height"
+                            android:id="@+id/v_icon"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24px"
+                            android:layout_marginTop="53px"
+                            android:layout_toRightOf="@id/head_image"
+                            android:text="@{mode.nickname}"
+                            android:textColor="@color/black_35"
+                            android:textSize="30px" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="24px"
+                            android:layout_marginTop="30px"
+                            android:text="@{mode.postTypeDesc}"
+                            android:textColor="@color/gray_text_9"
+                            android:textSize="24px" />
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+                    <TextView
+                        android:id="@+id/post_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26px"
+                        android:layout_marginRight="26px"
+                        android:textColor="@color/black_35"
+                        android:textIsSelectable="true"
+
+                        android:textSize="30px" />
+
+                    <GridLayout
+                        android:id="@+id/grid_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12px"
+                        android:layout_marginLeft="26px"
+                        android:layout_marginRight="26px"
+                        android:layout_marginTop="16px">
+
+                    </GridLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/gray_d9"
+                        android:contentDescription="@string/app_name" />
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60px">
+
+                        <TextView
+                            android:id="@+id/post_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="26px"
+                            android:textColor="@color/gray_text_9"
+                            android:textSize="24px" />
+
+                        <TextView
+                            android:id="@+id/delete_post"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="26px"
+                            android:layout_toRightOf="@id/post_time"
+                            android:text="@string/delete_post"
+                            android:textColor="@color/gray_text_9"
+                            android:textSize="24px"
+                            android:visibility="gone" />
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:id="@+id/praise_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="26px">
+
+
+                            <ImageView
+
+                                android:id="@+id/praise_icon"
+                                android:layout_width="25px"
+                                android:layout_height="25px"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="14px"
+                                android:background="@drawable/like_unpress"
+                                app:layout_auto_basewidth="height" />
+
+                            <TextView
+                                android:id="@+id/praise_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/gray_text_9"
+
+                                android:textSize="28px"
+
+                                />
+                        </com.zhy.autolayout.AutoLinearLayout>
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:id="@+id/comment_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="48px"
+                            android:layout_toLeftOf="@id/praise_layout">
+
+
+                            <ImageView
+                                android:layout_width="25px"
+                                android:layout_height="24px"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="14px"
+                                android:background="@drawable/selector_neighbor_comment" />
+
+                            <TextView
+                                android:id="@+id/comment_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/gray_text_9"
+                                android:textSize="28px"
+
+                                />
+                        </com.zhy.autolayout.AutoLinearLayout>
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/gray_d9"
+                        android:contentDescription="@string/app_name" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/praise_name_layout"
+                    android:layout_width="match_parent"
+                    android:minHeight="60px"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="23px"
+                        android:layout_height="21px"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30px"
+                        android:background="@drawable/life_like_icon" />
+
+                    <TextView
+                        android:paddingTop="5px"
+                        android:paddingBottom="5px"
+                        android:id="@+id/praise_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="75px"
+                        android:textColor="@color/dark_color"
+                        android:textSize="28px"
+                        android:lineSpacingExtra="5px"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/gray_d9" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <GridLayout
+                    android:id="@+id/comment_grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25px"
+                    android:layout_marginRight="25px"
+                    android:columnCount="1">
+
+                </GridLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </ScrollView>
+        <!-- 此textView用来填充剪切全文用-->
+        <TextView
+            android:id="@+id/sub_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="125px"
+            android:layout_marginRight="25px"
+            android:textColor="@color/transparent"
+            android:textSize="26px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+</layout>

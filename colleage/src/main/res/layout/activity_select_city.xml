@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/login_bg_color"
+    >
+<include layout="@layout/login_title_layout"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="650px"
+        android:layout_height="66px"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="152px"
+        android:background="@drawable/login_search_bg"
+        >
+    <ImageView
+        android:layout_width="47px"
+        android:layout_height="47px"
+        android:background="@drawable/login_search"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="32px"
+        />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="28px"
+            android:background="@color/transparent"
+            android:textColor="@color/white"
+            android:textColorHint="@color/login_search"
+            android:hint="@string/input_address_search"
+            android:id="@+id/search"
+            android:textSize="28px"
+            />
+    </com.zhy.autolayout.AutoLinearLayout>
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="255px"
+        android:layout_marginLeft="32px"
+        android:layout_marginRight="74px"
+        android:id="@+id/recycleView"
+        android:dividerHeight="0px"
+        android:scrollbars="none"
+        android:listSelector="@color/transparent"
+        >
+
+    </com.github.jdsjlzx.recyclerview.LRecyclerView>
+    <com.joypark.nacity.base.utils.SideBar
+        android:id="@+id/side_bar"
+        android:layout_width="74px"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="-10px"
+        android:layout_gravity="right|center"
+        android:layout_height="800px" />
+    <TextView
+        android:id="@+id/select_dialog"
+        android:layout_width="144px"
+        android:layout_height="144px"
+
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/circle_white"
+        android:gravity="center"
+        android:textColor="#666666"
+        android:textSize="56px"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+</com.zhy.autolayout.AutoRelativeLayout>

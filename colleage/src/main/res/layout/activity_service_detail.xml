@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="mode"
+            type="com.college.common_libs.domain.property.ServiceMainTo" />
+    </data>
+
+    <com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_title_layout" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f4f4f4"
+                    android:orientation="vertical">
+                   <com.zhy.autolayout.AutoLinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       android:id="@+id/info_layout"
+                       >
+
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:layout_marginTop="28px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contact_people"
+                            android:textColor="@color/gray_96"
+                            android:textSize="22px" />
+
+                        <TextView
+                            android:id="@+id/contact_people"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4px"
+                            android:text="@{mode.serviceUserName}"
+                            android:textColor="@color/gray_96"
+                            android:textSize="22px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginTop="20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contact_phone2"
+                            android:textColor="@color/gray_96"
+                            android:textSize="22px" />
+
+                        <TextView
+                            android:id="@+id/contact_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4px"
+                            android:text="@{mode.serviceUserPhone}"
+                            android:textColor="@color/gray_96"
+                            android:textSize="22px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginTop="20px">
+
+                        <TextView
+                            android:id="@+id/tv_03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/service_address_detail"
+                            android:textColor="@color/gray_96"
+                            android:textSize="22px" />
+
+                        <TextView
+                            android:id="@+id/service_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4px"
+                            android:text="@{mode.serviceAreaDetail}"
+                            android:textColor="@color/gray_96"
+                            android:textSize="22px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/repair_time_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginTop="20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_04"
+                            android:text="@string/repair_time_detail"
+                            android:textColor="@color/gray_96"
+                            android:textSize="22px" />
+
+                        <TextView
+                            android:id="@+id/repair_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4px"
+                            android:text="@{mode.repairTime}"
+                            android:textColor="@color/gray_96"
+                            android:textSize="22px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/repair_money_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginTop="20px">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/repair_money"
+                            android:textColor="@color/gray_96"
+                            android:textSize="22px" />
+
+                        <TextView
+                            android:id="@+id/repair_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4px"
+                            android:textColor="@color/gray_96"
+                            android:textSize="22px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/repair_unit_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginTop="20px">
+
+                        <TextView
+                            android:id="@+id/service_unit_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gray_96"
+                            android:textSize="22px" />
+
+                        <TextView
+                            android:id="@+id/service_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4px"
+                            android:textColor="@color/gray_96"
+                            android:textSize="22px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:layout_marginTop="28px"
+                        android:background="#d5d5d5" />
+                   </com.zhy.autolayout.AutoLinearLayout>
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/water_layout"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginTop="30px"
+                            android:layout_marginLeft="30px"
+                            android:textSize="20px"
+                            android:text="@{mode.serviceContentDesc}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <View
+                            android:layout_marginTop="35px"
+                            android:layout_marginLeft="30px"
+                            android:layout_marginRight="30px"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="#d5d5d5" />
+
+                    </com.zhy.autolayout.AutoLinearLayout>
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="240px"
+                        android:paddingLeft="30px"
+
+                        android:paddingRight="30px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="33px"
+                            android:text="@string/my_need"
+                            android:id="@+id/complaint_text"
+                            android:textColor="@color/dark_color"
+                            android:textSize="28px" />
+
+                        <TextView
+                            android:id="@+id/create_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="40px"
+                            android:text=""
+                            android:textColor="@color/gray_96"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/demand_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/create_time"
+                            android:layout_marginTop="12px"
+                            android:text="@{mode.serviceDesc}"
+                            android:textColor="@color/gray_96"
+                            android:textSize="24px" />
+
+                        <GridLayout
+                            android:id="@+id/demand_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/demand_content"
+                            android:layout_marginBottom="24px"
+                            android:layout_marginLeft="-15px"
+                            android:layout_marginTop="24px"
+                            android:columnCount="4" />
+                    </com.zhy.autolayout.AutoRelativeLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:minHeight="340px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="33px"
+                        android:text="@string/handel_feed"
+                        android:textColor="@color/dark_color"
+                        android:textSize="28px" />
+
+                    <TextView
+                        android:id="@+id/cancel_report"
+                        android:layout_width="115px"
+                        android:layout_height="44px"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="22px"
+                        android:background="@drawable/selector_cancel_report"
+                        android:gravity="center"
+                        android:text="@string/cancel_report"
+                        android:textSize="24px"
+                        android:visibility="gone" />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/responsible_person_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/feed_time"
+
+                        android:layout_marginTop="22px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/responsible_person"
+                            android:textColor="@color/dark_color"
+                            android:textSize="22px" />
+
+                        <TextView
+                            android:id="@+id/responsible_person"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/app_color"
+                            android:textSize="22px" />
+
+                        <TextView
+                            android:id="@+id/responsible_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5px"
+                            android:text="@{mode.operateUserPhone}"
+                            android:textColor="@color/app_color"
+                            android:textSize="22px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <TextView
+                        android:id="@+id/feed_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="40px"
+                        android:text=""
+                        android:textColor="@color/gray_96"
+                        android:textSize="20px" />
+
+                    <TextView
+                        android:id="@+id/feed_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/responsible_person_layout"
+                        android:layout_marginTop="12px"
+                        android:textColor="@color/gray_96"
+                        android:textSize="24px"
+
+                        />
+
+                    <GridLayout
+                        android:id="@+id/feed_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/feed_content"
+                        android:layout_marginBottom="24px"
+                        android:layout_marginLeft="-15px"
+                        android:layout_marginTop="24px"
+                        android:columnCount="4" />
+
+                    <View
+                        android:id="@+id/evaluate_btn"
+                        android:layout_width="155px"
+                        android:layout_height="49px"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/feed_image"
+                        android:layout_marginRight="50px"
+                        android:layout_marginBottom="60px"
+                        android:background="@drawable/property_evaluate_icon"
+                        android:visibility="gone" />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/responsible_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/responsible_person_layout"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="115px"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="175px"
+                            android:layout_height="196px"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/no_response_ic" />
+
+                        <TextView
+                            android:id="@+id/responsible_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32px"
+                            android:textColor="@color/gray_c"
+                            android:textSize="22px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </ScrollView>
+    </com.zhy.autolayout.AutoLinearLayout>
+</layout>

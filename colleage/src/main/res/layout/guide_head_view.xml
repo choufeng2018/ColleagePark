@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bigkoo.convenientbanner.ConvenientBanner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:background="@drawable/park_enterprise_load"
+        android:layout_height="400px" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/more_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="23px"
+            android:layout_height="23px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25px"
+            android:background="@drawable/park_guide_describe_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="68px"
+            android:text="@string/park_describe"
+            android:textColor="@color/app_text_color"
+            android:textSize="28px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="35px"
+            android:paddingRight="35px"
+            android:text="@string/more"
+            android:textColor="#969696"
+            android:textSize="28px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:columnCount="1" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginTop="20px"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="23px"
+            android:layout_height="23px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25px"
+            android:background="@drawable/park_enterprise" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="68px"
+            android:text="@string/park_enterprise"
+            android:textColor="@color/app_text_color"
+            android:textSize="28px" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/house_recycle_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="360px"
+            android:background="@color/transparent" />
+
+        <View
+            android:layout_width="130px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="340px"
+
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/all_house"
+            android:layout_width="109px"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="385px"
+            android:background="@color/white"
+            android:gravity="center_vertical|left"
+            android:minWidth="60px"
+            android:paddingBottom="10px"
+
+            android:paddingTop="10px"
+            android:text="@string/all"
+
+            android:textColor="@color/app_color"
+            android:textSize="24px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>
+</layout>

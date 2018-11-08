@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title_layout" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<com.zhy.autolayout.AutoLinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="24px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/praise_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="32px"
+            android:paddingRight="32px"
+            android:paddingTop="48px"
+            android:textColor="@color/app_text_color"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/praise_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="32px"
+            android:layout_marginTop="24px"
+            android:text=""
+            android:textColor="@color/gray_b4"
+            android:textSize="20px" />
+
+        <GridLayout
+            android:id="@+id/service_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24px"
+            android:layout_marginTop="24px"
+            android:columnCount="4" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/reply_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_ed"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="32px"
+            android:paddingRight="32px"
+            android:text="@string/property_service_reply"
+            android:textColor="#969696"
+            android:layout_marginTop="24px"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/praise_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="32px"
+            android:paddingRight="32px"
+            android:paddingTop="24px"
+            android:textColor="@color/app_text_color"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/replay_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="20px"
+            android:layout_marginRight="32px"
+            android:layout_marginTop="24px"
+            android:text=""
+            android:textColor="@color/gray_b4"
+            android:textSize="20px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>
+
+    </ScrollView>
+</com.zhy.autolayout.AutoLinearLayout>

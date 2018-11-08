@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title_layout" />
+
+    <EditText
+        android:id="@+id/modify_content"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_below="@+id/layout"
+        android:background="@color/white"
+        android:inputType="text"
+        android:maxLength="50"
+        android:paddingLeft="28px"
+        android:textColor="@color/dark_color"
+        android:textSize="30px" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/edit_content"
+        android:background="#dddddd" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/layout_checked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginBottom="8px"
+        android:layout_marginTop="26px"
+        android:visibility="gone"
+      >
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/choice_man"
+            android:layout_width="375px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32px">
+
+            <ImageButton
+                android:id="@+id/checked_man"
+                android:layout_width="56px"
+
+                android:layout_height="28dp"
+                android:background="@drawable/shape_concentric_circles"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="22px"
+                android:layout_toRightOf="@+id/checked_man"
+                android:text="@string/sir"
+                android:textColor="#7e7e7e"
+                android:textSize="30px" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/choice_woman"
+            android:layout_width="375px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="68px"
+            android:layout_toRightOf="@+id/choice_man">
+
+            <ImageButton
+                android:id="@+id/checked_woman"
+                android:layout_width="56px"
+                android:layout_height="56px"
+                android:background="@drawable/shape_over"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="22px"
+                android:layout_toRightOf="@+id/checked_woman"
+                android:text="@string/lady"
+                android:textColor="#7e7e7e"
+                android:textSize="30px" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:layout_below="@+id/layout_checked"
+        android:layout_marginLeft="14px"
+        android:layout_marginRight="14px"
+        android:layout_marginTop="34px"
+        android:background="@drawable/selector_property_modify_data_submit"
+        android:gravity="center"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="34px" />
+</com.zhy.autolayout.AutoLinearLayout>

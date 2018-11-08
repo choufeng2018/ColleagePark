@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_bg_color"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="392px"
+        android:layout_height="81px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="360px"
+        android:background="@drawable/logon_or_register_icon" />
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="450px"
+        android:layout_height="90px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="748px"
+        android:background="@drawable/selector_login_bg"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="36px" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="450px"
+        android:layout_height="90px"
+        android:layout_below="@id/login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30px"
+        android:background="@drawable/selector_register_bg"
+        android:gravity="center"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textSize="36px" />
+
+</com.zhy.autolayout.AutoRelativeLayout>

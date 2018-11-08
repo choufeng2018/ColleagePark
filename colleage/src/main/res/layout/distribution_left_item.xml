@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mode"
+            type="com.college.common_libs.domain.property.ServiceTypeTo" />
+    </data>
+
+    <com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+            >
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/item_view"
+            android:layout_width="match_parent"
+            android:layout_height="84px">
+
+            <TextView
+                android:background="@drawable/selector_distribution_left_bg"
+                android:paddingLeft="10px"
+                android:paddingRight="10px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/water_type"
+                android:text="www"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:gravity="center"
+                android:textSize="24px"
+                android:textColor="@color/gray_46"
+                 />
+            <View
+                android:background="@color/gray_df"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+</layout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/start_apply">
+
+    </com.github.jdsjlzx.recyclerview.LRecyclerView>
+
+    <TextView
+        android:id="@+id/start_apply"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@color/app_color"
+        android:text="@string/start_apply"
+        android:textColor="@color/white"
+        android:textSize="32px" />
+</com.zhy.autolayout.AutoRelativeLayout>

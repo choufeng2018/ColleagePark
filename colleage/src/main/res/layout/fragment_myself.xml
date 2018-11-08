@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/person_center_layout"
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:background="@drawable/myself_person_bg">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/head_image"
+            android:layout_width="160px"
+            android:layout_height="160px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="54px"
+            android:layout_marginLeft="60px"
+            android:background="@drawable/ic_launcher"
+            android:scaleType="fitXY"
+            app:layout_auto_basewidth="height"
+            app:riv_border_color="@color/white"
+            app:riv_border_width="3px"
+            app:riv_mutate_background="true"
+            app:riv_oval="true" />
+
+        <View
+            android:id="@+id/v_icon"
+            android:layout_width="21px"
+            android:layout_height="21px"
+            android:layout_marginLeft="-30px"
+            android:layout_marginTop="210px"
+            android:layout_toRightOf="@id/head_image"
+            android:background="@drawable/v_icon"
+            app:layout_auto_basewidth="height"
+
+            />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="142px"
+            android:layout_toRightOf="@+id/head_image"
+            android:textColor="@color/white"
+            android:textSize="32px" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="18px"
+            android:layout_toRightOf="@+id/head_image">
+
+            <View
+                android:layout_width="25px"
+                android:layout_height="31px"
+                android:background="@drawable/myself_position_icon" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8px"
+                android:textColor="@color/white"
+                android:textSize="24px"
+
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:layout_width="29px"
+            android:layout_height="51px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="95px"
+            android:layout_marginRight="72px"
+            android:background="@drawable/myself_person_top_arrow" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/main_page_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_marginTop="22px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="65px"
+            android:text="@string/personal_main_page"
+            android:textColor="@color/myself_text_color"
+            android:textSize="32px" />
+
+        <View
+            android:layout_width="14px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60px"
+            android:background="@drawable/myself_right_arrow_icon" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/my_walt_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_marginTop="22px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="65px"
+            android:text="@string/my_walt"
+            android:textColor="@color/myself_text_color"
+            android:textSize="32px" />
+
+        <View
+            android:layout_width="14px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60px"
+            android:background="@drawable/myself_right_arrow_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20px"
+            android:background="@color/myself_divide_line" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/my_door_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="65px"
+            android:text="@string/my_door"
+            android:textColor="@color/myself_text_color"
+            android:textSize="32px" />
+
+        <View
+            android:layout_width="14px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60px"
+            android:background="@drawable/myself_right_arrow_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20px"
+            android:background="@color/myself_divide_line" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/my_older_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="65px"
+            android:text="@string/my_older"
+            android:textColor="@color/myself_text_color"
+            android:textSize="32px" />
+
+        <View
+            android:layout_width="14px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60px"
+            android:background="@drawable/myself_right_arrow_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20px"
+            android:background="@color/myself_divide_line" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/my_service_record_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="65px"
+            android:text="@string/my_service_record"
+            android:textColor="@color/myself_text_color"
+            android:textSize="32px" />
+
+        <View
+            android:layout_width="14px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60px"
+            android:background="@drawable/myself_right_arrow_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20px"
+            android:background="@color/myself_divide_line" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/feedback_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_marginTop="22px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="65px"
+            android:text="@string/feedback"
+            android:textColor="@color/myself_text_color"
+            android:textSize="32px" />
+
+        <View
+            android:layout_width="14px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60px"
+            android:background="@drawable/myself_right_arrow_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20px"
+            android:background="@color/myself_divide_line" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/clean_cache_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="65px"
+            android:text="@string/clean_cache"
+            android:textColor="@color/myself_text_color"
+            android:textSize="32px" />
+
+        <View
+            android:layout_width="14px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60px"
+            android:background="@drawable/myself_right_arrow_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20px"
+            android:background="@color/myself_divide_line" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/about_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="65px"
+            android:text="@string/about"
+            android:textColor="@color/myself_text_color"
+            android:textSize="32px" />
+
+        <View
+            android:layout_width="14px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60px"
+            android:background="@drawable/myself_right_arrow_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20px"
+            android:background="@color/myself_divide_line" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/login_out_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_marginTop="22px"
+        android:background="@drawable/selector_myself_click_bg">
+
+        <View
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="262px"
+            android:background="@drawable/myself_login_out_icon"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15px"
+            android:text="@string/login_out"
+            android:textColor="@color/gray_b4"
+            android:textSize="32px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

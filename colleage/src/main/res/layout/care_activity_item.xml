@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<data>
+<variable
+    name="mode"
+    type="com.college.common_libs.domain.circle.CareListTo"/>
+</data>
+<com.zhy.autolayout.AutoRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<com.zhy.autolayout.AutoRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="172px"
+    android:background="@color/white"
+    >
+ <com.makeramen.roundedimageview.RoundedImageView
+     android:layout_width="134px"
+     android:layout_height="134px"
+     android:layout_marginLeft="24px"
+     android:layout_centerVertical="true"
+     app:riv_oval="true"
+     android:scaleType="fitXY"
+     app:layout_auto_basewidth="height"
+     android:id="@+id/head_image"
+     android:background="@drawable/default_head_image"
+     />
+    <View
+        android:layout_width="21px"
+        android:layout_height="21px"
+        android:background="@drawable/v_icon"
+        android:layout_marginLeft="138px"
+        android:layout_marginTop="118px"
+        android:id="@+id/v_icon"
+        app:layout_auto_basewidth="height"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32px"
+        android:id="@+id/nick_name"
+        android:textColor="@color/black_35"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/head_image"
+        android:layout_marginLeft="22px"
+
+        />
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/app_green"
+       android:textSize="28px"
+       android:paddingRight="15px"
+       android:paddingLeft="15px"
+       android:paddingTop="8px"
+       android:paddingBottom="8px"
+       android:layout_alignParentRight="true"
+       android:id="@+id/cancel_care"
+       android:layout_centerVertical="true"
+       android:layout_marginRight="32px"
+       android:text="@string/cancel_care"
+       />
+    <View
+        android:layout_width="24px"
+        android:layout_height="20px"
+        android:background="@drawable/life_care_icon"
+        android:layout_toLeftOf="@id/cancel_care"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="9px"
+        android:id="@+id/care_me_icon"
+        android:visibility="gone"
+        />
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1px"
+    android:background="@color/gray_d9"
+    android:layout_alignParentBottom="true"
+    />
+</com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>
+</layout>

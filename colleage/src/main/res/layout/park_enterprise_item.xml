@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mode"
+            type="com.college.common_libs.domain.guide.EnterpriseTo" />
+    </data>
+
+    <com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="22px"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="375px"
+            android:layout_height="340px">
+
+            <View
+                android:id="@+id/line_one"
+                android:layout_width="22px"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/line_tow"
+                android:layout_width="11px"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="gone" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="340px"
+                android:layout_height="340px"
+                android:background="@drawable/park_enterprise_item_bg"
+
+                android:orientation="vertical">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/enterprise_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="170px"
+                    android:layout_marginLeft="1px"
+                    android:layout_marginRight="1px"
+                    android:layout_marginTop="1px"
+                    android:background="@drawable/park_enterprise_load"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    app:riv_corner_radius_top_left="5px"
+                    app:riv_corner_radius_top_right="5px" />
+
+                <TextView
+                    android:id="@+id/garden_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/enterprise_image"
+                    android:layout_marginLeft="22px"
+                    android:layout_marginTop="20px"
+                    android:text="@{mode.name}"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/gray_46"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/garden_name"
+                    android:layout_marginLeft="22px"
+                    android:layout_marginRight="22px"
+                    android:layout_marginTop="14px"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@{mode.companyDesc}"
+                    android:textColor="#969696"
+                    android:textSize="17px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22px"
+                    android:layout_marginTop="298px"
+
+                    android:text="@{mode.fullAddress}"
+                    android:textColor="#6d75a4"
+
+                    android:textSize="22px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</layout>

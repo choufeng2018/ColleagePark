@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent_bg"
+    android:background="@drawable/guide_bg1"
+    >
+ <ImageView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="@drawable/guide_bg2"
+     android:id="@+id/guide_bg2"
+     android:alpha="0"
+     android:contentDescription="@string/app_name"
+     />
+ <ImageView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="@drawable/guide_bg14"
+     android:id="@+id/guide_bg4"
+     android:alpha="0"
+     android:contentDescription="@string/app_name"
+     />
+<android.support.v4.view.ViewPager
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/view_pager"
+
+    >
+
+</android.support.v4.view.ViewPager>
+<Button
+    android:layout_width="600px"
+    android:layout_height="90px"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="90px"
+    android:background="@color/transparent"
+    android:id="@+id/btn_start"
+    />
+ <com.zhy.autolayout.AutoLinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_centerHorizontal="true"
+     android:layout_alignParentBottom="true"
+     android:id="@+id/point_layout"
+     android:layout_marginBottom="240px"
+     >
+<View
+    android:layout_width="13px"
+    android:layout_height="13px"
+    android:background="@drawable/start_point_un_select"
+    android:id="@+id/point1"
+    />
+     <View
+         android:layout_width="13px"
+         android:layout_height="13px"
+         android:background="@drawable/start_point_select"
+         android:layout_marginLeft="14px"
+         android:id="@+id/point2"
+         />
+     <View
+         android:layout_width="13px"
+         android:layout_height="13px"
+         android:background="@drawable/start_point_select"
+         android:layout_marginLeft="14px"
+         android:id="@+id/point3"
+         />
+     <View
+         android:layout_width="13px"
+         android:layout_height="13px"
+         android:background="@drawable/start_point_select"
+         android:layout_marginLeft="14px"
+         android:id="@+id/point4"
+         />
+ </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

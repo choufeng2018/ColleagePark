@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+ <data>
+  <variable
+      name="mode"
+      type="com.college.common_libs.domain.circle.NeighborCommentTo"/>
+ </data>
+<com.zhy.autolayout.AutoRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+  <com.makeramen.roundedimageview.RoundedImageView
+      android:layout_width="74px"
+      android:layout_height="74px"
+      android:layout_marginLeft="1px"
+      android:layout_marginTop="20px"
+      android:id="@+id/head_image"
+      app:riv_oval="true"
+      android:scaleType="fitXY"
+      app:layout_auto_basewidth="height"
+      android:background="@drawable/default_head_image"
+      />
+    <View
+        android:layout_width="21px"
+        android:layout_height="21px"
+        android:background="@drawable/v_icon"
+        android:layout_marginLeft="64px"
+        android:layout_marginTop="67px"
+        app:layout_auto_basewidth="height"
+        android:id="@+id/v_icon"
+        />
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:textSize="30px"
+     android:textColor="@color/black_35"
+     android:text="@{mode.nickname}"
+     android:layout_toRightOf="@id/head_image"
+     android:layout_marginTop="40px"
+     android:layout_marginLeft="24px"
+     />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26px"
+
+        android:textColor="@color/black_35"
+        android:layout_toRightOf="@id/head_image"
+        android:layout_marginTop="91px"
+        android:layout_marginLeft="24px"
+        android:layout_marginBottom="21px"
+        android:lineSpacingExtra="8px"
+        android:id="@+id/comment_content"
+        android:textIsSelectable="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26px"
+        android:textColor="@color/app_green"
+        android:visibility="gone"
+        android:layout_marginRight="24px"
+       android:layout_marginTop="-53px"
+        android:id="@+id/all_comment"
+        android:text="@string/all_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/comment_content"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_d9"
+        android:layout_below="@id/comment_content"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="32px"
+        android:layout_marginRight="10px"
+        android:id="@+id/comment_time"
+        android:textSize="24px"
+        android:textColor="#999999"
+
+
+        />
+</com.zhy.autolayout.AutoRelativeLayout>
+</layout>

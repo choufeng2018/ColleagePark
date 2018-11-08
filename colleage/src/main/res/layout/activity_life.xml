@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="140px"
+        android:background="@color/app_green"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/back"
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+
+            >
+
+            <ImageView
+                android:layout_width="21px"
+                android:layout_height="37px"
+                android:layout_centerInParent="true"
+                android:background="@drawable/arrow_back_icon" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="100px"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="32px" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/post"
+            android:layout_width="wrap_content"
+            android:layout_height="49px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="18px"
+            android:layout_marginRight="20px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="29px"
+                android:layout_height="29px"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/life_post_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10px"
+                android:text="@string/post"
+                android:textColor="@color/white"
+                android:textSize="28px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+        <!-- 此textView用来填充剪切全文用-->
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="@color/transparent"
+          android:layout_marginLeft="26px"
+          android:layout_marginRight="26px"
+          android:textSize="30px"
+          android:id="@+id/sub_textView"
+          android:layout_alignParentBottom="true"
+          />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    <com.gigamole.navigationtabstrip.NavigationTabStrip
+        android:id="@+id/tpi"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_marginEnd="24px"
+        android:layout_marginStart="24px"
+        android:background="@color/white"
+        app:nts_active_color="@color/dark_color"
+        app:nts_color="@color/app_green"
+        app:nts_inactive_color="#cccccc"
+        app:nts_size="26px"
+        app:nts_weight="6px" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_text_d"
+        android:contentDescription="@string/app_name" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:background="@drawable/life_message_bg"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15px"
+        android:layout_marginBottom="15px"
+        android:id="@+id/message_layout"
+        android:visibility="gone"
+        >
+     <ImageView
+         android:layout_width="50px"
+         android:layout_height="50px"
+         android:layout_gravity="center_vertical"
+         android:layout_marginLeft="20px"
+         android:id="@+id/head_image"
+         android:scaleType="fitXY"
+         android:background="@drawable/default_head_image"
+         android:contentDescription="@string/app_name"
+         />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="26px"
+            android:id="@+id/message"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:maxLines="1"
+
+            />
+    </com.zhy.autolayout.AutoLinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    </android.support.v4.view.ViewPager>
+
+</com.zhy.autolayout.AutoLinearLayout>

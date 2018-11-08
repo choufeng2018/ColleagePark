@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    android:oneshot="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/splash_animation1" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation2" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation3" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation4" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation5" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation6" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation7" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation8" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation9" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation10" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation11" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation12" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation13" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation14" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation15" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation16" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation17" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation18" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation18" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation18" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation18" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation18" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation18" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation18" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation18" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation18" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation18" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation18" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation18" android:duration="100"/>
+    <item android:drawable="@drawable/splash_animation18" android:duration="100"/>
+
+
+
+
+</animation-list>

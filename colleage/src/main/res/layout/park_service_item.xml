@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/selector_park_service_item_bg"
+    >
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="187.5px"
+        android:layout_height="150px">
+    <ImageView
+        android:layout_width="56px"
+        android:layout_height="47px"
+        android:id="@+id/park_service_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30px"
+        android:contentDescription="@string/app_name"
+
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="102px"
+            android:id="@+id/park_service_name"
+            android:textSize="26px"
+            android:text=""
+            android:textColor="@color/dark_color"
+            />
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<data>
+ <variable
+     name="mode"
+     type="com.college.common_libs.domain.apartment.ApartmentInfoTo"/>
+</data>
+
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="85px"
+        android:textSize="34px"
+        android:textColor="@color/white"
+        android:layout_marginLeft="16px"
+        android:layout_centerVertical="true"
+        android:text="@{mode.gardenName}"
+        android:gravity="center_vertical"
+        android:id="@+id/apartment_name"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/apartment_name"
+        android:background="@color/white"
+        />
+    <ImageView
+        android:layout_width="17px"
+        android:layout_height="28px"
+        android:contentDescription="@string/app_name"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="21px"
+        android:background="@drawable/login_apartment_right_icon"
+        />
+</com.zhy.autolayout.AutoRelativeLayout>
+</layout>

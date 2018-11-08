@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_bg_color"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76px">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/back"
+            android:visibility="gone"
+            android:layout_width="100px"
+            android:layout_height="wrap_content"
+
+            >
+
+            <ImageView
+                android:layout_width="21px"
+                android:layout_height="37px"
+                android:layout_centerInParent="true"
+                android:background="@drawable/arrow_back_icon"
+                android:contentDescription="@string/app_name" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/finish_data"
+            android:textColor="@color/white"
+            android:textSize="34px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/head_image"
+        android:layout_width="210px"
+        android:layout_height="210px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="146px"
+        android:background="@drawable/default_head_image"
+        app:riv_border_color="#ffffff"
+        app:riv_border_width="3px"
+        app:riv_oval="true" />
+
+    <Button
+        android:id="@+id/upload_head_image"
+        android:layout_width="223px"
+        android:layout_height="71px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20px"
+        android:background="@drawable/selector_upload_head" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/city_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_marginTop="32px">
+
+        <EditText
+            android:id="@+id/nick_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:hint="@string/please_input_nick_name"
+            android:maxLength="8"
+            android:textColor="@color/white"
+            android:textColorHint="#a8a8a8"
+            android:textSize="36px" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:background="#40ffffff" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/sex_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_marginTop="32px">
+
+        <TextView
+            android:id="@+id/sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="132px"
+            android:gravity="center"
+            android:hint="@string/please_select_sex"
+            android:textColor="@color/white"
+            android:textColorHint="#a8a8a8"
+            android:textSize="36px" />
+
+        <View
+            android:layout_width="17px"
+            android:layout_height="28px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="72px"
+            android:background="@drawable/login_apartment_right_icon" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:background="#40ffffff" />
+
+    <TextView
+        android:id="@+id/finish"
+        android:layout_width="550px"
+        android:layout_height="90px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="90px"
+        android:background="@drawable/selector_login_bg"
+        android:gravity="center"
+        android:text="@string/write_finish"
+        android:textColor="@color/white"
+        android:textSize="36px" />
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title_layout" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500px"
+        android:background="#efeff4">
+
+        <View
+            android:id="@+id/apply_agree"
+            android:layout_width="175px"
+            android:layout_height="226px"
+            android:layout_centerInParent="true"
+            app:layout_auto_basewidth="height"
+            android:background="@drawable/apply_door_agree"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/apply_waite"
+            android:layout_width="131px"
+            android:layout_height="200px"
+            android:layout_centerInParent="true"
+            android:background="@drawable/door_hourglass"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/apply_refuse"
+            android:layout_width="192px"
+            android:layout_height="251px"
+            android:layout_centerInParent="true"
+            android:background="@drawable/door_refuse_apply"
+            android:visibility="gone" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <TextView
+        android:id="@+id/apply_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="30px"
+        android:text="@string/apply_time"
+        android:textColor="#a9a9a9"
+        android:textSize="36px" />
+
+    <TextView
+        android:id="@+id/apply_door"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="16px"
+        android:text="@string/apply_door"
+        android:textColor="#a9a9a9"
+        android:textSize="36px" />
+
+    <TextView
+        android:id="@+id/apply_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="16px"
+        android:text="@string/apply_statue"
+        android:textSize="36px"
+        android:textColor="#a9a9a9" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/layout_examine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30px"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#c8c7cc">
+
+        </View>
+
+        <TextView
+            android:id="@+id/examine_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="30px"
+            android:text="@string/apply_time"
+            android:textSize="36px" />
+
+        <TextView
+            android:id="@+id/examine_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="16px"
+            android:text="@string/apply_statue"
+            android:textSize="36px" />
+
+        <TextView
+            android:id="@+id/have_door"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="16px"
+            android:text="@string/turn_on_door"
+            android:textColor="#333333"
+            android:textSize="36px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

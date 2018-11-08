@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.zhy.autolayout.AutoRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<com.zhy.autolayout.AutoRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="400px"
+    android:id="@+id/parent"
+    android:layout_alignParentBottom="true"
+    android:alpha="100">
+
+
+        <Button
+            android:id="@+id/btn_camera"
+            android:layout_width="match_parent"
+            android:text="@string/capture_take_photo"
+            android:textSize="34px"
+            android:layout_above="@+id/line2"
+            android:textColor="@color/dark_color"
+            android:background="@color/white"
+            android:layout_height="94px" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:background="#d7d7d7"
+            android:layout_above="@+id/btn_album"
+            android:layout_height="2px"/>
+
+        <Button
+            android:id="@+id/btn_album"
+            android:layout_above="@+id/line"
+            android:layout_width="match_parent"
+            android:text="@string/album_upload"
+            android:textSize="34px"
+            android:textColor="@color/dark_color"
+            android:background="@color/white"
+            android:layout_height="94px" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:background="#343434"
+            android:layout_above="@+id/btn_cancel"
+            android:layout_height="7dp"/>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:text="@string/cancel"
+            android:textSize="34px"
+            android:layout_alignParentBottom="true"
+            android:textColor="#97948f"
+            android:background="@color/white"
+            android:layout_height="94px" />
+
+</com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

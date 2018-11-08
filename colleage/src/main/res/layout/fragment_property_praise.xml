@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f3"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="465px">
+
+            <EditText
+                android:id="@+id/praise_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="top"
+                android:hint="@string/i_want_say"
+                android:maxLength="200"
+                android:minHeight="278px"
+                android:paddingBottom="28px"
+                android:paddingLeft="32px"
+                android:paddingRight="32px"
+                android:paddingTop="35px"
+                android:textColor="@color/dark_color"
+                android:textColorHint="@color/gray_7b"
+                android:textSize="26px" />
+
+            <GridLayout
+                android:id="@+id/praise_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/praise_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:columnCount="4" />
+
+            <TextView
+                android:id="@+id/slide_capture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/praise_content"
+                android:layout_marginTop="66px"
+                android:layout_toRightOf="@id/praise_image"
+                android:text="@string/make_a_blueprint"
+                android:textColor="@color/gray_7b"
+                android:textSize="26px" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_eb" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:visibility="gone"
+            android:layout_marginTop="20px"
+            android:background="@color/gray_eb" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/share_circle_layout"
+            android:layout_width="match_parent"
+            android:layout_height="115px"
+            android:visibility="gone"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:text="@string/share_to_circle"
+                android:textColor="@color/gray_7b"
+                android:textSize="26px" />
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/share_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30px"
+                app:kswOffColor="@color/gray_e"
+                app:kswOnColor="@color/app_color"
+
+                />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32px"
+            android:layout_marginRight="38px"
+            android:id="@+id/suggest_describe_layout"
+            android:layout_marginTop="26px">
+
+            <View
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:layout_marginLeft="6px"
+                android:background="@drawable/property_suggest_describe_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:letterSpacing="0.12"
+                android:text="@string/property_suggest_describe"
+                android:textColor="#aaaaaa"
+                android:lineSpacingExtra="12px"
+                android:textSize="22px" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_property_service_submit_btn_bg"
+        android:gravity="center"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="34px" />
+</com.zhy.autolayout.AutoRelativeLayout>

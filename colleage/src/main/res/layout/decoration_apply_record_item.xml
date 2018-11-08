@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mode"
+            type="com.college.common_libs.domain.property.DecorateApplyTo" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                app:layout_auto_basewidth="height"
+                android:id="@+id/service_icon"
+                android:layout_width="75px"
+                android:layout_height="75px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="44px"
+                android:scaleType="fitXY"
+                android:src="@drawable/decorating_icon"
+                android:contentDescription="@string/app_name" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/service_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="146px"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="29px"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:width="350px"
+
+                    android:text="@{mode.companyName}"
+                    android:textColor="@color/dark_color"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:id="@+id/service_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16px"
+                    android:text="@{mode.roomNoDesc}"
+                    android:textColor="#7b7b7b"
+                    android:textSize="22px" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15px"
+                    android:layout_marginTop="45px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/service_progress"
+                        android:textColor="#7b7b7b"
+                        android:textSize="22px" />
+
+                    <TextView
+                        android:id="@+id/process"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{mode.applyStatusDesc}"
+                        android:textSize="22px" />
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <TextView
+                android:id="@+id/service_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="17px"
+                android:layout_marginTop="32px"
+                android:textColor="#7b7b7b"
+                android:textSize="20px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/service_layout"
+                android:layout_marginLeft="36px"
+                android:background="@color/gray_eb" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </LinearLayout>
+</layout>

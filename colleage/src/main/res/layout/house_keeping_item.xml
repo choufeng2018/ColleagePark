@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<data>
+ <variable
+     name="mode"
+     type="com.college.common_libs.domain.property.ServiceTypeTo"/>
+</data>
+<com.zhy.autolayout.AutoRelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+ <com.zhy.autolayout.AutoLinearLayout
+     android:layout_width="180px"
+     android:layout_height="222px"
+     android:orientation="vertical"
+     android:background="@color/white"
+     >
+  <ImageView
+      android:layout_width="104px"
+      android:layout_height="104px"
+      app:layout_auto_basewidth="height"
+      android:id="@+id/service_image"
+      android:contentDescription="@string/app_name"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="35px"
+      />
+   <TextView
+       android:layout_width="124px"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center_horizontal"
+       android:textColor="@color/black_46"
+       android:layout_marginTop="16px"
+       android:gravity="center_horizontal"
+       android:textSize="24px"
+       android:text="@{mode.name}"
+       />
+ </com.zhy.autolayout.AutoLinearLayout>   
+</com.zhy.autolayout.AutoRelativeLayout>
+</layout>

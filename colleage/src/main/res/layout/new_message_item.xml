@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+  <data>
+   <variable
+       name="mode"
+       type="com.college.common_libs.domain.circle.NeighborPostTo"/>
+  </data>
+ <com.zhy.autolayout.AutoRelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+
+<com.zhy.autolayout.AutoRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="172px"
+    android:background="@color/white"
+    >
+ <com.makeramen.roundedimageview.RoundedImageView
+     android:layout_width="134px"
+     android:layout_height="134px"
+     android:layout_centerVertical="true"
+     android:layout_marginLeft="24px"
+     app:riv_oval="true"
+     android:scaleType="fitXY"
+     android:background="@drawable/default_head_image"
+     app:layout_auto_basewidth="height"
+     android:id="@+id/head_image"
+
+     />
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="22px"
+        android:layout_toRightOf="@id/head_image"
+        android:layout_marginTop="34px"
+        >
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+          android:id="@+id/owner_name"
+           android:textSize="32px"
+           android:textColor="@color/black_35"
+           />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12px"
+            android:textSize="24px"
+            android:textColor="@color/black_35"
+            android:id="@+id/join_type"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8px"
+            android:textColor="@color/gray_text_9"
+            android:textSize="24px"
+            android:id="@+id/post_time"
+            
+            />
+    </com.zhy.autolayout.AutoLinearLayout>
+    <TextView
+        android:layout_width="204px"
+        android:layout_height="124px"
+        android:layout_marginTop="30px"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="36px"
+        android:background="@color/gray_e"
+        android:textColor="@color/black_35"
+        android:maxLines="4"
+        android:paddingLeft="15px"
+        android:paddingRight="5px"
+        android:textSize="24px"
+        android:id="@+id/post_content"
+        android:ellipsize="end"
+        android:paddingTop="5px"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#c1c1c1"
+        android:layout_alignParentBottom="true"
+        />
+</com.zhy.autolayout.AutoRelativeLayout>
+ </com.zhy.autolayout.AutoRelativeLayout>
+</layout>

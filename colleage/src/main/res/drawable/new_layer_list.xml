@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@android:id/background"
+
+        android:drawable="@drawable/evaluation_new_star_ba">
+    </item>
+    <!--未选中图片效果-->
+    <item
+        android:id="@android:id/secondaryProgress"
+        android:drawable="@drawable/evaluation_new_star_ba">
+    </item>
+    <!--选中图片效果-->
+    <item
+        android:id="@android:id/progress"
+        android:drawable="@drawable/evaluation_new_star">
+    </item>
+
+
+</layer-list>

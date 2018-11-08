@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nacity.college">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <!-- Android M -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:name=".MainApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".main.MainActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".news.NewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".news.EntrepreneurshipServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".recruit.RecruitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".recruit.RecruitDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".news.FinancingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".news.LegalServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".news.NewsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".news.ParkInnovateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".news.ParkActivitiesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".news.ParkActivitiesDetailAcitivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".news.PolicyServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".news.EnrollActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StartTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ExpectActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".login.LoginOrRegisterActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".push.ForceOfflineActivity"
+            android:hardwareAccelerated="false"
+            android:theme="@style/myTransparent"
+            android:screenOrientation="portrait" />
+
+  <activity
+            android:name=".push.PushJumpActivity"
+            android:hardwareAccelerated="false"
+            android:theme="@style/myTransparent"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".login.RegisterActivity"
+            android:screenOrientation="portrait"
+
+            />
+
+        <activity
+            android:name=".login.SelectCityActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".login.SelectApartmentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".myself.ShareActivity"
+            android:screenOrientation="portrait"
+
+            />
+
+        <activity
+            android:name=".share.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name=".property.RoomRepairActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateUnspecified" />
+        <activity
+            android:name="com.lidong.photopicker.PhotoPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PhotoPickerTheme" />
+        <activity
+            android:name="com.lidong.photopicker.PhotoPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PhotoPickerTheme" />
+        <activity
+            android:name=".property.SelectServiceCategoryActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".property.ChangeContactAndPhoneActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".property.DecorationApplyActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".property.ParkingApplyActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".property.ParkDistributionActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".property.ParkDistributionOrderActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateUnspecified"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".property.ApplyDetailActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".property.ParkingApplyDetailActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".property.DistributionRecordActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".property.PublicRepairActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateUnspecified" />
+        <activity
+            android:name=".property.PropertyPraiseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateUnspecified" />
+
+        <activity
+            android:name=".property.PropertySuggestActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateUnspecified" />
+        <activity
+            android:name=".property.PropertyComplaintActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateUnspecified" />
+        <activity
+            android:name=".property.HouseKeepingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateUnspecified" />
+        <activity
+            android:name=".property.KeeperActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateUnspecified" />
+        <activity
+            android:name=".base.PostImageDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateUnspecified" />
+        <activity
+            android:name=".base.TextPictureWebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".circle.CareActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".circle.FansActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".circle.JoinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".circle.NewMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".circle.PostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".circle.PostDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".circle.CirclePersonalCenterActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".myself.PersonCenterActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.soundcloud.android.crop.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".myself.AboutActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".base.AdWebActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".myself.MyServiceRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".myself.FeedBackActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".guide.ParkGuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".guide.EnterpriseActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".rent.HouseListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".rent.HouseDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".login.GuideActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".property.PraiseDetailActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".login.FinishDataActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".guide.IntroduceListActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".property.ServiceDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".property.PropertyEvaluateActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".property.ReadEvaluateActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".door.MyDoorActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".door.ApplyDoorActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".door.ApplyDoorDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":multiprocess"
+            tools:node="replace">
+
+
+        </service>
+
+
+        <service android:name="com.hzblzx.miaodou.sdk.core.bluetooth.NRFUartService" />
+        <service android:name="com.hzblzx.miaodou.sdk.core.bluetooth.CSRUartService" />
+        <meta-data android:name="MIAODOU_APP_KEY" android:value="b586b0870cff4c50b28763d7c73aea94"> </meta-data>
+
+        <receiver
+            android:name=".push.JPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <!--Required 用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!--Required 用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!--Required 用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!--Required 用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />+
+
+                <category android:name="com.nacity.college" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!--集成line客户端登录授权，需要添如下格式的过滤器-->
+            <intent-filter>
+                <data android:scheme="line.1477692153" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+
+        <meta-data
+            android:name="design_width"
+            android:value="750" />
+
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+    </application>
+
+
+</manifest>

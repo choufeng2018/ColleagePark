@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<include layout="@layout/app_title_layout"/>
+    <com.gigamole.navigationtabstrip.NavigationTabStrip
+        android:id="@+id/tpi"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginEnd="24px"
+        android:layout_marginStart="24px"
+        android:background="@color/white"
+        app:nts_active_color="@color/app_color"
+        app:nts_color="@color/app_color"
+        app:nts_inactive_color="#cccccc"
+        app:nts_size="26px"
+        app:nts_weight="6px" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/gray_eb" />
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPager"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/transparent"
+        android:layout_marginLeft="26px"
+        android:layout_marginRight="26px"
+        android:textSize="30px"
+        android:id="@+id/sub_textView"
+        android:layout_alignParentBottom="true"
+        />
+</com.zhy.autolayout.AutoLinearLayout>

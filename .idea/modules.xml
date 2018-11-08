@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CollegePark.iml" filepath="$PROJECT_DIR$/CollegePark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/colleage/colleage.iml" filepath="$PROJECT_DIR$/colleage/colleage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-libs/common-libs.iml" filepath="$PROJECT_DIR$/common-libs/common-libs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/photopicker/photopicker.iml" filepath="$PROJECT_DIR$/photopicker/photopicker.iml" />
+    </modules>
+  </component>
+</project>

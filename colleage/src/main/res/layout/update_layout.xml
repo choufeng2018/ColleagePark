@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mode"
+            type="com.college.common_libs.domain.user.UpdateTo" />
+    </data>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoLinearLayout
+           android:id="@+id/update_layout"
+            android:background="@drawable/dialog_updata_bg"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_width="540px"
+            android:layout_marginTop="435px"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_marginTop="59px"
+                android:text="版本更新"
+                android:textSize="30px"
+                android:textColor="#333333"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55px"
+                android:id="@+id/update_content"
+                android:textSize="28px"
+                android:layout_marginLeft="34px"
+                android:layout_marginRight="34px"
+                android:textColor="@color/gray_9"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18px"
+                android:textSize="26px"
+                android:layout_marginLeft="34px"
+                android:layout_marginRight="34px"
+                android:textColor="#333333"
+                android:text="是否取消本次版本更新？"/>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="34px"
+                android:layout_marginRight="34px"
+                android:layout_height="70px"
+                android:layout_marginBottom="32px"
+                android:layout_marginTop="48px"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:textSize="30px"
+                    android:textColor="@color/gray_9"
+                    android:text="确定"
+                    android:gravity="center"
+                    android:id="@+id/cancel"
+                    android:layout_width="218px"
+                    android:background="@drawable/update_cancel_bg"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:textSize="30px"
+                    android:id="@+id/confirm"
+                    android:textColor="@color/white"
+                    android:layout_alignParentRight="true"
+                    android:text="取消"
+                    android:gravity="center"
+                    android:layout_width="218px"
+                    android:background="@drawable/update_confirm_bg"
+                    android:layout_height="match_parent"/>
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_width="540px"
+            android:id="@+id/no_update_layout"
+
+            android:orientation="vertical"
+
+            >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="256px"
+                android:background="@drawable/update_top_bg" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="24px"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/update_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="54px"
+                    android:layout_marginTop="40px"
+                    android:textColor="@color/dark_color" />
+
+                <TextView
+                    android:id="@+id/update_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="54px"
+                    android:layout_marginTop="28px"
+                    android:textColor="#464646" />
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray_ed" />
+
+            <Button
+                android:id="@+id/no_update"
+                android:layout_width="match_parent"
+                android:layout_height="108px"
+                android:background="@drawable/update_new_btn_bg"
+                android:gravity="center"
+                android:text="@string/confirm"
+                android:textColor="@color/gray_b4"
+                android:textSize="32px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+</layout>

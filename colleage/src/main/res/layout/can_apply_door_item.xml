@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+ <data>
+  <variable
+      name="mode"
+      type="com.college.common_libs.domain.door.CanApplyDoorTo"/>
+ </data>
+
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10px"
+            android:background="#eeeeee">
+
+        </View>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#d4d4d4" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140px"
+            android:background="@color/white">
+
+            <View
+                android:id="@+id/code_register"
+                android:layout_width="83px"
+                android:layout_height="83px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="49px"
+                android:background="@drawable/my_open_door_key_icon"
+
+                />
+
+            <TextView
+                android:id="@+id/door_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="64px"
+                android:layout_marginTop="25px"
+                android:layout_toRightOf="@+id/code_register"
+                android:text="@{mode.doorName}"
+                android:textColor="#5b4d4c"
+                android:textSize="35px" />
+
+            <TextView
+                android:id="@+id/open_door_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="17px"
+                android:layout_marginLeft="64px"
+                android:layout_marginTop="25px"
+                android:layout_toRightOf="@+id/code_register"
+                android:text=""
+                android:textColorHint="#5b4d4c"
+                android:hint="@string/no_open_door_time"
+                android:textColor="#5b4d4c"
+                android:textSize="26px" />
+
+            <View
+                android:id="@+id/door_select"
+                android:layout_width="29px"
+                android:layout_height="29px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="37px"
+
+                android:background="@drawable/my_door_un_select_icon" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#d4d4d4" />
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>
+</layout>

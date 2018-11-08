@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@drawable/neighbor_load_bg">
+<com.bm.library.PhotoView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:id="@+id/post_image"
+    android:layout_centerInParent="true"
+
+    />
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:id="@+id/image_type"
+     android:text=""
+     android:background="@drawable/neighbor_image_type_bg"
+     android:textColor="@color/white"
+     android:layout_alignParentRight="true"
+     android:layout_alignParentBottom="true"
+
+     android:textSize="26px"
+     android:visibility="gone"
+     android:gravity="center"
+     />
+</com.zhy.autolayout.AutoRelativeLayout>

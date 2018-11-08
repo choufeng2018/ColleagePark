@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="100px">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45px"
+        android:layout_marginTop="10px"
+        android:textColor="@color/app_text_color"
+        android:textSize="28px"
+        android:id="@+id/title"
+        android:singleLine="true"
+        android:layout_marginRight="38px"
+        android:text="智慧园区整体介绍"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45px"
+        android:layout_marginTop="8px"
+        android:layout_marginBottom="8px"
+        android:textColor="#999999"
+        android:textSize="24px"
+        android:id="@+id/detail"
+        android:singleLine="true"
+        android:layout_marginRight="38px"
+        android:text="智慧园区，是指政府集中统一规划"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="18px"
+        android:layout_marginRight="30px"
+        android:textSize="18px"
+        android:textColor="@color/gray_b4"
+        android:id="@+id/time"
+        android:text="2016-12-09"/>
+</com.zhy.autolayout.AutoRelativeLayout>

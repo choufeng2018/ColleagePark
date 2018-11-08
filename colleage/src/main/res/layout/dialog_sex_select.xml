@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#7f000000">
+
+
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="173px"
+            android:layout_above="@+id/cancel"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/select_sex_bg"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/select_man"
+                android:layout_width="match_parent"
+                android:layout_height="86px"
+                android:background="@color/transparent"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/selectManText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/man"
+                        android:textColor="@color/white"
+                        android:textSize="28px" />
+
+                    <ImageView
+                        android:id="@+id/sexIcon"
+                        android:layout_width="28px"
+                        android:layout_height="28px"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/man_white"
+                        android:layout_marginLeft="28px"
+                        android:contentDescription="@string/app_name"
+
+               />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/white"
+                app:layout_marginLeftPercent="24px"
+
+                app:layout_marginRightPercent="24px">
+
+            </View>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/select_woman"
+                android:layout_width="match_parent"
+                android:layout_height="86px"
+                android:background="@color/transparent"
+                android:orientation="vertical"
+
+
+                >
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/selectWomanText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/woman"
+                        android:textColor="@color/white"
+                        android:textSize="28px"
+
+
+                   />
+
+                    <ImageView
+                        android:id="@+id/womanIcon"
+                        android:layout_width="29px"
+                        android:layout_height="29px"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/woman_white"
+                        android:contentDescription="@string/app_name"
+                        android:layout_marginLeft="28px"
+               />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoRelativeLayout>

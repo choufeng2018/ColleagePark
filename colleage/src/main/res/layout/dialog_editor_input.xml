@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_send"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#aaaaaa" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/ll01"
+            android:background="#aaaaaa" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/ll01"
+            android:layout_width="580px"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_marginBottom="14px"
+
+            android:layout_marginLeft="27px"
+
+            android:layout_marginTop="14px"
+            android:background="@drawable/circle_comment_bg"
+            android:minHeight="66px"
+            android:padding="0dp">
+
+            <EditText
+
+
+                android:id="@+id/comment_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:hint=""
+                android:maxLength="500"
+                android:minHeight="60px"
+                android:paddingLeft="27px"
+                android:textColor="@color/black_46"
+                android:textColorHint="@color/gray_b4"
+                android:textSize="28px" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/send"
+            android:textColor="@color/app_color"
+            android:textSize="30px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

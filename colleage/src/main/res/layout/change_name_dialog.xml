@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="100"
+    android:id="@+id/parent"
+    android:background="#7F000000"
+    >
+<com.zhy.android.percent.support.PercentLinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_widthPercent="71.94%w"
+    android:layout_centerInParent="true">
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/change_name_up"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="23.93%w">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_marginTopPercent="8.68%w"
+            android:text="是否确认本次修改"
+            android:id="@+id/title"
+            android:gravity="center"
+            android:textColor="#3e3638"
+            android:textStyle="bold"
+            app:layout_textSizePercent="6.38%w"
+            />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+<com.zhy.android.percent.support.PercentLinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="16.21%w"
+        android:background="@drawable/change_name_left"
+        android:text="取消"
+        android:layout_marginTop="1px"
+        android:gravity="center"
+        android:textColor="#006eff"
+        android:id="@+id/btn_cancel"
+        app:layout_textSizePercent="6.38%w"
+        />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray_d9">
+
+    </View>
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="16.21%w"
+        android:background="@drawable/change_name_right"
+        android:text="确定"
+        android:id="@+id/btn_add"
+        android:layout_marginTop="1px"
+        android:gravity="center"
+        android:textColor="#006eff"
+
+        app:layout_textSizePercent="6.38%w"
+        />
+</com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>
+
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

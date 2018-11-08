@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                     android:orientation="vertical"
+                                     android:background="@color/white"
+
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:scaleType="fitXY"
+        android:id="@+id/companyImage">
+    </ImageView>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170px"
+        >
+
+        <ImageView
+            android:layout_marginTop="30px"
+            android:scaleType="fitXY"
+            android:id="@+id/company_image"
+            android:layout_width="110px"
+            android:layout_height="110px"
+            android:layout_marginLeft="30px"/>
+        <ImageView
+            android:layout_marginTop="29px"
+            android:layout_width="112px"
+            android:layout_height="112px"
+            android:background="@drawable/company_bg"
+            android:layout_marginLeft="29px"/>
+
+        <TextView
+            android:id="@+id/company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32px"
+            android:layout_marginTop="56px"
+            android:layout_toRightOf="@+id/company_image"
+            android:text="浙江科技园网络有限公司"
+            android:textColor="@color/myself_text_color"
+            android:textSize="28px"/>
+
+        <TextView
+            android:id="@+id/company_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/company_name"
+            android:layout_marginLeft="32px"
+            android:layout_marginTop="20px"
+            android:layout_toRightOf="@+id/company_image"
+            android:text="A座一单元707"
+            android:textColor="@color/gray_96"
+            android:textSize="18px"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12px"
+        android:background="#e7e7e7">
+    </View>
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        >
+
+        <TextView
+            android:id="@+id/contact"
+            android:text="联系方式"
+            android:textSize="28px"
+            android:textColor="@color/myself_text_color"
+            android:layout_marginTop="14px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"/>
+        <View
+            android:id="@+id/view"
+            android:layout_marginTop="50px"
+            android:layout_marginLeft="28px"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ededed">
+        </View>
+
+        <TextView
+            android:id="@+id/contact_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32px"
+            android:layout_marginTop="18px"
+            android:layout_below="@+id/view"
+            android:text="联系人：李先生"
+            android:textColor="@color/gray_96"
+            android:textSize="24px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/contact_phone"
+            android:layout_marginLeft="32px"
+            android:layout_marginTop="13px"
+            android:layout_below="@+id/contact_people"
+            android:text="联系电话：18758168587"
+            android:textColor="@color/gray_96"
+            android:textSize="24px"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12px"
+        android:background="#e7e7e7">
+    </View>
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <TextView
+            android:id="@+id/introduce"
+            android:text="公司简介"
+            android:textSize="28px"
+            android:layout_marginTop="14px"
+            android:textColor="@color/myself_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            />
+        <View
+            android:id="@+id/view_01"
+            android:layout_marginTop="50px"
+            android:layout_marginLeft="28px"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ededed">
+        </View>
+        <com.joypark.nacity.base.ExpandableTextView
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_below="@+id/view_01"
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="20px"
+            app:DrawableAndTextGravity="right"
+            app:collapseDrawable="@drawable/collapsing_icon"
+            app:contentTextColor="@color/gray_96"
+            app:expandCollapseTextColor="@color/app_color"
+            app:expandDrawable="@drawable/expanding_icon"
+            app:expandText="展开"
+            app:collapseText ="收起"
+            app:maxCollapsedLines="5"
+            ></com.joypark.nacity.base.ExpandableTextView>
+
+</com.zhy.autolayout.AutoRelativeLayout>
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recruit_info"
+        >
+
+        <View
+            android:id="@+id/view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="12px"
+            android:background="#e7e7e7">
+        </View>
+    <TextView
+        android:id="@+id/recruit"
+        android:layout_below="@+id/view_layout"
+        android:text="公司招聘"
+        android:textSize="28px"
+        android:layout_marginTop="14px"
+        android:textColor="@color/myself_text_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        />
+        <View
+            android:layout_marginTop="62px"
+            android:layout_marginLeft="28px"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ededed"
+            android:id="@+id/view2">
+        </View>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>
