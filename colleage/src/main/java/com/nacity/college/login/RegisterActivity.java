@@ -46,11 +46,9 @@ public class RegisterActivity extends BaseActivity implements LoginView {
         setContentView(R.layout.activity_register);
         ButterKnife.bind(this);
         setTitle(Constant.PHONE_REGISTER);
-        EventBus.getDefault().register(this);
         model = new LoginPresenter(this);
-
+        setTitle("注册");
     }
-
 
 
     @OnClick({R.id.finish, R.id.get_verification})
@@ -67,14 +65,12 @@ public class RegisterActivity extends BaseActivity implements LoginView {
             case R.id.finish:
 
 
-                    loadingShow();
-                    model.parkRegister("", apartmentInfo.getApartmentInfoTo().getGardenId(), phoneNumber.getText().toString(), verificationCode.getText().toString());
+                loadingShow();
+                model.parkRegister("", apartmentInfo.getApartmentInfoTo().getGardenId(), phoneNumber.getText().toString(), verificationCode.getText().toString());
 
                 break;
         }
     }
-
-
 
 
     @Override
@@ -113,13 +109,14 @@ public class RegisterActivity extends BaseActivity implements LoginView {
     @Override
     public void setCountTime(int second) {
 
-            runOnUiThread(() -> {    if (second > 0)
+        runOnUiThread(() -> {
+            if (second > 0)
                 getVerification.setText(second + Constant.AFTER_VERIFICATION_CODE);
             else {
                 getVerification.setText(Constant.RE_SEND_VERIFICATION_CODE);
                 getVerification.setEnabled(true);
             }
-            });
+        });
 
     }
 

@@ -53,6 +53,7 @@ public class LoginActivity extends BaseActivity implements LoginView {
         model = new LoginPresenter(this);
         addVerificationListener();
         EventBus.getDefault().register(this);
+        setTitle("登录");
 
     }
 

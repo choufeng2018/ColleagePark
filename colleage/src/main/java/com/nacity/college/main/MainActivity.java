@@ -272,10 +272,10 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
     private void initFragment() {
         fragmentList.add(new MainHomeFragment2());
         fragmentList.add(new CircleFragment());
-        fragmentList.add(new MailFragment());
+
         fragmentList.add(new MyselfFragment());
         viewPager.setAdapter(adapter);
-        viewPager.setOffscreenPageLimit(4);
+        viewPager.setOffscreenPageLimit(3);
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -286,8 +286,8 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
             @Override
             public void onPageSelected(int position) {
                 setMenuLayout(position);
-                if (position==3)
-                    ((MyselfFragment)fragmentList.get(3)).getUserInfo();
+                if (position==2)
+                    ((MyselfFragment)fragmentList.get(2)).getUserInfo();
                 else if (position==1)
                     ((CircleFragment)fragmentList.get(1)).setUserInfo();
                 else if (position==0) {
@@ -311,11 +311,11 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
 
         @Override
         public int getCount() {
-            return 4;
+            return 3;
         }
     };
 
-    @OnClick({R.id.main_home_layout, R.id.main_circle_layout, R.id.main_mail_layout, R.id.main_myself_layout})
+    @OnClick({R.id.main_home_layout, R.id.main_circle_layout,  R.id.main_myself_layout})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.main_home_layout:
@@ -324,11 +324,8 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
             case R.id.main_circle_layout:
                 viewPager.setCurrentItem(1);
                 break;
-            case R.id.main_mail_layout:
-                viewPager.setCurrentItem(2);
-                break;
             case R.id.main_myself_layout:
-                viewPager.setCurrentItem(3);
+                viewPager.setCurrentItem(2);
                 break;
         }
     }
@@ -338,8 +335,6 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
         mainHomeText.setTextColor(currentPosition == 0 ? Color.parseColor("#6d75a4") : Color.parseColor("#b4b4b4"));
         mainCircleIcon.setBackgroundResource(currentPosition == 1 ? R.drawable.main_circle_select : R.drawable.main_circle_un_select);
         mainCircleText.setTextColor(currentPosition == 1 ? Color.parseColor("#6d75a4") : Color.parseColor("#b4b4b4"));
-        mainMailIcon.setBackgroundResource(currentPosition == 2 ? R.drawable.main_mail_select : R.drawable.main_mail_un_select);
-        mainMailText.setTextColor(currentPosition == 2 ? Color.parseColor("#6d75a4") : Color.parseColor("#b4b4b4"));
         mainMyselfIcon.setBackgroundResource(currentPosition == 3 ? R.drawable.main_myself_select : R.drawable.main_myself_un_select);
         mainMyselfText.setTextColor(currentPosition == 3 ? Color.parseColor("#6d75a4") : Color.parseColor("#b4b4b4"));
 

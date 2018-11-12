@@ -63,7 +63,7 @@
          </com.zhy.autolayout.AutoRelativeLayout>
         </com.zhy.autolayout.AutoRelativeLayout>
 
-        <com.joypark.nacity.base.utils.EasySlidingTabRecord
+        <com.nacity.college.base.utils.EasySlidingTabRecord
             android:id="@+id/tpi"
             android:layout_width="match_parent"
             android:layout_height="100px"

@@ -5,7 +5,7 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <include layout="@layout/login_title_layout" />
+    <include layout="@layout/title_layout" />
 
     <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"
@@ -89,7 +89,7 @@
         android:layout_width="556px"
         android:layout_height="1px"
         android:layout_gravity="center_horizontal"
-        android:background="#40ffffff" />
+        android:background="@color/e0" />
 
     <TextView
         android:id="@+id/finish"

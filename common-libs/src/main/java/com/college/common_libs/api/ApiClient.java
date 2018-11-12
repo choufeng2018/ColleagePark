@@ -45,7 +45,7 @@ public class ApiClient {
     private Context mContext;
     private long time = System.currentTimeMillis();
     private String sign = MD5.getMD5(MD5.getMD5(String.valueOf(time)) + "AIzaSyDgDTWUqhXyDx_NayRsGNHBcYTjiVyB1Mw");
-    private int[] certificates = {R.raw.garden};
+//    private int[] certificates = {R.raw.garden};
 
     private static class SingletonHolder {
         private static final ApiClient INSTANCE = new ApiClient();
@@ -107,7 +107,7 @@ public class ApiClient {
                 .connectTimeout(15000, TimeUnit.MILLISECONDS)
                 .addInterceptor(headInterceptor)
                 .addInterceptor(logInterceptor)
-                .sslSocketFactory(getSSLSocketFactory(mContext, certificates))
+//                .sslSocketFactory(getSSLSocketFactory(mContext, certificates))
                 .hostnameVerifier((hostname, session) -> "progarden.joyhomenet.com".equals(hostname))
                 .addNetworkInterceptor(new HttpCacheInterceptor())
                 .cache(cache)
@@ -119,8 +119,8 @@ public class ApiClient {
         // String baseUrl = "https://s1.joyhomenet.com:9043/ihome/";
         //测试
     // String baseUrl = "http://tgarden.joyhomenet.com:89/garden/";
-       // String baseUrl = "http://progarden.joyhomenet.com:8081/garden/";
-           String baseUrl = "https://progarden.joyhomenet.com:9858/garden/";
+        String baseUrl = "http://progarden.joyhomenet.com:8081/garden/";
+//           String baseUrl = "https://progarden.joyhomenet.com:9858/garden/";
 
 
         retrofit = new Retrofit.Builder()

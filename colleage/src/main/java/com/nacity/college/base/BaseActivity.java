@@ -58,7 +58,25 @@ public abstract class BaseActivity<T> extends FragmentActivity implements BaseVi
     }
 
 
-    public void setTitle(String titleContent) {
+    protected void setTitle(String titleContent) {
+
+        titleName = (TextView) findViewById(R.id.title_name);
+        if (titleName != null)
+            titleName.setText(titleContent);
+        View back = findViewById(R.id.back);
+        if (back != null)
+            back.setOnClickListener(v -> {
+                if (loadingDialog != null && loadingDialog.isShowing()) {
+                    loadingDialog.dismiss();
+                    finish();
+                } else
+                    onBackPressed();
+            });
+
+
+    }
+
+    protected void setTitleName(String titleContent) {
 
         titleName = (TextView) findViewById(R.id.title_name);
         if (titleName != null)

@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.joypark.nacity.main.MainActivity">
+    tools:context=".main.MainActivity">
 
-    <com.joypark.nacity.base.utils.NoSlideViewPager
+    <com.nacity.college.base.utils.NoSlideViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/menu_layout"
-        android:id="@+id/viewPager"
-        >
+        android:layout_above="@+id/menu_layout">
 
-    </com.joypark.nacity.base.utils.NoSlideViewPager>
+    </com.nacity.college.base.utils.NoSlideViewPager>
+
     <View
+        android:id="@+id/divide_line"
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="@color/divide_line"
         android:layout_above="@+id/menu_layout"
-        android:id="@+id/divide_line"
-        />
+        android:background="@color/divide_line" />
 
-    <com.zhy.autolayout.AutoLinearLayout
+    <com.zhy.autolayout.AutoRelativeLayout
         android:id="@+id/menu_layout"
         android:layout_width="match_parent"
         android:layout_height="110px"
@@ -35,20 +34,19 @@
             android:id="@+id/main_home_layout"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-
             android:layout_marginLeft="56px"
-            android:paddingLeft="20px"
-            android:paddingRight="20px"
+
             android:orientation="vertical"
-            >
+            android:paddingLeft="20px"
+            android:paddingRight="20px">
 
             <View
-                android:layout_marginTop="18px"
                 android:id="@+id/main_home_icon"
                 android:layout_width="47px"
-                app:layout_auto_basewidth="height"
                 android:layout_height="43px"
-                android:background="@drawable/main_home_select" />
+                android:layout_marginTop="18px"
+                android:background="@drawable/main_home_select"
+                app:layout_auto_basewidth="height" />
 
             <TextView
                 android:id="@+id/main_home_text"
@@ -56,8 +54,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:text="@string/main_home"
                 android:layout_marginBottom="12px"
+                android:text="@string/main_home"
                 android:textColor="@color/main_menu_select"
                 android:textSize="21px" />
         </com.zhy.autolayout.AutoRelativeLayout>
@@ -66,22 +64,22 @@
             android:id="@+id/main_circle_layout"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-
+            android:layout_centerHorizontal="true"
             android:layout_marginLeft="96px"
-            android:paddingLeft="20px"
-            android:paddingRight="20px"
-
             android:orientation="vertical"
+            android:paddingLeft="20px"
+
+            android:paddingRight="20px"
 
             >
 
             <View
-                android:layout_marginTop="18px"
                 android:id="@+id/main_circle_icon"
                 android:layout_width="46px"
                 android:layout_height="46px"
-                app:layout_auto_basewidth="height"
-                android:background="@drawable/main_circle_un_select" />
+                android:layout_marginTop="18px"
+                android:background="@drawable/main_circle_un_select"
+                app:layout_auto_basewidth="height" />
 
             <TextView
                 android:id="@+id/main_circle_text"
@@ -89,9 +87,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginBottom="12px"
                 android:text="@string/main_circle"
                 android:textColor="@color/main_menu_un_select"
-                android:layout_marginBottom="12px"
                 android:textSize="21px" />
         </com.zhy.autolayout.AutoRelativeLayout>
 
@@ -105,14 +103,14 @@
             android:orientation="vertical"
             android:paddingLeft="20px"
             android:paddingRight="20px"
-            >
+            android:visibility="gone">
 
             <View
                 android:id="@+id/main_mail_icon"
-                app:layout_auto_basewidth="height"
                 android:layout_width="42px"
                 android:layout_height="42px"
-                android:background="@drawable/main_mail_un_select" />
+                android:background="@drawable/main_mail_un_select"
+                app:layout_auto_basewidth="height" />
 
             <TextView
                 android:id="@+id/main_mail_text"
@@ -129,33 +127,32 @@
             android:id="@+id/main_myself_layout"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingLeft="20px"
-            android:paddingRight="20px"
-
-            android:layout_marginLeft="96px"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="56px"
 
             android:orientation="vertical"
 
-            >
+            android:paddingLeft="20px"
+            android:paddingRight="20px">
 
             <View
-                android:layout_marginTop="18px"
                 android:id="@+id/main_myself_icon"
-                app:layout_auto_basewidth="height"
                 android:layout_width="46px"
                 android:layout_height="46px"
-                android:background="@drawable/main_myself_un_select" />
+                android:layout_marginTop="18px"
+                android:background="@drawable/main_myself_un_select"
+                app:layout_auto_basewidth="height" />
 
             <TextView
-                android:layout_marginBottom="12px"
                 android:id="@+id/main_myself_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginBottom="12px"
                 android:text="@string/main_myself"
                 android:textColor="@color/main_menu_un_select"
                 android:textSize="21px" />
         </com.zhy.autolayout.AutoRelativeLayout>
-    </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
 </com.zhy.autolayout.AutoRelativeLayout>
