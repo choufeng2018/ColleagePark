@@ -2,39 +2,44 @@
 <com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_bg_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <View
-        android:layout_width="392px"
-        android:layout_height="81px"
+        android:layout_width="366px"
+        android:layout_height="304px"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="360px"
+        android:layout_marginTop="220px"
         android:background="@drawable/logon_or_register_icon" />
 
-    <TextView
+    <com.ruffian.library.RTextView
         android:id="@+id/login"
-        android:layout_width="450px"
-        android:layout_height="90px"
+        android:layout_width="400px"
+        android:layout_height="80px"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="748px"
-        android:background="@drawable/selector_login_bg"
+        app:corner_radius="80px"
+        app:border_color_normal="@color/black_3"
+        app:border_width_normal="1px"
         android:gravity="center"
         android:text="@string/login"
-        android:textColor="@color/white"
+        android:textColor="@color/black_3"
         android:textSize="36px" />
 
-    <TextView
+    <com.ruffian.library.RTextView
         android:id="@+id/register"
-        android:layout_width="450px"
-        android:layout_height="90px"
+        android:layout_width="400px"
+        android:layout_height="80px"
         android:layout_below="@id/login"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30px"
-        android:background="@drawable/selector_register_bg"
+        app:corner_radius="80px"
+        app:border_color_normal="@color/black_3"
+        app:border_width_normal="1px"
         android:gravity="center"
         android:text="@string/register"
-        android:textColor="@color/white"
+        android:textColor="@color/black_3"
         android:textSize="36px" />
 
 </com.zhy.autolayout.AutoRelativeLayout>

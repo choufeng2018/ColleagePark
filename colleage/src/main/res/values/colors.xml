@@ -13,7 +13,7 @@
     <color name="app_green_press">#81ad6b</color>
     <color name="app_green">#6d75a4</color>
     <color name="transparent">#00000000</color>
-    <color name="login_phone_input_color">#66ffffff</color>
+    <color name="login_phone_input_color">#9a9a9a</color>
     <color name="login_search">#a8a8a8</color>
     <color name="main_menu_select">#6d75a4</color>
     <color name="main_menu_un_select">#b4b4b4</color>
@@ -63,4 +63,6 @@
     <color name="no_available">#969696</color>
     <color name="house_detail_line">#ededed</color>
     <color name="house_descripe">#7b7b7b</color>
+    <color name="black_3">#333333</color>
+    <color name="e0">#e0e0e0</color>
 </resources>

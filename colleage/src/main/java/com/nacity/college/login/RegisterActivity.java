@@ -30,10 +30,7 @@ import de.greenrobot.event.Subscribe;
  **/
 
 public class RegisterActivity extends BaseActivity implements LoginView {
-    @BindView(R.id.city_name)
-    TextView cityName;
-    @BindView(R.id.apartment_name)
-    TextView apartmentName;
+
     @BindView(R.id.phone_number)
     EditText phoneNumber;
     @BindView(R.id.verification_code)
@@ -50,38 +47,17 @@ public class RegisterActivity extends BaseActivity implements LoginView {
         ButterKnife.bind(this);
         setTitle(Constant.PHONE_REGISTER);
         EventBus.getDefault().register(this);
-        initView();
         model = new LoginPresenter(this);
 
     }
 
-    private void initView() {
-//        if (apartmentInfo != null && apartmentInfo.getApartmentInfoTo() != null) {
-//            cityName.setText(apartmentInfo.getApartmentInfoTo().getCityName() == null ? "" : apartmentInfo.getApartmentInfoTo().getCityName());
-//            apartmentName.setText(apartmentInfo.getGardenName() == null ? "" : apartmentInfo.getGardenName());
-//        }
-    }
 
-    @OnClick({R.id.finish, R.id.get_verification, R.id.city_layout, R.id.apartment_layout})
+
+    @OnClick({R.id.finish, R.id.get_verification})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.city_layout:
-                Intent intent = new Intent(appContext, SelectCityActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.apartment_layout:
-//                if (TextUtils.isEmpty(cityName.getText().toString())) {
-//                    showErrorMessage(Constant.PLEASE_SELECT_CITY);
-//                    return;
-//                }
-                intent = new Intent(appContext, SelectApartmentActivity.class);
-                if(!TextUtils.isEmpty(cityName.getText().toString())){
-                    Log.i("22222222222222", "cityName: ");
-                    intent.putExtra("CityId", apartmentInfo.getApartmentInfoTo().getCityId()+"");
-                }
-                startActivity(intent);
-                goToAnimation(1);
-                break;
+
+
             case R.id.get_verification:
                 loadingShow();
                 model.getVerificationCode("1", phoneNumber.getText().toString(), getVerification);
@@ -89,41 +65,16 @@ public class RegisterActivity extends BaseActivity implements LoginView {
 
                 break;
             case R.id.finish:
-//                if (TextUtils.isEmpty(cityName.getText().toString())) {
-//                    startActivity(new Intent(appContext, SelectCityActivity.class));
-//                    goToAnimation(1);
-//                }
-                if (TextUtils.isEmpty(apartmentName.getText().toString())) {
-                    intent = new Intent(appContext, SelectApartmentActivity.class);
-                    intent.putExtra("CityId", apartmentInfo.getApartmentInfoTo().getCityId()+"");
-                    startActivity(intent);
-                    goToAnimation(1);
-                } else {
+
 
                     loadingShow();
-                    model.parkRegister(cityName.getText().toString(), apartmentInfo.getApartmentInfoTo().getGardenId(), phoneNumber.getText().toString(), verificationCode.getText().toString());
-                }
+                    model.parkRegister("", apartmentInfo.getApartmentInfoTo().getGardenId(), phoneNumber.getText().toString(), verificationCode.getText().toString());
+
                 break;
         }
     }
 
-    @Subscribe
-    public void getCityAndApartment(Event event) {
-        Log.i("222", ": 111");
-        if ("SelectCity".equals(event.getType())){
-            Log.i("222", ": 112"+event.getMode());
-            if(event.getMode()!=null){
-                cityName.setText(event.getMode() + "");
-            }else{
-                cityName.setText("");
-            }
-        }
-        else if ("SelectApartment".equals(event.getType())) {
-            apartmentName.setText(event.getMode() + "");
 
-        }
-        apartmentInfo = ApartmentInfoHelper.getInstance(appContext);
-    }
 
 
     @Override

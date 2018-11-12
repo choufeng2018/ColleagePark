@@ -108,7 +108,7 @@ dependencies {
     compile 'com.soundcloud.android:android-crop:1.0.1@aar'
     compile 'com.jzxiang.pickerview:TimePickerDialog:1.0.1'
     compile 'se.emilsjolander:stickylistheaders:2.7.0'
-
+    compile 'com.ruffian.library:RTextView:1.0.10'
 
 
 }

@@ -2,83 +2,23 @@
 <com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_bg_color"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <include layout="@layout/login_title_layout" />
 
-    <com.zhy.autolayout.AutoRelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:layout_marginTop="70px"
-        android:id="@+id/city_layout"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:layout_marginLeft="132px"
-            android:textSize="28px"
-            android:layout_centerVertical="true"
-            android:id="@+id/city_name"
-            android:hint="@string/please_select_city"
-            android:textColorHint="@color/login_phone_input_color"
-            />
-        <View
-            android:layout_width="17px"
-            android:layout_height="28px"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="110px"
-            android:layout_centerVertical="true"
-            android:background="@drawable/login_apartment_right_icon"
-            />
-    </com.zhy.autolayout.AutoRelativeLayout>
-    <View
-        android:layout_width="556px"
-        android:layout_height="1px"
-        android:layout_gravity="center_horizontal"
-        android:background="#40ffffff" />
-    <com.zhy.autolayout.AutoRelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:id="@+id/apartment_layout"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:layout_marginLeft="132px"
-            android:textSize="28px"
-            android:layout_centerVertical="true"
-            android:id="@+id/apartment_name"
-            android:hint="@string/please_select_apartment"
-            android:textColorHint="@color/login_phone_input_color"
-            />
-        <View
-            android:layout_width="17px"
-            android:layout_height="28px"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="110px"
-            android:layout_centerVertical="true"
-            android:background="@drawable/login_apartment_right_icon"
-            />
-    </com.zhy.autolayout.AutoRelativeLayout>
-    <View
-        android:layout_width="556px"
-        android:layout_height="1px"
-        android:layout_gravity="center_horizontal"
-        android:background="#40ffffff" />
     <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"
         android:layout_height="100px"
-            
+        android:layout_marginTop="200px"
+
         >
 
         <View
-            android:layout_width="31px"
-            android:layout_height="36px"
+            android:layout_width="40px"
+            android:layout_height="40px"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="132px"
+            android:layout_marginLeft="128px"
             android:background="@drawable/login_phone_icon"
 
             />
@@ -93,7 +33,7 @@
             android:hint="@string/input_phone"
             android:inputType="phone"
             android:maxLength="11"
-            android:textColor="@color/white"
+            android:textColor="@color/black_3"
             android:textColorHint="@color/login_phone_input_color"
             android:textSize="28px" />
     </com.zhy.autolayout.AutoLinearLayout>
@@ -102,15 +42,15 @@
         android:layout_width="556px"
         android:layout_height="1px"
         android:layout_gravity="center_horizontal"
-        android:background="#40ffffff" />
+        android:background="@color/e0" />
 
     <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"
         android:layout_height="100px">
 
         <View
-            android:layout_width="31px"
-            android:layout_height="36px"
+            android:layout_width="40px"
+            android:layout_height="40px"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="132px"
             android:background="@drawable/login_verification_icon"
@@ -127,7 +67,7 @@
             android:hint="@string/input_verification_code"
             android:inputType="number"
             android:maxLength="6"
-            android:textColor="@color/white"
+            android:textColor="@color/black_3"
             android:textColorHint="@color/login_phone_input_color"
 
             android:textSize="28px" />
@@ -141,7 +81,7 @@
             android:background="@drawable/verification_code_bg"
             android:gravity="center"
             android:text="@string/get_verification_code"
-            android:textColor="@color/login_phone_input_color"
+            android:textColor="#8ea1d3"
             android:textSize="20px" />
     </com.zhy.autolayout.AutoLinearLayout>
 
@@ -156,7 +96,7 @@
         android:layout_width="450px"
         android:layout_height="90px"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="200px"
+        android:layout_marginTop="232px"
         android:background="@drawable/selector_login_bg"
         android:gravity="center"
         android:text="@string/finish"
