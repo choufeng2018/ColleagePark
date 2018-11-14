@@ -230,7 +230,7 @@ public class MainHomeFragment extends BaseFragment implements MainHomeView {
     @Override
     public void getAdSuccess(List<AdvertiseTo> advertiseList) {
         BannerUtil.setBanner(banner,advertiseList,R.drawable.park_rent_house_load);
-        banner.setPageIndicator(new int[]{R.drawable.ic_page_indicator, R.drawable.ic_page_indicator_focused}).setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.ALIGN_PARENT_RIGHT);
+        banner.setPageIndicator(new int[]{R.drawable.ic_page_indicator, R.drawable.ic_page_indicator_focused}).setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL);
         banner.startTurning(5000);
     }
 

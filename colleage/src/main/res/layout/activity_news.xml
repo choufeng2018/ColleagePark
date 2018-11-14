@@ -1,31 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zhy.autolayout.AutoLinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="#fff"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <include layout="@layout/app_title_layout"/>
-    <com.gigamole.navigationtabstrip.NavigationTabStrip
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title_layout" />
+    <!--<com.gigamole.navigationtabstrip.NavigationTabStrip-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="88px"-->
+    <!--android:background="@color/white"-->
+    <!---->
+    <!--app:nts_active_color="@color/indicator_title_select_color"-->
+    <!--app:nts_color="@color/indicator_news_select_color"-->
+    <!--app:nts_inactive_color="@color/gray_b4"-->
+    <!--app:nts_weight="6px"-->
+    <!--app:nts_size="12sp"-->
+    <!--android:id="@+id/tpi"-->
+    <!--android:layout_marginStart="24px"-->
+    <!--android:layout_marginEnd="24px"-->
+    <!--/>-->
+    <com.zhy.autolayout.AutoRelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="88px"
-        android:background="@color/white"
-        app:nts_active_color="@color/indicator_title_select_color"
-        app:nts_color="@color/indicator_news_select_color"
-        app:nts_inactive_color="@color/gray_b4"
-        app:nts_weight="6px"
-        app:nts_size="12sp"
-        android:id="@+id/tpi"
-        android:layout_marginStart="24px"
-        android:layout_marginEnd="24px"
-        />
+        android:layout_height="100px">
+
+        <com.nacity.college.base.utils.PingFangTextView
+            android:id="@+id/property_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60px"
+            android:text="物业公告"
+            android:textColor="@color/app_color"
+            android:textSize="30px" />
+
+        <com.nacity.college.base.utils.PingFangTextView
+            android:id="@+id/manager_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:text="管委会公告"
+            android:textColor="@color/black_3"
+            android:textSize="30px"
+            android:layout_alignBaseline="@+id/park_notice"
+            android:layout_alignBottom="@+id/park_notice"
+            android:layout_centerHorizontal="true" />
+
+        <com.nacity.college.base.utils.PingFangTextView
+            android:id="@+id/park_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60px"
+            android:text="园区风采"
+            android:textColor="@color/black_3"
+            android:textSize="30px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="250px"
+        android:layout_height="4px"
+        android:id="@+id/move_line"
+        >
+
+        <View
+            android:layout_width="200px"
+            android:layout_height="match_parent"
+            android:background="@color/app_color"
+            android:layout_centerInParent="true" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
     <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
-        android:id="@+id/view_pager"
-        >
+        android:background="@color/white">
 
     </android.support.v4.view.ViewPager>
 </com.zhy.autolayout.AutoLinearLayout>

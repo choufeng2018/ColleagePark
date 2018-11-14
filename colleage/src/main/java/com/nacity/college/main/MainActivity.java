@@ -27,6 +27,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.gitonway.lee.niftymodaldialogeffects.lib.NiftyDialogBuilder;
 import com.college.common_libs.domain.user.UpdateTo;
 import com.nacity.college.R;
+import com.nacity.college.base.utils.StatuBarUtil;
 import com.nacity.college.databinding.UpdateLayoutBinding;
 import com.nacity.college.MainApp;
 import com.nacity.college.base.BaseActivity;
@@ -93,6 +94,7 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        StatuBarUtil.setStatueBarTextBlack(getWindow());
         initFragment();
         model = new UpdatePresenter(this);
         model.getUpdateInfo();
@@ -280,7 +282,6 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
             }
 
             @Override

@@ -53,6 +53,7 @@ public abstract class BaseActivity<T> extends FragmentActivity implements BaseVi
 
         appContext = this;
         StatuBarUtil.setStatueBarTransparent(getWindow());
+        StatuBarUtil.setStatueBarTextBlack(getWindow());
 
 
     }

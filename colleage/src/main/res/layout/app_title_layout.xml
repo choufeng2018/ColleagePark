@@ -6,7 +6,7 @@
     android:fitsSystemWindows="true"
     android:clipToPadding="true"
     android:id="@+id/title_layout"
-    android:background="@color/app_title_color"
+    android:background="@color/white"
     android:layout_height="128px">
     <com.zhy.autolayout.AutoRelativeLayout
         android:layout_width="100px"
@@ -15,14 +15,14 @@
 
         >
         <ImageView
-            android:layout_width="21px"
-            android:layout_height="37px"
-            android:background="@drawable/arrow_back_icon"
+            android:layout_width="44px"
+            android:layout_height="44px"
+            android:background="@drawable/back_icon"
             android:layout_centerInParent="true"
             android:contentDescription="@string/app_name"
             />
     </com.zhy.autolayout.AutoRelativeLayout>
-    <TextView
+    <com.nacity.college.base.utils.PingFangTextView
         android:layout_width="wrap_content"
         android:layout_height="100px"
         android:id="@+id/title_name"
@@ -33,6 +33,6 @@
         android:ellipsize="end"
         android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
+        android:textColor="@color/black_3"
         />
 </com.zhy.autolayout.AutoRelativeLayout>

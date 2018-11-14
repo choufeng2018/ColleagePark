@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zhy.autolayout.AutoLinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:layout_marginTop="100px"
+
+        >
+
+        <com.nacity.college.base.utils.PingFangTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="浙江大学国家大学科技园"
+            android:textColor="@color/black_3"
+            android:textSize="48px"
+            android:textStyle="bold" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <View
+                android:layout_width="41px"
+                android:layout_height="40px"
+
+                android:background="@drawable/main_message_icon" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="50px"
         android:scrollbars="none">
 
 
@@ -20,82 +52,102 @@
 
             <com.zhy.autolayout.AutoRelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="428px">
+                android:layout_height="390px"
+
+                >
 
 
                 <com.bigkoo.convenientbanner.ConvenientBanner
                     android:id="@+id/banner"
                     android:layout_width="match_parent"
-                    android:layout_height="428px"
+                    android:layout_height="390px"
 
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
                     android:background="@drawable/park_rent_house_load" />
+
                 <ImageView
-                    android:layout_marginLeft="30px"
-                    android:layout_marginTop="70px"
+                    android:id="@+id/ad_load"
                     android:layout_width="27px"
                     android:layout_height="33px"
-                    android:id="@+id/ad_load"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="70px"
                     android:background="@drawable/location"
-                    />
+                    android:visibility="gone" />
+
                 <TextView
                     android:id="@+id/location"
-                    android:text="浙大科技园"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical|left"
-                    android:textColor="#ffffff"
                     android:layout_marginLeft="68px"
                     android:layout_marginTop="70px"
-                    android:textSize="28px"
+                    android:gravity="center_vertical|left"
                     android:shadowColor="#ffb1b1b1"
-                    android:shadowRadius="1"
                     android:shadowDx="1.5"
-                    android:shadowDy="1.5"/>
+                    android:shadowDy="1.5"
+                    android:shadowRadius="1"
+                    android:text="浙大科技园"
+                    android:visibility="gone"
+                    android:textColor="#ffffff"
+                    android:textSize="28px" />
 
             </com.zhy.autolayout.AutoRelativeLayout>
-            <TextView
+
+            <com.nacity.college.base.utils.PingFangTextView
                 android:layout_width="match_parent"
-                android:layout_height="84px"
-                android:layout_marginTop="20px"
+                android:layout_height="wrap_content"
+
                 android:background="@color/white"
-                android:paddingLeft="25px"
+                android:paddingBottom="40px"
+                android:paddingLeft="38px"
                 android:paddingTop="41px"
                 android:text="@string/park_service"
                 android:textColor="#25293c"
-                android:textSize="21px" />
+                android:textSize="36px" />
 
-            <GridLayout
+            <com.bigkoo.convenientbanner.ConvenientBanner
                 android:id="@+id/park_service_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:columnCount="4" />
+                android:background="@color/white" />
 
-            <TextView
+            <com.nacity.college.base.utils.PingFangTextView
+                android:id="@+id/property_service_text"
                 android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20px"
                 android:background="@color/white"
-                android:paddingLeft="25px"
+                android:paddingBottom="10px"
+                android:paddingLeft="36px"
                 android:paddingTop="41px"
                 android:text="@string/property_service"
-                android:id="@+id/property_service_text"
                 android:textColor="#25293c"
-                android:textSize="21px"
+                android:textSize="36px"
 
                 />
 
-            <com.bigkoo.convenientbanner.ConvenientBanner
-                android:id="@+id/property_service_banner"
+            <HorizontalScrollView
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white" />
+                android:background="@color/white"
+                android:scrollbars="none"
+                >
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/property_service_banner"
+                    android:layout_marginBottom="40px"
+                   >
+
+                </GridLayout>
+                </HorizontalScrollView>
 
             <GridLayout
                 android:id="@+id/service_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="40px"
+
                 android:columnCount="1" />
         </com.zhy.autolayout.AutoLinearLayout>
 

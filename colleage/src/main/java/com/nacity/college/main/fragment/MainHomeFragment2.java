@@ -25,6 +25,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -63,6 +64,7 @@ import com.nacity.college.door.util.BluetoothManager;
 import com.nacity.college.door.util.QRCode;
 import com.nacity.college.door.view.OpenDoorView;
 import com.nacity.college.guide.ParkGuideActivity;
+import com.nacity.college.main.adapter.ParkServiceBannerView;
 import com.nacity.college.main.adapter.PropertyServiceBannerView;
 import com.nacity.college.main.model.MainHomeModel;
 import com.nacity.college.main.presenter.MainHomePresenter;
@@ -108,9 +110,9 @@ public class MainHomeFragment2 extends BaseFragment implements MainHomeView, Ope
     @BindView(R.id.banner)
     ConvenientBanner<String> banner;
     @BindView(R.id.park_service_layout)
-    GridLayout parkServiceLayout;
+    ConvenientBanner<List<MainMenuTo>> parkServiceLayout;
     @BindView(R.id.property_service_banner)
-    ConvenientBanner<List<MainMenuTo>> propertyServiceBanner;
+    GridLayout propertyServiceBanner;
     @BindView(R.id.location)
     TextView location;
     @BindView(R.id.service_layout)
@@ -321,7 +323,7 @@ public class MainHomeFragment2 extends BaseFragment implements MainHomeView, Ope
         adList.clear();
         adList.addAll(advertiseList);
         BannerUtil.setBanner(banner, advertiseList, R.drawable.park_rent_house_load);
-        banner.setPageIndicator(new int[]{R.drawable.ic_page_indicator, R.drawable.ic_page_indicator_focused}).setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.ALIGN_PARENT_RIGHT);
+        banner.setPageIndicator(new int[]{R.drawable.ic_page_indicator, R.drawable.ic_page_indicator_focused}).setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL);
         banner.startTurning(5000);
 
     }
@@ -329,21 +331,29 @@ public class MainHomeFragment2 extends BaseFragment implements MainHomeView, Ope
     @Override
     public void getParkServiceSuccess(List<MainMenuTo> data) {
         model.getPropertyService();
-        parkServiceLayout.removeAllViews();
         if (data.size() == 0)
             return;
-        Observable.from(data).subscribe(mainMenuTo -> {
-            View parkServiceView = View.inflate(appContext, R.layout.park_service_item, null);
-            ImageView parkServiceImage = (ImageView) parkServiceView.findViewById(R.id.park_service_image);
-            TextView parkServiceName = (TextView) parkServiceView.findViewById(R.id.park_service_name);
-            parkServiceName.setText(mainMenuTo.getShowName());
-            Glide.with(MainApp.mContext).load(MainApp.getImagePath(mainMenuTo.getPicUrl1())).into(parkServiceImage);
-            parkServiceView.setTag(mainMenuTo.getCode());
-            parkServiceView.setTag(R.id.park_service_name, mainMenuTo.getShowName());
-            parkServiceView.setOnClickListener(v -> jumpToServiceActivity((String) v.getTag(), v));
-            parkServiceLayout.addView(parkServiceView);
-        });
 
+
+        List<List<MainMenuTo>> localImages = new ArrayList<>();
+        for (int i = 0; i < (data.size() % 8 == 0 ? data.size() / 8 : data.size() / 8 + 1); i++) {
+            List<MainMenuTo> mainMenuTos = new ArrayList<>();
+            for (int j = 0; j < 8 && (i * 8 + j < data.size()); j++) {
+                mainMenuTos.add(data.get(i * 8 + j));
+            }
+            localImages.add(mainMenuTos);
+        }
+
+        ParkServiceBannerView propertyServiceBannerView = new ParkServiceBannerView();
+        parkServiceLayout.setMinimumHeight((int) (getScreenWidthPixels(appContext) * 0.48));
+        int[] pageIndicator = {R.drawable.wisdom_dot_un_select, R.drawable.wisdom_dot_select};
+
+        parkServiceLayout.setPages(() -> propertyServiceBannerView, localImages);
+        if (localImages.size() > 1)
+            parkServiceLayout.setPageIndicator(pageIndicator);
+        else
+            parkServiceLayout.setCanLoop(false);
+        propertyServiceBannerView.setOnPropertyServiceOnClickListener(this::jumpToServiceActivity);
 
     }
 
@@ -357,27 +367,20 @@ public class MainHomeFragment2 extends BaseFragment implements MainHomeView, Ope
             propertyServiceBanner.setVisibility(View.GONE);
             return;
         }
-        List<List<MainMenuTo>> localImages = new ArrayList<>();
-        for (int i = 0; i < (data.size() % 8 == 0 ? data.size() / 8 : data.size() / 8 + 1); i++) {
-            List<MainMenuTo> mainMenuTos = new ArrayList<>();
-            for (int j = 0; j < 8 && (i * 8 + j < data.size()); j++) {
-                mainMenuTos.add(data.get(i * 8 + j));
-            }
-            localImages.add(mainMenuTos);
-        }
+                Observable.from(data).subscribe(mainMenuTo -> {
+                    View mView = View.inflate(appContext, R.layout.main_property_service_item, null);
+                    mView.setTag(mainMenuTo.getCode() + "");
+                    ImageView propertyImage = (ImageView) mView.findViewById(R.id.property_image);
+                    TextView propertyName = (TextView) mView.findViewById(R.id.property_text);
+                    Glide.with(MainApp.mContext).load(MainApp.getImagePath(mainMenuTo.getPicUrl1())).into(propertyImage);
+                    propertyName.setText(mainMenuTo.getShowName());
+                    mView.setTag(R.id.park_service_name,mainMenuTo.getShowName());
+                    propertyServiceBanner.addView(mView);
+                    mView.setOnClickListener(view -> jumpToServiceActivity(mainMenuTo.getCode(),view));
+        });
 
-        PropertyServiceBannerView propertyServiceBannerView = new PropertyServiceBannerView();
-        propertyServiceBanner.setMinimumHeight((int) (getScreenWidthPixels(appContext) * 0.5333));
-        int[] pageIndicator = {R.drawable.wisdom_dot_un_select, R.drawable.wisdom_dot_select};
 
-        propertyServiceBanner.setPages(
-                () -> propertyServiceBannerView, localImages);
-        if (localImages.size() > 1)
-            propertyServiceBanner.setPageIndicator(pageIndicator);
-        else
-            propertyServiceBanner.setCanLoop(false);
-        propertyServiceBannerView.setOnPropertyServiceOnClickListener(this::jumpToServiceActivity);
-        setCloudCanLogin(data);
+
     }
 
     @Override

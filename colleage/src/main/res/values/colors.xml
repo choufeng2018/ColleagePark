@@ -5,7 +5,7 @@
     <!--<color name="colorAccent">#FF4081</color>-->
     <color name="white">#ffffff</color>
     <color name="gray_f778">#f7f7f8</color>
-    <color name="app_color">#6d75a4</color>
+    <color name="app_color">#4363b6</color>
     <color name="dark_color">#000000</color>
     <color name="gray_color">#d9d9d9</color>
     <color name="common_dialog_text_color">#464646</color>
@@ -47,7 +47,7 @@
     <color name="gray_b4">#b4b4b4</color>
     <color name="gray_96">#969696</color>
     <color name="distribution_price">#ef4661</color>
-    <color name="myself_text_color">#25293c</color>
+    <color name="myself_text_color">#333333</color>
     <color name="myself_divide_line">#ededed</color>
     <color name="app_text_color">#25293c</color>
     <color name="gray_46">#464646</color>
@@ -65,4 +65,5 @@
     <color name="house_descripe">#7b7b7b</color>
     <color name="black_3">#333333</color>
     <color name="e0">#e0e0e0</color>
+    <color name="gray_6">#666666</color>
 </resources>

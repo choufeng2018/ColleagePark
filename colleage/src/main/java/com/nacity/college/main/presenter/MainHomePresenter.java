@@ -70,6 +70,7 @@ public class MainHomePresenter extends BasePresenter implements MainHomeModel, S
                     @Override
                     public void onError(Throwable e) {
                         homeView.loadError(e);
+                        System.out.println(e+"eee");
                     }
 
                     @Override

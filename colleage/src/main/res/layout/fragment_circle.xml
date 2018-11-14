@@ -13,7 +13,7 @@
         <com.zhy.autolayout.AutoRelativeLayout
             android:layout_width="match_parent"
             android:layout_height="120px"
-            android:background="@color/app_title_color">
+            android:background="@color/white">
 
             <com.zhy.autolayout.AutoRelativeLayout
                 android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                     android:maxLines="1"
                     android:maxWidth="400px"
                     android:text="@string/main_circle"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black_3"
                     android:textSize="32px" />
             </com.zhy.autolayout.AutoRelativeLayout>
          <com.zhy.autolayout.AutoRelativeLayout
@@ -41,6 +41,7 @@
              android:layout_alignParentRight="true"
              android:id="@+id/person_layout"
              android:layout_marginTop="40px"
+             android:visibility="gone"
              >
              <View
                  android:layout_width="36px"

@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e7e7e7"
+     android:background="@color/white"
     android:orientation="vertical">
 
     <com.zhy.autolayout.AutoRelativeLayout
         android:id="@+id/person_center_layout"
         android:layout_width="match_parent"
         android:layout_height="300px"
-        android:background="@drawable/myself_person_bg">
+        android:background="@color/white">
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/head_image"
@@ -36,7 +36,7 @@
             android:layout_toRightOf="@id/head_image"
             android:background="@drawable/v_icon"
             app:layout_auto_basewidth="height"
-
+            android:visibility="gone"
             />
 
         <TextView
@@ -46,7 +46,7 @@
             android:layout_marginLeft="30px"
             android:layout_marginTop="142px"
             android:layout_toRightOf="@+id/head_image"
-            android:textColor="@color/white"
+            android:textColor="@color/black_3"
             android:textSize="32px" />
 
         <com.zhy.autolayout.AutoLinearLayout
@@ -67,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8px"
-                android:textColor="@color/white"
+                android:textColor="@color/gray_9"
                 android:textSize="24px"
 
                 />
@@ -76,6 +76,7 @@
         <View
             android:layout_width="29px"
             android:layout_height="51px"
+            android:visibility="gone"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_marginBottom="95px"
@@ -84,12 +85,98 @@
     </com.zhy.autolayout.AutoRelativeLayout>
 
     <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36px"
+        >
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="150px"
+            >
+            <com.nacity.college.base.utils.PingFangTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/app_color"
+                android:textSize="26px"
+                android:text="0"
+               android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26px"
+                android:textColor="@color/gray_6"
+                android:text="关注"
+                android:layout_marginTop="12px"
+                android:layout_gravity="center_horizontal"
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+     android:layout_centerHorizontal="true"
+            >
+            <com.nacity.college.base.utils.PingFangTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/app_color"
+                android:textSize="26px"
+                android:text="0"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26px"
+                android:textColor="@color/gray_6"
+                android:text="参与"
+                android:layout_marginTop="12px"
+                android:layout_gravity="center_horizontal"
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="150px"
+            >
+            <com.nacity.college.base.utils.PingFangTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/app_color"
+                android:textSize="26px"
+                android:text="0"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26px"
+                android:textColor="@color/gray_6"
+                android:text="粉丝"
+                android:layout_marginTop="12px"
+                android:layout_gravity="center_horizontal"
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
         android:id="@+id/main_page_layout"
         android:layout_width="match_parent"
         android:layout_height="90px"
-        android:layout_marginTop="22px"
+        android:layout_marginTop="36px"
         android:background="@drawable/selector_myself_click_bg">
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:background="@color/myself_divide_line" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -113,6 +200,7 @@
         android:layout_width="match_parent"
         android:layout_height="90px"
         android:layout_marginTop="22px"
+        android:visibility="gone"
         android:background="@drawable/selector_myself_click_bg">
 
         <TextView
@@ -138,12 +226,14 @@
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="20px"
             android:background="@color/myself_divide_line" />
+
     </com.zhy.autolayout.AutoRelativeLayout>
 
     <com.zhy.autolayout.AutoRelativeLayout
         android:id="@+id/my_door_layout"
         android:layout_width="match_parent"
         android:layout_height="90px"
+        android:visibility="gone"
         android:background="@drawable/selector_myself_click_bg">
 
         <TextView
@@ -175,6 +265,7 @@
         android:id="@+id/my_older_layout"
         android:layout_width="match_parent"
         android:layout_height="90px"
+        android:visibility="gone"
         android:background="@drawable/selector_myself_click_bg">
 
         <TextView
@@ -196,12 +287,18 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1px"
+            android:layout_height="0px"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="20px"
             android:background="@color/myself_divide_line" />
     </com.zhy.autolayout.AutoRelativeLayout>
-
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="1px"
+         android:background="@color/gray_f3"
+         android:layout_marginLeft="40px"
+         android:layout_marginRight="40px"
+         />
     <com.zhy.autolayout.AutoRelativeLayout
         android:id="@+id/my_service_record_layout"
         android:layout_width="match_parent"
@@ -227,17 +324,23 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1px"
+            android:layout_height="0px"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="20px"
             android:background="@color/myself_divide_line" />
     </com.zhy.autolayout.AutoRelativeLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_f3"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        />
     <com.zhy.autolayout.AutoRelativeLayout
         android:id="@+id/feedback_layout"
         android:layout_width="match_parent"
         android:layout_height="90px"
-        android:layout_marginTop="22px"
+
         android:background="@drawable/selector_myself_click_bg">
 
         <TextView
@@ -259,7 +362,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1px"
+            android:layout_height="0px"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="20px"
             android:background="@color/myself_divide_line" />
@@ -290,9 +393,10 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1px"
+            android:layout_height="0px"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="20px"
+            android:visibility="gone"
             android:background="@color/myself_divide_line" />
     </com.zhy.autolayout.AutoRelativeLayout>
 
@@ -323,22 +427,25 @@
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="20px"
-            android:background="@color/myself_divide_line" />
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:background="@color/gray_f3" />
     </com.zhy.autolayout.AutoRelativeLayout>
 
-    <com.zhy.autolayout.AutoLinearLayout
+    <com.zhy.autolayout.AutoRelativeLayout
         android:id="@+id/login_out_layout"
-        android:layout_width="match_parent"
-        android:layout_height="90px"
+        android:layout_width="519px"
+        android:layout_height="60px"
         android:layout_marginTop="22px"
-        android:background="@drawable/selector_myself_click_bg">
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/login_out_bg">
 
         <View
             android:layout_width="30px"
             android:layout_height="30px"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="262px"
+            android:visibility="gone"
             android:background="@drawable/myself_login_out_icon"
 
             />
@@ -349,7 +456,8 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="15px"
             android:text="@string/login_out"
-            android:textColor="@color/gray_b4"
-            android:textSize="32px" />
-    </com.zhy.autolayout.AutoLinearLayout>
+            android:layout_centerInParent="true"
+            android:textColor="@color/gray_6"
+            android:textSize="26px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
 </com.zhy.autolayout.AutoLinearLayout>
