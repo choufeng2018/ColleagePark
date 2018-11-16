@@ -44,6 +44,22 @@ public class FontCache {
 
         return typeface;
     }
+
+    public static Typeface getTypefaceMedium(String fontname, Context context) {
+        Typeface typeface = fontCache.get(fontname);
+
+        if (typeface == null) {
+            try {
+                typeface = Typeface.createFromAsset(context.getAssets(), fontname);
+            } catch (Exception e) {
+                return null;
+            }
+
+            fontCache.put(fontname, typeface);
+        }
+
+        return typeface;
+    }
 }
 
 

@@ -1,203 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-    <variable
-        name="mode"
-        type="com.college.common_libs.domain.circle.NeighborPostTo"/>
+
+        <variable
+            name="mode"
+            type="com.college.common_libs.domain.circle.NeighborPostTo" />
     </data>
- <com.zhy.autolayout.AutoLinearLayout
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:background="@color/white"
-     android:orientation="vertical"
-     >
 
-     <ImageView
-         android:layout_width="match_parent"
-         android:layout_height="20px"
-         android:background="#eeeeee"
-         android:contentDescription="@string/app_name"
-         />
-
-  <com.zhy.autolayout.AutoRelativeLayout
-      android:layout_width="match_parent"
-      android:layout_height="126px">
-    <com.makeramen.roundedimageview.RoundedImageView
-        android:layout_width="78px"
-        android:layout_height="78px"
-        android:scaleType="fitXY"
-        android:layout_marginLeft="26px"
-        android:layout_marginTop="28px"
-        app:layout_auto_basewidth="height"
-        android:id="@+id/head_image"
-        android:background="@drawable/default_head_image"
-        app:riv_oval="true"
-        />
-      <View
-          android:layout_width="21px"
-          android:layout_height="21px"
-          android:background="@drawable/v_icon"
-          android:layout_marginLeft="90px"
-          android:layout_marginTop="86px"
-          android:id="@+id/v_icon"
-          />
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:textSize="30px"
-          android:textColor="@color/black_35"
-          android:layout_toRightOf="@id/head_image"
-          android:layout_marginTop="53px"
-          android:layout_marginLeft="24px"
-          android:text="@{mode.nickname}"
-          />
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:textColor="@color/gray_text_9"
-          android:textSize="24px"
-          android:layout_alignParentRight="true"
-          android:layout_marginRight="24px"
-          android:layout_marginTop="30px"
-          android:text="@{mode.postTypeDesc}"
-          />
-
-  </com.zhy.autolayout.AutoRelativeLayout>
-     <TextView
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:id="@+id/post_content"
-         android:layout_marginLeft="26px"
-         android:layout_marginRight="26px"
-         android:textSize="30px"
-         android:textColor="@color/black_35"
-         android:text=""
-         android:textIsSelectable="true"
-         />
-     <TextView
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:id="@+id/all_content"
-         android:layout_marginLeft="26px"
-         android:layout_marginRight="26px"
-         android:textSize="30px"
-         android:textColor="@color/app_color"
-         android:layout_gravity="right"
-         android:maxLines="3"
-         android:visibility="gone"
-         android:text="@string/all_content"
-         android:layout_marginTop="-36px"
-         />
-  <GridLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/grid_view"
-      android:layout_marginTop="16px"
-      android:layout_marginLeft="26px"
-      android:layout_marginRight="26px"
-      android:layout_marginBottom="12px"
-      >
-
-  </GridLayout>
-  <ImageView
-      android:layout_width="match_parent"
-      android:layout_height="1px"
-      android:background="@color/gray_d9"
-      android:contentDescription="@string/app_name"
-      />
-  <com.zhy.autolayout.AutoRelativeLayout
-      android:layout_width="match_parent"
-      android:layout_height="60px">
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:id="@+id/post_time"
-       android:textColor="@color/gray_text_9"
-       android:layout_centerVertical="true"
-       android:layout_marginLeft="26px"
-       android:textSize="24px"
-       />
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:id="@+id/delete_post"
-          android:textColor="@color/gray_text_9"
-          android:layout_centerVertical="true"
-          android:layout_marginLeft="26px"
-          android:textSize="24px"
-          android:text="@string/delete_post"
-          android:visibility="gone"
-          android:layout_toRightOf="@id/post_time"
-          />
     <com.zhy.autolayout.AutoLinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
-        android:id="@+id/praise_layout"
-        android:layout_marginRight="26px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20px"
+            android:background="#eeeeee"
+            android:contentDescription="@string/app_name" />
 
-        >
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="126px">
 
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/head_image"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_marginLeft="26px"
+                android:layout_marginTop="28px"
+                android:background="@drawable/default_head_image"
+                android:scaleType="fitXY"
+                app:layout_auto_basewidth="height"
+                app:riv_oval="true" />
 
+            <View
+                android:id="@+id/v_icon"
+                android:layout_width="21px"
+                android:layout_height="21px"
+                android:layout_marginLeft="90px"
+                android:layout_marginTop="86px"
+                android:background="@drawable/v_icon"
+                android:visibility="gone" />
 
-      <ImageView
+            <com.nacity.college.base.utils.PingFangMediumView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24px"
+                android:layout_marginTop="28px"
+                android:layout_toRightOf="@id/head_image"
+                android:text="@{mode.nickname}"
+                android:textColor="@color/black_3"
+                android:textSize="30px" />
 
-          android:layout_width="35px"
-          android:layout_height="34px"
-          android:layout_centerInParent="true"
+            <com.nacity.college.base.utils.PingFangMediumView
+                android:id="@+id/post_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24px"
 
-          android:layout_gravity="center_vertical"
-          android:layout_marginRight="14px"
+                android:layout_marginTop="75px"
+                android:layout_toRightOf="@id/head_image"
+                android:textColor="@color/gray_text_9"
+                android:textSize="24px" />
 
-          android:id="@+id/praise_icon"
-          />
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40px"
+                android:layout_marginTop="30px"
+                android:text="@{mode.postTypeDesc}"
+                android:textColor="@color/gray_text_9"
+                android:textSize="24px" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.nacity.college.base.utils.PingFangMediumView
+            android:id="@+id/post_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="28px"
-            android:textColor="@color/gray_text_9"
-            android:layout_gravity="center_vertical"
-            android:layout_centerVertical="true"
+            android:layout_marginLeft="130px"
+            android:layout_marginRight="26px"
+            android:text=""
 
-            android:id="@+id/praise_number"
+            android:textColor="#a8a8a8"
+            android:textIsSelectable="true"
+            android:textSize="30px" />
 
-            />
+        <TextView
+            android:id="@+id/all_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:layout_marginTop="-36px"
+            android:maxLines="3"
+            android:text="@string/all_content"
+            android:textColor="@color/app_color"
+            android:textSize="30px"
+            android:visibility="gone" />
+
+        <GridLayout
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12px"
+            android:layout_marginLeft="130px"
+            android:layout_marginRight="26px"
+            android:layout_marginTop="16px">
+
+        </GridLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60px">
+
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/praise_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="30px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="130px"
+                android:background="@drawable/circle_praise_bg"
+                android:minWidth="80px">
+
+
+                <ImageView
+                    android:id="@+id/praise_icon"
+                    android:layout_width="20px"
+                    android:layout_height="20px"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12px"
+                    android:layout_marginRight="14px"
+
+                    android:background="@drawable/like_unpress" />
+
+                <TextView
+                    android:id="@+id/praise_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="12px"
+                    android:textColor="@color/gray_text_9"
+                    android:textSize="22px"
+
+                    />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30px"
+                android:background="@drawable/circle_praise_bg"
+                android:layout_marginLeft="40px"
+                android:minWidth="80px"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/praise_layout">
+
+
+                <ImageView
+                    android:layout_width="21px"
+                    android:layout_height="20px"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="14px"
+                    android:layout_marginLeft="12px"
+                    android:background="@drawable/selector_neighbor_comment" />
+
+                <TextView
+                    android:id="@+id/comment_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12px"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/gray_text_9"
+                    android:textSize="22px"
+
+                    />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                android:id="@+id/delete_post"
+                android:layout_width="32px"
+                android:layout_alignParentEnd="true"
+                android:layout_height="31px"
+                android:layout_centerVertical="true"
+                 android:layout_marginRight="40px"
+                android:background="@drawable/delete_post_icon"
+                android:visibility="gone" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
     </com.zhy.autolayout.AutoLinearLayout>
-      <com.zhy.autolayout.AutoLinearLayout
-          android:layout_width="wrap_content"
-          android:layout_height="match_parent"
-          android:layout_toLeftOf="@id/praise_layout"
-          android:layout_marginRight="48px"
-
-          >
-
-
-
-
-      <ImageView
-          android:layout_width="25px"
-          android:layout_height="24px"
-          android:layout_centerVertical="true"
-          android:layout_marginRight="14px"
-          android:background="@drawable/selector_neighbor_comment"
-          android:layout_gravity="center_vertical"
-          />
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:textSize="28px"
-              android:textColor="@color/gray_text_9"
-
-              android:layout_centerVertical="true"
-              android:layout_gravity="center_vertical"
-              android:id="@+id/comment_number"
-
-              />
-      </com.zhy.autolayout.AutoLinearLayout>
-  </com.zhy.autolayout.AutoRelativeLayout>
-
- </com.zhy.autolayout.AutoLinearLayout>
 </layout>

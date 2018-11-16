@@ -43,7 +43,7 @@ import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.TextView;
+
 
 import com.nacity.college.R;
 
@@ -95,12 +95,12 @@ public class EasySlidingTabRecord extends HorizontalScrollView {
     private int tabPadding = 2;
     private int dividerWidth = 1;
     private int mMyUnderlinePadding = 4;
-    private int tabTextSize = 12;
+    private int tabTextSize = 15;
     private int tabTextColor = 0xff303F9F;
     private int selectedTabTextColor = 0xffFF4081;
 
     private Typeface tabTypeface = null;
-    private int tabTypefaceStyle = Typeface.NORMAL;
+    private int tabTypefaceStyle = Typeface.BOLD;
 
     private int lastScrollX = 0;
     private int tabWidth;
@@ -304,7 +304,7 @@ public class EasySlidingTabRecord extends HorizontalScrollView {
      * @param bottom
      */
     private void addTextTab(final int position, SpannableString title, int start, int top, int end, int bottom) {
-        TextView tab = new TextView(getContext());
+        PingFangTextView tab = new PingFangTextView(getContext());
         tab.setText(title);
         tab.setGravity(Gravity.CENTER);
 //        You can set the text view single line
@@ -323,7 +323,7 @@ public class EasySlidingTabRecord extends HorizontalScrollView {
      * @param title
      */
     private void addTextTab(final int position, String title) {
-        TextView tab = new TextView(getContext());
+        PingFangTextView tab = new PingFangTextView(getContext());
         tab.setText(title);
         tab.setGravity(Gravity.CENTER);
 //        You can set the text view single line
@@ -386,8 +386,8 @@ public class EasySlidingTabRecord extends HorizontalScrollView {
             for (int i = 0; i < this.tabCount; i++) {
                 View v = this.tabsContainer.getChildAt(i);
                 v.setBackgroundResource(this.tabBackgroundResId);
-                if (v instanceof TextView) {
-                    TextView tab = (TextView) v;
+                if (v instanceof PingFangTextView) {
+                    PingFangTextView tab = (PingFangTextView) v;
                     SpannableString spannableString = ((TabsTitleInterface) adapter).getTabTitle(i);
                     if (i == this.selectedPosition) {
                         spannableString.setSpan(new ForegroundColorSpan(this.selectedTabTextColor), 0, spannableString.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
@@ -403,8 +403,8 @@ public class EasySlidingTabRecord extends HorizontalScrollView {
             for (int i = 0; i < this.tabCount; i++) {
                 View v = this.tabsContainer.getChildAt(i);
                 v.setBackgroundResource(this.tabBackgroundResId);
-                if (v instanceof TextView) {
-                    TextView tab = (TextView) v;
+                if (v instanceof PingFangTextView) {
+                    PingFangTextView tab = (PingFangTextView) v;
                     tab.setTextSize(TypedValue.COMPLEX_UNIT_PX, tabTextSize);
                     tab.setTypeface(this.tabTypeface, this.tabTypefaceStyle);
                     tab.setTextColor(this.tabTextColor);

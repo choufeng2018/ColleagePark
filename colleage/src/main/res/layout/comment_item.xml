@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="PxUsage">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_marginTop="40px">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/head_image"
+                android:layout_width="70px"
+                android:layout_height="70px"
+                app:layout_auto_basewidth="height"
+                android:scaleType="fitXY"
+                app:riv_corner_radius="35px"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40px"
+                android:layout_toRightOf="@id/head_image"
+                android:textColor="@color/black_3"
+                android:textSize="26px" />
+
+            <TextView
+                android:id="@+id/comment_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="#999999"
+                android:maxLength="19"
+                android:textSize="22px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nick_name"
+                android:layout_marginTop="16px"
+                android:layout_toEndOf="@+id/head_image"
+                android:textColor="#999999"
+                android:layout_marginLeft="40px"
+                android:id="@+id/comment_content"
+                android:textSize="26px" />
+
+            <GridLayout
+                android:id="@+id/reply_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40px"
+                android:layout_toRightOf="@id/head_image"
+                android:layout_below="@+id/comment_content"
+                android:layout_marginTop="12px"
+                android:columnCount="1"
+                android:paddingTop="8px"
+                android:paddingBottom="8px"
+                android:background="@drawable/post_list_item_bg">
+
+            </GridLayout>
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</layout>

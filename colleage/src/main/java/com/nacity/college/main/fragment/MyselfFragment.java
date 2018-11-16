@@ -22,13 +22,13 @@ import com.nacity.college.base.utils.GlideCacheUtil;
 import com.nacity.college.circle.CirclePersonalCenterActivity;
 import com.nacity.college.common.model.UserInfoModel;
 import com.nacity.college.common.presenter.UserInfoPresenter;
-import com.nacity.college.door.MyDoorActivity;
+
 import com.nacity.college.login.LoginOrRegisterActivity;
 import com.nacity.college.myself.AboutActivity;
 import com.nacity.college.myself.FeedBackActivity;
 import com.nacity.college.myself.MyServiceRecordActivity;
 import com.nacity.college.myself.PersonCenterActivity;
-import com.zhidian.cloudintercomlibrary.CloudIntercomLibrary;
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -116,9 +116,7 @@ public class MyselfFragment extends BaseFragment {
                 goToAnimation(1);
                 break;
             case R.id.my_door_layout:
-                intent = new Intent(appContext, MyDoorActivity.class);
-                startActivity(intent);
-                goToAnimation(1);
+
                 break;
             case R.id.feedback_layout:
                 intent = new Intent(appContext, FeedBackActivity.class);
@@ -149,7 +147,7 @@ public class MyselfFragment extends BaseFragment {
             startActivity(intent);
             getActivity().finish();
             goToAnimation(2);
-            CloudIntercomLibrary.getInstance().logout(appContext,null);
+
         });
     }
 

@@ -117,7 +117,7 @@ public class PostDetailActivity extends BaseActivity implements PostDetailView {
         if (appContext != null && binding.headImage != null)
             Glide.with(appContext).load(MainApp.getImagePath(mode.getUserPic())).into(binding.headImage);
         setContent(mode, binding.postContent);
-        vIcon.setVisibility(mode.getUserType()==6||mode.getUserType()==7?View.VISIBLE:View.GONE);
+//        vIcon.setVisibility(mode.getUserType()==6||mode.getUserType()==7?View.VISIBLE:View.GONE);
         binding.postTime.setText(DateUtil.passTime(mode.getCreateTime()));
         binding.commentNumber.setText((mode.getPostCommentVoList() == null ? 0 : mode.getPostCommentVoList().size()) + "");
         binding.praiseNumber.setText((mode.getPostPraiseVoList() == null ? 0 : mode.getPostPraiseVoList().size()) + "");
@@ -250,7 +250,7 @@ public class PostDetailActivity extends BaseActivity implements PostDetailView {
                 LifeCommentItemBinding commentBind = DataBindingUtil.bind(mView);
                 commentBind.setMode(commentTo);
                 commentBind.commentTime.setText(commentTo.getCreateTimeDesc());
-                commentBind.vIcon.setVisibility(commentTo.getUserType()==7||commentTo.getUserType()==6?View.VISIBLE:View.GONE);
+//                commentBind.vIcon.setVisibility(commentTo.getUserType()==7||commentTo.getUserType()==6?View.VISIBLE:View.GONE);
                 if (appContext != null && commentBind.headImage != null)
                     Glide.with(appContext).load(MainApp.getImagePath(commentTo.getUserPic())).into(commentBind.headImage);
 

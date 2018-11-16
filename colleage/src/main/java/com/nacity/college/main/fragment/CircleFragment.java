@@ -119,7 +119,7 @@ public class CircleFragment extends BaseFragment implements CircleFragmentView {
         viewPager.setAdapter(adapter);
         tpi.setViewPager(viewPager);
 
-        tpi.setTextSize(getScreenWidth() * 26 / 750);
+        tpi.setTextSize(getScreenWidth() * 30 / 750);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

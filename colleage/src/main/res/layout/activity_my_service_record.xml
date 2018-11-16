@@ -40,7 +40,7 @@
             />
     </com.zhy.autolayout.AutoRelativeLayout>
 
-    <com.joypark.nacity.base.utils.EasySlidingTabRecord
+    <com.nacity.college.base.utils.EasySlidingTabRecord
         android:layout_below="@+id/title"
         android:layout_width="636px"
         android:layout_height="100px"

@@ -12,7 +12,7 @@ import com.nacity.college.base.utils.PublicWay;
 import com.nacity.college.base.utils.SpUtil;
 import com.nacity.college.base.utils.StatuBarUtil;
 import com.nacity.college.login.LoginOrRegisterActivity;
-import com.zhidian.cloudintercomlibrary.CloudIntercomLibrary;
+
 
 import cn.jpush.android.api.JPushInterface;
 
@@ -36,7 +36,6 @@ public class ForceOfflineActivity extends BaseActivity {
       }
 //
         JPushInterface.clearAllNotifications(this);
-        CloudIntercomLibrary.getInstance().logout(appContext,null);
         CommonDialog alertDialog = new CommonDialog(this, R.layout.dialog_forceoffline, R.style.myDialogTheme);
             alertDialog.show();
             alertDialog.setCancelable(false);

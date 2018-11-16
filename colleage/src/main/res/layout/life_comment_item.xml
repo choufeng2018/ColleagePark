@@ -31,6 +31,7 @@
         android:layout_marginTop="67px"
         app:layout_auto_basewidth="height"
         android:id="@+id/v_icon"
+        android:visibility="gone"
         />
  <TextView
      android:layout_width="wrap_content"

@@ -9,6 +9,7 @@ import com.github.jdsjlzx.recyclerview.LRecyclerViewAdapter;
 import com.college.common_libs.domain.news.NewsTo;
 import com.nacity.college.R;
 import com.nacity.college.base.BaseActivity;
+import com.nacity.college.news.adapter.FinancingFragmentAdapter;
 import com.nacity.college.news.adapter.NewsFragmentAdapter;
 import com.nacity.college.news.model.NewsModel;
 import com.nacity.college.news.presenter.NewsPresenter;
@@ -27,7 +28,7 @@ import butterknife.ButterKnife;
 public class PolicyServiceActivity extends BaseActivity implements NewsFragmentView {
     @BindView(R.id.recycleView)
     LRecyclerView recycleView;
-    private NewsFragmentAdapter adapter;
+    private FinancingFragmentAdapter adapter;
     private int                 pageIndex;
     private List<NewsTo> newsList =new ArrayList<>();
     private NewsModel mNewsModel;
@@ -46,7 +47,7 @@ public class PolicyServiceActivity extends BaseActivity implements NewsFragmentV
 
     }
     public void setRecycleView(){
-        adapter = new NewsFragmentAdapter(appContext);
+        adapter = new FinancingFragmentAdapter(appContext);
         adapter.setList(newsList);
         recycleView.setLayoutManager(new LinearLayoutManager(this));
         LRecyclerViewAdapter lRecyclerViewAdapter = new LRecyclerViewAdapter(adapter);

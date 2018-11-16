@@ -6,13 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
+import android.text.TextUtils;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.nacity.college.R;
 import com.nacity.college.ExpectActivity;
 import com.nacity.college.MainApp;
@@ -244,6 +247,15 @@ public abstract class BaseActivity<T> extends FragmentActivity implements BaseVi
             }
         }
         super.onRestart();
+    }
+
+    protected void disPlayImage(ImageView imageView, String imageUrl) {
+        if (TextUtils.isEmpty(imageUrl))
+            Glide.with(appContext).load(R.drawable.default_head_image).into(imageView);
+        else if (imageUrl.contains("http"))
+            Glide.with(appContext).load(imageUrl+"?imageMogr2/thumbnail/500x").into(imageView);
+        else
+            Glide.with(appContext).load("http://7xk6y7.com2.z0.glb.qiniucdn.com/" + imageUrl+"?imageMogr2/thumbnail/500x").into(imageView);
     }
 
     @Override

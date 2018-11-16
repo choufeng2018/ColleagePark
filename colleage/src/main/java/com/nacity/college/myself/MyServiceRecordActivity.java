@@ -179,7 +179,7 @@ public class MyServiceRecordActivity extends BaseActivity implements MyServiceRe
 
     @Override
     public void getServiceTypeSuccess(String i) {
-        viewPager.setCurrentItem(Integer.parseInt(i));
+//        viewPager.setCurrentItem(Integer.parseInt(i));
 
     }
 }

@@ -68,10 +68,10 @@ public class LifeFragmentAdapter extends BaseAdapter<NeighborPostTo, LifePostIte
 
                         Glide.with(MainApp.mContext).load(MainApp.getImagePath(mode.getUserPic())).into(binding.headImage);
 
-                        if (mode.getUserType()==7||mode.getUserType()==6)
-                            binding.vIcon.setVisibility(View.VISIBLE);
-                        else
-                            binding.vIcon.setVisibility(View.GONE);
+//                        if (mode.getUserType()==7||mode.getUserType()==6)
+//                            binding.vIcon.setVisibility(View.VISIBLE);
+//                        else
+//                            binding.vIcon.setVisibility(View.GONE);
 
                         binding.postTime.setText(DateUtil.passTime(mode.getCreateTime()));
 

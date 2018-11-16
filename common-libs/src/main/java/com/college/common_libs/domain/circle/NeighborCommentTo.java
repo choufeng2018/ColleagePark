@@ -1,6 +1,7 @@
 package com.college.common_libs.domain.circle;
 
 import java.io.Serializable;
+import java.util.List;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -37,5 +38,7 @@ public class NeighborCommentTo implements Serializable {
     private String gardenName;
     private String createTimeDesc;
     private String subComment;
+
+    private List<NeighborCommentTo>childList;
 
 }

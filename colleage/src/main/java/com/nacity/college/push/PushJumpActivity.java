@@ -24,7 +24,7 @@ import com.nacity.college.base.utils.PublicWay;
 import com.nacity.college.base.utils.SpUtil;
 import com.nacity.college.base.utils.StatuBarUtil;
 import com.nacity.college.circle.FansActivity;
-import com.nacity.college.door.MyDoorActivity;
+
 import com.nacity.college.news.NewsDetailActivity;
 import com.nacity.college.news.ParkActivitiesDetailAcitivity;
 import com.nacity.college.property.ApplyDetailActivity;
@@ -268,20 +268,10 @@ public class PushJumpActivity extends BaseActivity {
                 finish();
                 break;
             case 11:
-                i=  new Intent(appContext,MyDoorActivity.class);
 
-                startActivity(i);
-                SpUtil.put(MainApp.KeyValue.KEY_HOME_DATA, "");
-                goToAnimation(1);
-                finish();
                 break;
             case 12:
-                i=  new Intent(appContext,MyDoorActivity.class);
-                i.putExtra("Index",1);
-                startActivity(i);
-                SpUtil.put(MainApp.KeyValue.KEY_HOME_DATA, "");
-                goToAnimation(1);
-                finish();
+
                 break;
             default:
         }
