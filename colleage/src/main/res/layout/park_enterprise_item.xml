@@ -53,7 +53,7 @@
                     app:riv_corner_radius_top_left="5px"
                     app:riv_corner_radius_top_right="5px" />
 
-                <TextView
+                <com.nacity.college.base.utils.PingFangTextView
                     android:id="@+id/garden_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -63,10 +63,10 @@
                     android:text="@{mode.name}"
                     android:maxLines="1"
                     android:ellipsize="end"
-                    android:textColor="@color/gray_46"
+                    android:textColor="@color/black_3"
                     android:textSize="24px" />
 
-                <TextView
+                <com.nacity.college.base.utils.PingFangMediumView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/garden_name"
@@ -86,7 +86,7 @@
                     android:layout_marginTop="298px"
 
                     android:text="@{mode.fullAddress}"
-                    android:textColor="#6d75a4"
+                    android:textColor="@color/app_color"
 
                     android:textSize="22px" />
             </com.zhy.autolayout.AutoRelativeLayout>

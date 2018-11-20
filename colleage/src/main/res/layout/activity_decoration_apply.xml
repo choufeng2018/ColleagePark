@@ -1,111 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-    <include layout="@layout/app_title_layout"
-        android:id="@+id/title"/>
+<com.zhy.autolayout.AutoRelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/app_title_layout" />
 
     <ScrollView
-        android:background="@color/white"
+        android:id="@+id/my_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/title"
-        android:scrollbars="none"
-        android:id="@+id/my_scrollview"
-        >
+        android:background="@color/white"
+        android:scrollbars="none">
 
         <com.zhy.autolayout.AutoLinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
             <TextView
-                android:text="填写资料"
-                android:textSize="24px"
-                android:paddingTop="20px"
-                android:paddingLeft="40px"
-                android:textColor="@color/app_text_color"
-                android:background="@color/gray_f778"
                 android:layout_width="match_parent"
-                android:layout_height="60px"/>
-            <com.zhy.autolayout.AutoLinearLayout
-                android:orientation="horizontal"
+                android:layout_height="60px"
                 android:background="@color/gray_f778"
-                android:layout_marginTop="20px"
-                android:layout_marginLeft="30px"
+                android:paddingLeft="40px"
+                android:paddingTop="20px"
+                android:text="填写资料"
+                android:textColor="@color/app_text_color"
+                android:textSize="24px" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="690px"
                 android:layout_height="106px"
-                android:layout_width="690px">
-                <TextView
-                    android:layout_marginLeft="30px"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="20px"
+
+                android:orientation="horizontal">
+
+                <com.nacity.college.base.utils.PingFangTextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+
                     android:gravity="center"
                     android:text="姓名："
-                    android:textSize="28px"
                     android:textColor="@color/app_text_color"
-                    />
+                    android:textSize="28px" />
+
                 <EditText
-                    android:singleLine="true"
-                    android:focusableInTouchMode="true"
-                    android:layout_gravity="center_vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:maxLength="5"
-                    android:hint="5位汉字以内"
-                    android:textSize="28px"
-                    android:textColor="@color/app_text_color"
-                    android:textColorHint="@color/gray_b4"
                     android:id="@+id/name"
-                    android:background="@color/transparent"
-                    />
-            </com.zhy.autolayout.AutoLinearLayout>
-            <com.zhy.autolayout.AutoLinearLayout
-                android:background="@color/gray_f778"
-                android:layout_marginTop="20px"
-                android:layout_marginLeft="30px"
-                android:layout_height="106px"
-                android:layout_width="690px">
-                <TextView
-                    android:layout_marginLeft="30px"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="联系方式："
-                    android:textSize="28px"
-                    android:textColor="@color/app_text_color"
-                    android:gravity="center"
-                    />
-                <EditText
-                    android:singleLine="true"
-                    android:inputType="number"
-                    android:focusableInTouchMode="true"
-                    android:layout_gravity="center_vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:maxLength="11"
-                    android:hint="请输入手机号码"
-                    android:textSize="28px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/transparent"
+                    android:focusableInTouchMode="true"
+                    android:hint="5位汉字以内"
+                    android:maxLength="5"
+                    android:singleLine="true"
                     android:textColor="@color/app_text_color"
                     android:textColorHint="@color/gray_b4"
-                    android:id="@+id/phoneNo"
-                    android:background="@color/transparent"
-                    />
+                    android:textSize="28px" />
             </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="@color/gray_f7" />
+
             <com.zhy.autolayout.AutoLinearLayout
-                android:background="@color/gray_f778"
-                android:layout_marginTop="20px"
-                android:layout_marginLeft="30px"
+                android:layout_width="690px"
                 android:layout_height="106px"
-                android:layout_width="690px">
-                <TextView
-                    android:layout_marginLeft="32px"
+                android:layout_marginLeft="30px">
+
+                <com.nacity.college.base.utils.PingFangTextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="公司名称："
-                    android:id="@+id/tv_receive_name"
-                    android:textSize="28px"
-                    android:textColor="@color/app_text_color"
+
                     android:gravity="center"
-                    />
+                    android:text="联系方式："
+                    android:textColor="@color/app_text_color"
+                    android:textSize="28px" />
+
+                <EditText
+                    android:id="@+id/phoneNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/transparent"
+                    android:focusableInTouchMode="true"
+                    android:hint="请输入手机号码"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColor="@color/app_text_color"
+                    android:textColorHint="@color/gray_b4"
+                    android:textSize="28px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="@color/gray_f7" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="690px"
+                android:layout_height="106px"
+                android:layout_marginLeft="30px">
+
+                <com.nacity.college.base.utils.PingFangTextView
+                    android:id="@+id/tv_receive_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:gravity="center"
+                    android:text="公司名称："
+                    android:textColor="@color/app_text_color"
+                    android:textSize="28px" />
 
                 <EditText
                     android:id="@+id/company_name"
@@ -118,210 +136,239 @@
                     android:maxLength="20"
                     android:textColor="@color/app_text_color"
                     android:textColorHint="@color/gray_b4"
-                    android:textSize="28px"
-                    />
+                    android:textSize="28px" />
             </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="@color/gray_f7" />
+
             <com.zhy.autolayout.AutoRelativeLayout
-                android:background="@color/gray_f778"
-                android:layout_marginTop="20px"
-                android:layout_marginLeft="30px"
+                android:layout_width="690px"
                 android:layout_height="106px"
-                android:layout_width="690px">
-                <TextView
-                    android:layout_marginLeft="30px"
+                android:layout_marginLeft="30px">
+
+                <com.nacity.college.base.utils.PingFangTextView
+                    android:id="@+id/tv_event_name"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="房号："
-                    android:id="@+id/tv_event_name"
+
                     android:gravity="center"
-                    android:textSize="28px"
+                    android:text="房号："
                     android:textColor="@color/app_text_color"
-              />
+                    android:textSize="28px" />
+
                 <TextView
-                    android:singleLine="true"
-                    android:focusableInTouchMode="true"
-                    android:layout_gravity="center_vertical"
+                    android:id="@+id/tv_apartment_name"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
                     android:layout_toRightOf="@+id/tv_event_name"
+                    android:background="@color/transparent"
+                    android:focusableInTouchMode="true"
                     android:gravity="center_vertical"
                     android:hint="请选择房号"
-                    android:textSize="28px"
+                    android:singleLine="true"
                     android:textColor="@color/app_text_color"
                     android:textColorHint="@color/gray_b4"
-                    android:id="@+id/tv_apartment_name"
-                    android:background="@color/transparent"
-                    />
+                    android:textSize="28px" />
+
                 <ImageView
                     android:layout_width="18px"
                     android:layout_height="30px"
-                    android:layout_marginRight="52px"
-                    android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
-                    android:background="@drawable/arrow_select"
-                    />
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="52px"
+                    android:background="@drawable/arrow_select" />
             </com.zhy.autolayout.AutoRelativeLayout>
-        <com.zhy.autolayout.AutoRelativeLayout
-            android:background="@color/gray_f778"
-            android:layout_marginTop="20px"
-            android:layout_marginLeft="30px"
-            android:layout_height="106px"
-            android:layout_width="690px">
 
-            <TextView
-                android:id="@+id/tv_construction"
-                android:background="@color/gray_f778"
-                android:layout_height="match_parent"
-                android:textSize="28px"
-                android:layout_marginLeft="30px"
-                android:textColor="@color/app_text_color"
-                android:layout_width="wrap_content"
-                android:gravity="center_vertical"
-                android:text="有无施工图："
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="16dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="@color/gray_f7" />
 
-            <ImageView
-                android:id="@+id/image_construction"
-                android:layout_width="40px"
-                android:layout_height="40px"
-                android:layout_marginRight="228px"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/circle_unselect"
-                />
-            <TextView
-                android:layout_marginLeft="30px"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="有"
-                android:layout_marginRight="184px"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:textSize="28px"
-                android:textColor="@color/app_text_color"
-                />
-            <TextView
-                android:layout_marginLeft="30px"
-                android:layout_width="120px"
-                android:layout_height="50px"
-                android:text=""
-                android:id="@+id/have_image"
-                android:layout_marginRight="170px"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:textSize="28px"
-                android:textColor="@color/app_text_color"
-                />
-            <TextView
-                android:layout_marginLeft="30px"
-                android:layout_width="120px"
-                android:layout_height="50px"
-                android:text=""
-                android:id="@+id/no_image"
-                android:layout_marginRight="30px"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:textSize="28px"
-                android:textColor="@color/app_text_color"
-                />
-            <ImageView
-
-                android:id="@+id/no_image_construction"
-                android:layout_width="40px"
-                android:layout_height="40px"
-                android:layout_marginRight="98px"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/circle_select"
-                />
-            <TextView
-                android:layout_marginLeft="30px"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="无"
-                android:layout_marginRight="54px"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:textSize="28px"
-                android:textColor="@color/app_text_color"
-                />
-
-        </com.zhy.autolayout.AutoRelativeLayout>
             <com.zhy.autolayout.AutoRelativeLayout
-                android:background="@color/gray_f778"
-                android:layout_marginTop="20px"
-                android:layout_height="320px"
-                android:layout_width="match_parent">
-                <TextView
-                    android:id="@+id/tv"
+                android:layout_width="690px"
+                android:background="@color/white"
+                android:layout_height="106px"
+                android:layout_marginLeft="30px">
+
+                <com.nacity.college.base.utils.PingFangTextView
+                    android:id="@+id/tv_construction"
                     android:layout_width="wrap_content"
-                    android:textSize="24px"
-                    android:text="说明："
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+
+
+                    android:gravity="center_vertical"
+                    android:text="有无施工图："
                     android:textColor="@color/app_text_color"
-                    android:paddingTop="25px"
-                    android:paddingLeft="40px"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="28px" />
+
+                <ImageView
+                    android:id="@+id/image_construction"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="228px"
+                    android:src="@drawable/circle_unselect" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="184px"
+                    android:text="有"
+                    android:textColor="@color/app_text_color"
+                    android:textSize="28px" />
+
+                <TextView
+                    android:id="@+id/have_image"
+                    android:layout_width="120px"
+                    android:layout_height="50px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="170px"
+                    android:text=""
+                    android:textColor="@color/app_text_color"
+                    android:textSize="28px" />
+
+                <TextView
+                    android:id="@+id/no_image"
+                    android:layout_width="120px"
+                    android:layout_height="50px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:text=""
+                    android:textColor="@color/app_text_color"
+                    android:textSize="28px" />
+
+                <ImageView
+
+                    android:id="@+id/no_image_construction"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="98px"
+                    android:src="@drawable/circle_select" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="54px"
+                    android:text="无"
+                    android:textColor="@color/app_text_color"
+                    android:textSize="28px" />
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="@color/gray_f7" />
+
+            <com.nacity.college.base.utils.PingFangTextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20px"
+
+                android:layout_marginLeft="40px"
+                android:layout_marginTop="20px"
+                android:text="说明："
+                android:textColor="@color/app_text_color"
+                android:textSize="30px" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="320px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="@drawable/parking_apply_input_bg"
+                >
+
+
                 <EditText
-                    android:layout_toRightOf="@+id/tv"
                     android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tv"
+                    android:background="@color/transparent"
                     android:gravity="top"
                     android:maxLength="100"
-                    android:background="@color/transparent"
-                    android:layout_width="match_parent"
-                    android:textSize="24px"
-                    android:paddingTop="25px"
                     android:paddingRight="35px"
+                    android:paddingTop="25px"
                     android:textColor="@color/gray_96"
                     android:textColorHint="@color/app_text_color"
-                    android:layout_height="match_parent"
-                 />
+                    android:textSize="24px" />
+
                 <TextView
                     android:id="@+id/tip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:textSize="20px"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="20px"
                     android:layout_marginRight="26px"
                     android:text="还可以输入100字"
-                    android:layout_marginBottom="20px"
-                    android:textColor="#cccccc" />
-</com.zhy.autolayout.AutoRelativeLayout>
+                    android:textColor="#cccccc"
+                    android:textSize="20px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
             <com.zhy.autolayout.AutoRelativeLayout
-                android:layout_marginTop="20px"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px">
+
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/property_complaint_describe_icon"
+                    android:drawablePadding="10px"
+                    android:gravity="center"
                     android:text="审核通过之后请前往网页端上传照片信息"
                     android:textColor="@color/app_text_color"
-                    android:drawablePadding="10px"
-                    android:textSize="20px"
-                    android:drawableLeft="@drawable/property_complaint_describe_icon"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="20px" />
             </com.zhy.autolayout.AutoRelativeLayout>
+
             <View
                 android:layout_width="match_parent"
-                android:layout_height="110px"/>
+                android:layout_height="110px" />
         </com.zhy.autolayout.AutoLinearLayout>
 
 
     </ScrollView>
+
     <TextView
 
-        android:textSize="36px"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/manual_input"
         android:layout_width="match_parent"
         android:layout_height="100px"
-        android:textColor="@color/white"
-        android:text="申请"
-        android:gravity="center"
+        android:layout_alignParentBottom="true"
         android:background="@color/app_color"
-        android:id="@+id/manual_input"
+        android:gravity="center"
+        android:text="申请"
+        android:textColor="@color/white"
+        android:textSize="36px"
 
         />
 </com.zhy.autolayout.AutoRelativeLayout>

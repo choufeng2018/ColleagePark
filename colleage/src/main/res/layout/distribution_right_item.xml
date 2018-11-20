@@ -8,117 +8,124 @@
             type="com.college.common_libs.domain.property.ServiceTypeTo" />
     </data>
 
-    <com.zhy.autolayout.AutoRelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-                                           android:layout_width="match_parent"
-                                           android:layout_height="wrap_content"
-        >
+    <com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
         <com.zhy.autolayout.AutoRelativeLayout
             android:layout_width="match_parent"
             android:layout_height="306px">
+
             <com.makeramen.roundedimageview.RoundedImageView
-                android:layout_marginLeft="22px"
-                android:layout_marginTop="48px"
+                android:id="@+id/water_image"
                 android:layout_width="95px"
                 android:layout_height="95px"
+                android:layout_marginLeft="22px"
+                android:layout_marginTop="48px"
+                android:scaleType="fitXY"
                 app:riv_border_color="#9c9c9c"
                 app:riv_border_width="1px"
-                android:id="@+id/water_image"
-                android:scaleType="fitXY"
-                app:riv_corner_radius="8px"/>
+                app:riv_corner_radius="8px" />
 
 
-        <TextView
-            android:layout_marginLeft="24px"
-            android:id="@+id/name"
-            android:text="@{mode.name}"
-            android:layout_toRightOf="@+id/water_image"
-            android:layout_marginTop="50px"
-            android:textSize="28px"
-            android:textColor="@color/gray_46"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <com.nacity.college.base.utils.PingFangMediumView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24px"
+                android:layout_marginTop="50px"
+                android:layout_toRightOf="@+id/water_image"
+                android:text="@{mode.name}"
+                android:textColor="@color/black_3"
+                android:textSize="28px" />
+
             <TextView
                 android:id="@+id/explain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/name"
-            android:layout_marginLeft="24px"
-            android:text="@{mode.content}"
-            android:layout_toRightOf="@+id/water_image"
-            android:layout_marginTop="20px"
-            android:textSize="22px"
-            android:textColor="@color/gray_96"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+                android:layout_marginLeft="24px"
+                android:layout_marginTop="20px"
+                android:layout_toRightOf="@+id/water_image"
+                android:text="@{mode.content}"
+                android:textColor="@color/gray_96"
+                android:textSize="22px" />
+
             <TextView
-            android:id="@+id/price"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="45px"
-            android:layout_marginLeft="24px"
-            android:text="¥"
-            android:layout_toRightOf="@+id/water_image"
-            android:textSize="24px"
-            android:textColor="@color/distribution_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="45px"
+                android:layout_marginLeft="24px"
+                android:layout_toRightOf="@+id/water_image"
+                android:text="¥"
+                android:textColor="@color/distribution_price"
+                android:textSize="24px" />
+
             <TextView
                 android:id="@+id/price_left"
-                android:layout_marginLeft="5px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="41px"
-            android:text=""
-            android:layout_toRightOf="@+id/price"
-            android:textSize="42px"
-            android:textColor="@color/distribution_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+                android:layout_marginLeft="5px"
+                android:layout_toRightOf="@+id/price"
+                android:text=""
+                android:textColor="@color/distribution_price"
+                android:textSize="42px" />
+
             <TextView
-                android:maxLength="2"
                 android:id="@+id/price_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="45px"
-            android:text=""
-            android:layout_toRightOf="@+id/price_left"
-            android:textSize="28px"
-            android:textColor="@color/distribution_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+                android:layout_toRightOf="@+id/price_left"
+                android:maxLength="2"
+                android:text=""
+                android:textColor="@color/distribution_price"
+                android:textSize="28px" />
+
             <ImageView
                 android:id="@+id/increase"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginRight="50px"
-                android:layout_marginBottom="45px"
-                android:background="@drawable/selector_increase_distribution"
                 android:layout_width="49px"
-                android:layout_height="49px"/>
+                android:layout_height="49px"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="45px"
+                android:layout_marginRight="50px"
+                android:background="@drawable/selector_increase_distribution" />
+
             <TextView
-                android:text="0"
-                android:layout_marginRight="30px"
-                android:layout_toLeftOf="@+id/increase"
+                android:id="@+id/goods_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="55px"
-                android:visibility="gone"
-                android:id="@+id/goods_number"
+                android:layout_marginRight="30px"
+                android:layout_toLeftOf="@+id/increase"
+                android:text="0"
                 android:textSize="29px"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:visibility="gone" />
+
             <ImageView
-                android:visibility="gone"
+                android:id="@+id/reduce"
+                android:layout_width="49px"
+                android:layout_height="49px"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="45px"
                 android:layout_marginRight="177px"
                 android:layout_toLeftOf="@+id/goods_number"
-                android:id="@+id/reduce"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="45px"
                 android:background="@drawable/selector_reduce_distribution"
-                android:layout_width="49px"
-                android:layout_height="49px"/>
+                android:visibility="gone" />
+
             <View
-                android:layout_alignParentBottom="true"
-                android:background="@color/gray_ed"
                 android:layout_width="match_parent"
                 android:layout_height="2px"
-                />
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_ed" />
         </com.zhy.autolayout.AutoRelativeLayout>
 
     </com.zhy.autolayout.AutoRelativeLayout>

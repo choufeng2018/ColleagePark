@@ -10,7 +10,7 @@
         android:orientation="vertical"
         android:layout_height="100px">
 
-    <TextView
+    <com.nacity.college.base.utils.PingFangTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="45px"
@@ -21,7 +21,7 @@
         android:singleLine="true"
         android:layout_marginRight="38px"
         android:text="智慧园区整体介绍"/>
-    <TextView
+    <com.nacity.college.base.utils.PingFangMediumView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="45px"
@@ -34,7 +34,7 @@
         android:layout_marginRight="38px"
         android:text="智慧园区，是指政府集中统一规划"/>
     </com.zhy.autolayout.AutoLinearLayout>
-    <TextView
+    <com.nacity.college.base.utils.PingFangMediumView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"

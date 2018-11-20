@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.nacity.college.base.utils.PingFangMediumView xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/tvGoodsItemTitle"
               android:layout_width="match_parent"
               android:layout_height="28dp"
@@ -11,6 +11,6 @@
               android:gravity="center_vertical"
               android:paddingLeft="20px"
               android:textSize="24px"
-              android:textColor="@color/gray_46"
+              android:textColor="@color/black_3"
         />
 </com.zhy.autolayout.AutoRelativeLayout>

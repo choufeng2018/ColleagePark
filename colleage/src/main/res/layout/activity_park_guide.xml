@@ -12,7 +12,7 @@
             android:orientation="vertical">
 
 
-            <include layout="@layout/white_app_title_layout" />
+            <include layout="@layout/title_layout" />
 
 
 

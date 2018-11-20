@@ -1,350 +1,371 @@
 <com.zhy.autolayout.AutoRelativeLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <include layout="@layout/app_title_layout"
-             android:id="@+id/title"/>
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/app_title_layout" />
+
     <ScrollView
-android:id="@+id/scrollView"
-        android:layout_below="@+id/title"
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/submit_layout">
+        android:layout_above="@+id/submit_layout"
+        android:layout_below="@+id/title">
 
-    <com.zhy.autolayout.AutoLinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-    <GridLayout
-        android:focusable="false"
-        android:id="@+id/grid_view"
-        android:columnCount="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-       />
-        <View
-            android:background="@color/gray_e7"
+        <com.zhy.autolayout.AutoLinearLayout
             android:layout_width="match_parent"
-            android:layout_height="22px"/>
-        <com.zhy.autolayout.AutoRelativeLayout
-            android:id="@+id/contact_phone_layout"
-            android:layout_width="match_parent"
-            android:layout_height="100px"
-            android:layout_marginLeft="30px"
-            android:layout_marginRight="30px">
-
-            <View
-                android:layout_width="22px"
-                android:layout_height="22px"
-                android:layout_centerVertical="true"
-                android:background="@drawable/property_distribution_phone_icon" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="35px"
-                android:text="@string/contact_phone"
-                android:textColor="@color/dark_color"
-                android:textSize="28px" />
-
-            <View
-                android:layout_width="17px"
-                android:layout_height="28px"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:background="@drawable/login_apartment_right_icon" />
-
-            <TextView
-                android:id="@+id/phone_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="35px"
-                android:textColorHint="@color/gray_c"
-                android:hint="请输入手机号"
-                android:layout_marginRight="54px"
-                android:textColor="@color/dark_color"
-                android:textSize="28px" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2px"
-                android:layout_alignParentBottom="true"
-                android:background="@color/gray_eb" />
-        </com.zhy.autolayout.AutoRelativeLayout>
-
-        <com.zhy.autolayout.AutoRelativeLayout
-            android:id="@+id/contact_layout"
-            android:layout_width="match_parent"
-            android:layout_height="100px"
-            android:layout_marginLeft="30px"
-            android:layout_marginRight="30px">
-
-            <View
-                android:layout_width="22px"
-                android:layout_height="23px"
-                android:layout_centerVertical="true"
-                android:background="@drawable/property_distribution_contact_icon" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="35px"
-                android:text="@string/contact"
-                android:textColor="@color/dark_color"
-                android:textSize="28px" />
-
-            <View
-                android:layout_width="17px"
-                android:layout_height="28px"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:background="@drawable/login_apartment_right_icon" />
-
-            <TextView
-                android:id="@+id/contact"
-                android:gravity="right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:textColorHint="@color/gray_c"
-                android:hint="请输入联系人"
-                android:layout_marginLeft="35px"
-                android:layout_marginRight="54px"
-                android:textColor="@color/dark_color"
-                android:textSize="28px" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2px"
-                android:layout_alignParentBottom="true"
-                android:background="@color/gray_eb" />
-        </com.zhy.autolayout.AutoRelativeLayout>
-
-        <com.zhy.autolayout.AutoRelativeLayout
-            android:id="@+id/repair_address_layout"
-            android:layout_width="match_parent"
-            android:layout_height="100px"
-            android:layout_marginLeft="30px"
-            android:layout_marginRight="30px">
-
-            <View
-                android:layout_width="18px"
-                android:layout_height="22px"
-                android:layout_centerVertical="true"
-                android:background="@drawable/property_distribution_position_icon" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="35px"
-                android:text="送货地址"
-                android:textColor="@color/dark_color"
-                android:textSize="28px" />
-
-            <TextView
-                android:id="@+id/repair_address"
-                android:textColorHint="@color/gray_c"
-                android:hint="请填写送货地址"
-                android:layout_marginRight="54px"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:gravity="right"
-
-                android:textColor="@color/dark_color"
-                android:textSize="28px"
-                />
-            <View
-                android:layout_width="17px"
-                android:layout_height="28px"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:background="@drawable/login_apartment_right_icon" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2px"
-                android:layout_alignParentBottom="true"
-                android:background="@color/gray_eb" />
-        </com.zhy.autolayout.AutoRelativeLayout>
-
-        <com.zhy.autolayout.AutoRelativeLayout
-            android:id="@+id/repair_time_layout"
-            android:layout_width="match_parent"
-            android:layout_height="100px"
-            android:layout_marginLeft="30px"
-            android:layout_marginRight="30px">
-
-            <View
-                android:layout_width="19px"
-                android:layout_height="20px"
-                android:layout_centerVertical="true"
-                android:background="@drawable/property_distribution_time_icon" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="35px"
-                android:text="送货时间"
-                android:textColor="@color/dark_color"
-                android:textColorHint="#cccccc"
-                android:textSize="28px" />
-
-            <View
-                android:layout_width="17px"
-                android:layout_height="28px"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:background="@drawable/login_apartment_right_icon" />
-
-            <TextView
-                android:id="@+id/repair_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="35px"
-                android:layout_marginRight="54px"
-                android:textColorHint="@color/gray_c"
-                android:hint="请选择送货时间"
-                android:textColor="@color/dark_color"
-                android:textSize="28px" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2px"
-                android:layout_alignParentBottom="true"
-                android:background="@color/gray_eb" />
-        </com.zhy.autolayout.AutoRelativeLayout>
-        <View
-            android:background="@color/gray_e7"
-            android:layout_width="match_parent"
-            android:layout_height="22px"/>
-        <com.zhy.autolayout.AutoRelativeLayout
-            android:id="@+id/explain_layout"
-            android:layout_width="match_parent"
-            android:layout_height="300px"
-            android:layout_marginLeft="30px"
-            android:layout_marginRight="30px">
-
-        <View
-            android:layout_width="22px"
-            android:layout_height="20px"
-            android:layout_marginTop="42px"
-            android:background="@drawable/property_service_remark_icon" />
-
-        <TextView
-            android:id="@+id/tv_remark"
-            android:layout_marginTop="38px"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="35px"
-            android:text="备注"
-            android:textColor="@color/dark_color"
-            android:textSize="28px" />
-            <EditText
-                android:minHeight="200px"
+            android:orientation="vertical">
 
-                android:layout_marginLeft="35px"
-                android:layout_below="@+id/tv_remark"
-                android:id="@+id/service_description"
+            <GridLayout
+                android:id="@+id/grid_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24px"
-                android:layout_marginTop="18px"
-                android:background="@color/transparent"
-                android:gravity="top"
-                android:hint="请说点什么吧..."
-                android:nextFocusDown="@id/repair_time"
-                android:textColor="@color/dark_color"
-                android:textColorHint="#b4b4b4"
-                android:textSize="26px" />
-        </com.zhy.autolayout.AutoRelativeLayout>
+                android:columnCount="1"
+                android:focusable="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="22px"
+                android:background="@color/gray_e7" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/contact_phone_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px">
+
+                <View
+                    android:layout_width="22px"
+                    android:layout_height="22px"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/property_distribution_phone_icon" />
+
+                <com.nacity.college.base.utils.PingFangMediumView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14px"
+                    android:text="@string/contact_phone"
+                    android:textColor="@color/dark_color"
+                    android:textSize="28px" />
+
+                <View
+                    android:layout_width="17px"
+                    android:layout_height="28px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/login_apartment_right_icon" />
+
+                <TextView
+                    android:id="@+id/phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35px"
+                    android:layout_marginRight="54px"
+                    android:hint="请输入手机号"
+                    android:textColor="@color/dark_color"
+                    android:textColorHint="@color/gray_c"
+                    android:textSize="28px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_eb" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/contact_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px">
+
+                <View
+                    android:layout_width="22px"
+                    android:layout_height="23px"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    android:background="@drawable/property_distribution_contact_icon" />
+
+                <com.nacity.college.base.utils.PingFangMediumView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14px"
+                    android:text="@string/contact"
+                    android:textColor="@color/dark_color"
+                    android:textSize="28px" />
+
+                <View
+                    android:layout_width="17px"
+                    android:layout_height="28px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/login_apartment_right_icon" />
+
+                <TextView
+                    android:id="@+id/contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35px"
+                    android:layout_marginRight="54px"
+                    android:gravity="right"
+                    android:hint="请输入联系人"
+                    android:textColor="@color/dark_color"
+                    android:textColorHint="@color/gray_c"
+                    android:textSize="28px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_eb" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/repair_address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px">
+
+                <View
+                    android:layout_width="18px"
+                    android:layout_height="22px"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    android:background="@drawable/property_distribution_position_icon" />
+
+                <com.nacity.college.base.utils.PingFangMediumView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14px"
+                    android:text="送货地址"
+                    android:textColor="@color/dark_color"
+                    android:textSize="28px" />
+
+                <TextView
+                    android:id="@+id/repair_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="54px"
+                    android:gravity="right"
+                    android:hint="请填写送货地址"
+                    android:textColor="@color/dark_color"
+
+                    android:textColorHint="@color/gray_c"
+                    android:textSize="28px" />
+
+                <View
+                    android:layout_width="17px"
+                    android:layout_height="28px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/login_apartment_right_icon" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_eb" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/repair_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px">
+
+                <View
+                    android:layout_width="19px"
+                    android:layout_height="20px"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    android:background="@drawable/property_distribution_time_icon" />
+
+                <com.nacity.college.base.utils.PingFangMediumView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14px"
+                    android:text="送货时间"
+                    android:textColor="@color/dark_color"
+                    android:textColorHint="#cccccc"
+                    android:textSize="28px" />
+
+                <View
+                    android:layout_width="17px"
+                    android:layout_height="28px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/login_apartment_right_icon" />
+
+                <TextView
+                    android:id="@+id/repair_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35px"
+                    android:layout_marginRight="54px"
+                    android:hint="请选择送货时间"
+                    android:textColor="@color/dark_color"
+                    android:textColorHint="@color/gray_c"
+                    android:textSize="28px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_eb" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="22px"
+                android:background="@color/gray_e7" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/explain_layout"
+                android:layout_width="match_parent"
+                android:layout_height="300px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px">
+
+                <View
+                    android:layout_width="22px"
+                    android:layout_height="20px"
+                    android:layout_marginTop="42px"
+                    android:visibility="gone"
+                    android:background="@drawable/property_service_remark_icon" />
+
+                <com.nacity.college.base.utils.PingFangMediumView
+                    android:id="@+id/tv_remark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14px"
+                    android:layout_marginTop="38px"
+                    android:text="备注"
+                    android:textColor="@color/dark_color"
+                    android:textSize="28px" />
+
+                <EditText
+                    android:id="@+id/service_description"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_remark"
+                    android:layout_marginBottom="24px"
+                    android:layout_marginLeft="35px"
+                    android:layout_marginTop="18px"
+                    android:background="@color/transparent"
+                    android:gravity="top"
+                    android:hint="请说点什么吧..."
+                    android:minHeight="200px"
+                    android:nextFocusDown="@id/repair_time"
+                    android:textColor="@color/dark_color"
+                    android:textColorHint="#b4b4b4"
+                    android:textSize="26px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
 
 
-        <View
-            android:background="@color/gray_e7"
-            android:layout_width="match_parent"
-            android:layout_height="22px"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="22px"
+                android:background="@color/gray_e7" />
 
-    </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
     </ScrollView>
+
     <com.zhy.autolayout.AutoRelativeLayout
-        android:background="@color/white"
         android:id="@+id/submit_layout"
-        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
         android:layout_height="100px"
-        android:layout_width="match_parent">
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
         <ImageView
             android:id="@+id/iv_icon"
-            android:layout_marginBottom="29px"
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/money_icon"
-            android:layout_marginLeft="53px"
             android:layout_width="33px"
-            android:layout_height="37px"/>
+            android:layout_height="37px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="29px"
+            android:layout_marginLeft="53px"
+            android:background="@drawable/money_icon" />
+
         <TextView
             android:id="@+id/price_icon"
-            android:layout_marginLeft="25px"
-            android:layout_marginBottom="26px"
-            android:layout_alignParentBottom="true"
-            android:text="¥"
-            android:layout_toRightOf="@+id/iv_icon"
-            android:textSize="34px"
-            android:textColor="@color/distribution_price"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="26px"
+            android:layout_marginLeft="25px"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:text="¥"
+            android:textColor="@color/distribution_price"
+            android:textSize="34px" />
+
         <TextView
             android:id="@+id/price_left"
-            android:layout_marginLeft="5px"
-            android:layout_marginBottom="24px"
-            android:layout_alignParentBottom="true"
-            android:text="1234."
-            android:layout_toRightOf="@+id/price_icon"
-            android:textSize="42px"
-            android:textColor="@color/distribution_price"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24px"
+            android:layout_marginLeft="5px"
+            android:layout_toRightOf="@+id/price_icon"
+            android:text="1234."
+            android:textColor="@color/distribution_price"
+            android:textSize="42px" />
+
         <TextView
             android:id="@+id/price_right"
-            android:layout_marginBottom="27px"
-            android:layout_alignParentBottom="true"
-            android:text="66"
-            android:maxLength="2"
-            android:layout_toRightOf="@+id/price_left"
-            android:textSize="29px"
-            android:textColor="@color/distribution_price"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:layout_marginBottom="36px"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:layout_marginBottom="27px"
+            android:layout_toRightOf="@+id/price_left"
+            android:maxLength="2"
+            android:text="66"
+            android:textColor="@color/distribution_price"
+            android:textSize="29px" />
+
+        <TextView
             android:id="@+id/tv_count"
-            android:text="共20件商品"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="36px"
             android:layout_marginLeft="45px"
             android:layout_toRightOf="@+id/price_right"
-            android:textSize="20px"
+            android:text="共20件商品"
             android:textColor="@color/gray_96"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:textSize="20px" />
+
         <TextView
             android:id="@+id/tv_submit"
-            android:text="提交"
-            android:gravity="center"
-            android:layout_alignParentRight="true"
-            android:textSize="37px"
-            android:background="@color/distribution_price"
-            android:textColor="@color/white"
             android:layout_width="210px"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/app_color"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="37px" />
     </com.zhy.autolayout.AutoRelativeLayout>
 </com.zhy.autolayout.AutoRelativeLayout>

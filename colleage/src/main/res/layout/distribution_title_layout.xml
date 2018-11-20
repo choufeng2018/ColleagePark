@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zhy.autolayout.AutoRelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:fitsSystemWindows="true"
-    android:clipToPadding="true"
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/title_layout"
+    android:layout_width="match_parent"
+    android:layout_height="128px"
     android:background="@color/white"
-    android:layout_height="128px">
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
     <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/back"
         android:layout_width="100px"
         android:layout_height="match_parent"
-        android:id="@+id/back"
 
         >
+
         <ImageView
-            android:layout_width="21px"
-            android:layout_height="41px"
-            android:background="@drawable/white_back_icon"
+            android:layout_width="44px"
+            android:layout_height="44px"
             android:layout_centerInParent="true"
-            android:contentDescription="@string/app_name"
-            />
+            android:background="@drawable/back_icon"
+            android:contentDescription="@string/app_name" />
     </com.zhy.autolayout.AutoRelativeLayout>
-    <TextView
+
+    <com.nacity.college.base.utils.PingFangTextView
+        android:id="@+id/title_name"
         android:layout_width="wrap_content"
         android:layout_height="100px"
-        android:id="@+id/title_name"
-        android:textSize="32px"
-        android:text=""
-        android:maxWidth="400px"
-        android:maxLines="1"
+        android:layout_centerHorizontal="true"
         android:ellipsize="end"
         android:gravity="center"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/gray_b4"
-        />
+        android:maxLines="1"
+        android:maxWidth="400px"
+        android:text=""
+        android:textColor="@color/black_3"
+        android:textSize="32px" />
+
     <com.zhy.autolayout.AutoRelativeLayout
-        android:layout_width="101px"
-        android:layout_alignParentRight="true"
-        android:layout_height="match_parent"
         android:id="@+id/record"
-        >
+        android:layout_width="101px"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true">
+
         <ImageView
             android:layout_width="33px"
             android:layout_height="37px"
-            android:background="@drawable/distribution_record_icon"
             android:layout_centerInParent="true"
-            android:contentDescription="@string/app_name"
-            />
+            android:background="@drawable/distribution_record_icon"
+            android:contentDescription="@string/app_name" />
     </com.zhy.autolayout.AutoRelativeLayout>
 </com.zhy.autolayout.AutoRelativeLayout>

@@ -336,8 +336,8 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
         mainHomeText.setTextColor(currentPosition == 0 ? Color.parseColor("#6d75a4") : Color.parseColor("#b4b4b4"));
         mainCircleIcon.setBackgroundResource(currentPosition == 1 ? R.drawable.main_circle_select : R.drawable.main_circle_un_select);
         mainCircleText.setTextColor(currentPosition == 1 ? Color.parseColor("#6d75a4") : Color.parseColor("#b4b4b4"));
-        mainMyselfIcon.setBackgroundResource(currentPosition == 3 ? R.drawable.main_myself_select : R.drawable.main_myself_un_select);
-        mainMyselfText.setTextColor(currentPosition == 3 ? Color.parseColor("#6d75a4") : Color.parseColor("#b4b4b4"));
+        mainMyselfIcon.setBackgroundResource(currentPosition == 2 ? R.drawable.main_myself_select : R.drawable.main_myself_un_select);
+        mainMyselfText.setTextColor(currentPosition == 2 ? Color.parseColor("#6d75a4") : Color.parseColor("#b4b4b4"));
 
     }
 

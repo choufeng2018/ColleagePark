@@ -5,12 +5,13 @@
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <include layout="@layout/white_app_title_layout"/>
+    <include layout="@layout/title_layout"/>
 
     <com.github.jdsjlzx.recyclerview.LRecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recycleView"
+        android:background="@color/white"
         />
 
 </com.zhy.autolayout.AutoLinearLayout>

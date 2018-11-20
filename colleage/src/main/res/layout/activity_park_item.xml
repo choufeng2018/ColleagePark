@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="mode"
@@ -8,7 +8,7 @@
     <com.zhy.autolayout.AutoRelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:background="#e7e7e7"
+        android:background="@color/white"
         android:descendantFocusability="blocksDescendants"
         android:layout_height="wrap_content">
 
@@ -22,10 +22,26 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="25px"
+                android:layout_height="wrap_content">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/image_pic"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/app_name"
+                    android:layout_marginRight="30px"
+                    android:layout_marginLeft="30px"
+                    app:riv_corner_radius="20px"
+                    android:layout_height="328px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
             <com.zhy.autolayout.AutoRelativeLayout
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent">
-                <TextView
+                <com.nacity.college.base.utils.PingFangTextView
                     android:id="@+id/notice_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -35,7 +51,7 @@
                     android:ellipsize="end"
                     android:singleLine="true"
                     android:text="@{mode.title}"
-                    android:textColor="#464646"
+                    android:textColor="@color/black_3"
                     android:textSize="30px"/>
 
                 <TextView
@@ -50,6 +66,21 @@
                     android:maxLines="3"
                     android:textSize="24px"
                     android:textColor="#969696"
+                    />
+                <com.ruffian.library.RTextView
+                    android:layout_width="200px"
+                    android:layout_height="50px"
+                    app:border_color_normal="@color/app_color"
+                    android:textColor="@color/app_color"
+                    app:border_width_normal="1px"
+                    android:layout_gravity="center"
+                    android:textSize="26px"
+                    android:layout_below="@+id/notice_content"
+                    android:gravity="center"
+                    android:text="查看详情"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="20px"
+                    app:corner_radius="50px"
                     />
             <com.zhy.autolayout.AutoLinearLayout
                 android:layout_marginTop="18px"
@@ -78,20 +109,7 @@
             </com.zhy.autolayout.AutoLinearLayout>
 
             </com.zhy.autolayout.AutoRelativeLayout>
-            <com.zhy.autolayout.AutoRelativeLayout
-                android:id="@+id/layout"
-                android:layout_width="match_parent"
-                android:layout_marginTop="25px"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:id="@+id/image_pic"
-                    android:layout_width="match_parent"
-                    android:scaleType="fitXY"
-                    android:contentDescription="@string/app_name"
-                    android:layout_marginRight="30px"
-                    android:layout_marginLeft="30px"
-                    android:layout_height="328px" />
-            </com.zhy.autolayout.AutoRelativeLayout>
+
 
             <com.zhy.autolayout.AutoRelativeLayout
                 android:layout_width="match_parent"

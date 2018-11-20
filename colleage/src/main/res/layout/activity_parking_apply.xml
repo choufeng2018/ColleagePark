@@ -1,475 +1,548 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zhy.autolayout.AutoRelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <include layout="@layout/app_title_layout"
-             android:id="@+id/title"/>
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/app_title_layout" />
 
     <ScrollView
-        android:layout_below="@+id/title"
-        android:background="@color/white"
+        android:id="@+id/my_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none"
-        android:id="@+id/my_scrollview">
+        android:layout_below="@+id/title"
+        android:background="@color/white"
+        android:scrollbars="none">
 
         <com.zhy.autolayout.AutoLinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
             <TextView
-                android:text="填写个人资料"
-                android:textSize="24px"
-                android:paddingTop="20px"
-                android:paddingLeft="40px"
-                android:textColor="@color/app_text_color"
-                android:background="@color/gray_f778"
                 android:layout_width="match_parent"
-                android:layout_height="60px"/>
-            <com.zhy.autolayout.AutoLinearLayout
-                android:orientation="horizontal"
+                android:layout_height="60px"
                 android:background="@color/gray_f778"
-                android:layout_marginTop="20px"
-                android:layout_marginLeft="30px"
+                android:paddingLeft="40px"
+                android:paddingTop="20px"
+                android:text="填写个人资料"
+                android:textColor="@color/app_text_color"
+                android:textSize="24px"
+                android:visibility="gone" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="106px"
-                android:layout_width="690px">
-                <TextView
-                    android:layout_marginLeft="30px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:layout_marginTop="20px"
+
+                android:orientation="horizontal">
+
+                <com.nacity.college.base.utils.PingFangTextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+
                     android:gravity="center"
                     android:text="姓名："
-                    android:textSize="28px"
-                    android:textColor="@color/app_text_color"
-                    />
+                    android:textColor="@color/black_3"
+                    android:textSize="30px" />
+
                 <EditText
-                    android:singleLine="true"
-                    android:focusableInTouchMode="true"
-                    android:layout_gravity="center_vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:maxLength="5"
-                    android:hint="5位汉字以内"
-                    android:textSize="28px"
-                    android:textColor="@color/app_text_color"
-                    android:textColorHint="@color/gray_b4"
                     android:id="@+id/name"
-                    android:background="@color/transparent"
-                    />
-            </com.zhy.autolayout.AutoLinearLayout>
-            <com.zhy.autolayout.AutoLinearLayout
-                android:background="@color/gray_f778"
-                android:layout_marginTop="20px"
-                android:layout_marginLeft="30px"
-                android:layout_height="106px"
-                android:layout_width="690px">
-                <TextView
-                    android:layout_marginLeft="30px"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="车牌号："
-                    android:textSize="28px"
-                    android:textColor="@color/app_text_color"
-                    android:gravity="center"
-                    />
-                <EditText
-                    android:singleLine="true"
-                    android:focusableInTouchMode="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_gravity="center_vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:maxLength="10"
-                    android:hint="10位汉字以内"
-                    android:textSize="28px"
-                    android:textColor="@color/app_text_color"
-                    android:textColorHint="@color/gray_b4"
-                    android:id="@+id/carNo"
                     android:background="@color/transparent"
-                    />
-            </com.zhy.autolayout.AutoLinearLayout>
+                    android:focusableInTouchMode="true"
+                    android:hint="请填写"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:textColor="@color/app_text_color"
+                    android:textColorHint="@color/gray_9"
+                    android:textSize="26px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="#eaeaea" />
+
             <com.zhy.autolayout.AutoRelativeLayout
-                android:background="@color/gray_f778"
-                android:layout_marginTop="20px"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="106px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+
+                >
+
+                <com.nacity.college.base.utils.PingFangTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="车牌号："
+                    android:textColor="@color/black_3"
+                    android:textSize="30px" />
+
+                <EditText
+                    android:id="@+id/carNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/transparent"
+                    android:focusableInTouchMode="true"
+                    android:hint="请填写"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textColor="@color/app_text_color"
+                    android:textColorHint="@color/gray_9"
+                    android:textSize="26px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="#eaeaea" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="106px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px">
+
                 <ImageView
                     android:id="@+id/view"
+                    android:layout_width="16px"
+                    android:layout_height="16px"
                     android:layout_marginLeft="50px"
                     android:layout_marginTop="45px"
-                    android:scaleType="fitXY"
                     android:background="@drawable/circular_decorate"
-                    android:layout_width="16px"
-                    android:layout_height="16px"/>
-                <TextView
-                    android:layout_toRightOf="@+id/view"
-                    android:layout_marginLeft="25px"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+                <com.nacity.college.base.utils.PingFangTextView
+                    android:id="@+id/tv_receive_name"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="38px"
-                    android:text="上传行驶证："
-                    android:id="@+id/tv_receive_name"
-                    android:textSize="28px"
-                    android:textColor="@color/app_text_color"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/view"
                     android:gravity="center"
-                    />
+                    android:text="上传行驶证："
+                    android:textColor="@color/app_text_color"
+                    android:textSize="30px" />
+
                 <TextView
-                    android:background="@drawable/btn_parking_apply"
+                    android:id="@+id/tv_upload_image"
                     android:layout_width="123px"
                     android:layout_height="40px"
-                    android:text="上传照片"
-                    android:id="@+id/tv_upload_image"
-                    android:layout_marginRight="58px"
-                    android:layout_marginTop="34px"
                     android:layout_alignParentRight="true"
-                    android:textSize="16px"
-                    android:textColor="@color/white"
+
+                    android:layout_marginTop="34px"
+                    android:background="@drawable/btn_parking_apply"
                     android:gravity="center"
-                    />
+                    android:text="上传照片"
+                    android:textColor="@color/white"
+                    android:textSize="16px" />
+
                 <TextView
-                    android:layout_marginTop="10px"
+                    android:id="@+id/upload_image"
                     android:layout_width="160px"
                     android:layout_height="80px"
-                    android:text=""
-                    android:id="@+id/upload_image"
-                    android:layout_marginRight="40px"
                     android:layout_alignParentRight="true"
+
+                    android:layout_marginTop="10px"
                     android:gravity="center"
-                    />
+                    android:text="" />
+
                 <HorizontalScrollView
 
-                    android:layout_width="660px"
-                    android:layout_marginTop="108px"
                     android:id="@+id/image_scroll_01"
-                    android:layout_centerHorizontal="true"
+                    android:layout_width="660px"
                     android:layout_height="wrap_content"
-                    android:scrollbars="none"
-                    >
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="108px"
+                    android:scrollbars="none">
+
                     <LinearLayout
                         android:id="@+id/rp_image"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"/>
+                        android:orientation="horizontal" />
                 </HorizontalScrollView>
+
                 <View
-                    android:layout_below="@+id/image_scroll_01"
                     android:id="@+id/view_layout"
-                    android:visibility="gone"
-                    android:layout_alignParentBottom="true"
                     android:layout_width="match_parent"
-                    android:layout_height="34px"/>
+                    android:layout_height="34px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/image_scroll_01"
+                    android:visibility="gone" />
 
             </com.zhy.autolayout.AutoRelativeLayout>
-            <TextView
-                android:text="车位信息"
-                android:textSize="24px"
-                android:paddingTop="20px"
-                android:layout_marginTop="20px"
-                android:paddingLeft="40px"
-                android:textColor="@color/app_text_color"
-                android:background="@color/gray_f778"
+
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="60px"/>
-            <com.zhy.autolayout.AutoRelativeLayout
-                android:visibility="gone"
-                android:background="@color/gray_f778"
+                android:layout_height="1px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="#eaeaea" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60px"
                 android:layout_marginTop="20px"
-                android:layout_marginLeft="30px"
+                android:background="@color/gray_f778"
+                android:paddingLeft="40px"
+                android:paddingTop="20px"
+                android:text="车位信息"
+                android:textColor="@color/app_text_color"
+                android:textSize="24px"
+                android:visibility="invisible" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="690px"
                 android:layout_height="106px"
-                android:layout_width="690px">
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="20px"
+                android:background="@color/gray_f778"
+                android:visibility="gone">
+
                 <TextView
-                    android:layout_marginLeft="30px"
+                    android:id="@+id/tv_event_name"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="房号："
-                    android:id="@+id/tv_event_name"
+                    android:layout_marginLeft="30px"
                     android:gravity="center"
-                    android:textSize="28px"
+                    android:text="房号："
                     android:textColor="@color/app_text_color"
-                    />
+                    android:textSize="28px" />
+
                 <TextView
-                    android:singleLine="true"
-                    android:focusableInTouchMode="true"
-                    android:layout_gravity="center_vertical"
+                    android:id="@+id/tv_apartment_name"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
                     android:layout_toRightOf="@+id/tv_event_name"
+                    android:background="@color/transparent"
+                    android:focusableInTouchMode="true"
                     android:gravity="center_vertical"
                     android:hint="请选择房号"
-                    android:textSize="28px"
+                    android:singleLine="true"
                     android:textColor="@color/app_text_color"
                     android:textColorHint="@color/gray_b4"
-                    android:id="@+id/tv_apartment_name"
-                    android:background="@color/transparent"
-                    />
+                    android:textSize="28px" />
+
                 <ImageView
                     android:layout_width="18px"
                     android:layout_height="30px"
-                    android:layout_marginRight="52px"
-                    android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
-                    android:background="@drawable/arrow_select"
-                    />
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="52px"
+                    android:background="@drawable/arrow_select" />
             </com.zhy.autolayout.AutoRelativeLayout>
-            <com.zhy.autolayout.AutoRelativeLayout
-                android:background="@color/gray_f778"
-                android:layout_marginTop="20px"
-                android:layout_marginLeft="30px"
-                android:layout_height="106px"
-                android:layout_width="690px">
 
-                <TextView
-                    android:id="@+id/tv_construction"
-                    android:background="@color/gray_f778"
-                    android:layout_height="match_parent"
-                    android:textSize="28px"
-                    android:layout_marginLeft="30px"
-                    android:textColor="@color/app_text_color"
-                    android:layout_width="wrap_content"
-                    android:gravity="center_vertical"
-                    android:text="车位种类："
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="16dp"/>
+            <com.nacity.college.base.utils.PingFangTextView
+                android:id="@+id/tv_construction"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="40px"
+                android:layout_marginStart="16dp"
+
+                android:gravity="center_vertical"
+                android:text="车位种类："
+                android:textColor="@color/black_3"
+                android:textSize="30px" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="46px"
+                android:layout_marginLeft="40px"
+                android:layout_marginTop="20px">
+
+
                 <ImageView
-                    android:layout_toLeftOf="@+id/tv_03"
                     android:id="@+id/iv_03"
                     android:layout_width="40px"
                     android:layout_height="40px"
-                    android:layout_marginRight="18px"
                     android:layout_centerVertical="true"
+                    android:layout_marginRight="18px"
+
                     android:src="@drawable/circle_unselect"
                     app:layout_auto_basewidth="height"
 
                     />
+
                 <TextView
                     android:id="@+id/tv_03"
-                    android:layout_marginRight="53px"
-                    android:layout_toLeftOf="@+id/iv_02"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="机械"
-
                     android:layout_centerVertical="true"
-                    android:textSize="28px"
+                    android:layout_marginRight="53px"
+                    android:layout_toRightOf="@+id/iv_03"
+
+                    android:text="机械"
                     android:textColor="@color/app_text_color"
-                    />
+                    android:textSize="28px" />
+
                 <ImageView
-                    android:layout_toLeftOf="@+id/tv_02"
                     android:id="@+id/iv_02"
                     android:layout_width="40px"
                     android:layout_height="40px"
-                    app:layout_auto_basewidth="height"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="280px"
 
                     android:layout_marginRight="18px"
-                    android:layout_centerVertical="true"
                     android:src="@drawable/circle_select"
-                    />
+                    app:layout_auto_basewidth="height" />
+
                 <TextView
                     android:id="@+id/tv_02"
-                    android:layout_marginRight="53px"
-                    android:layout_toLeftOf="@+id/iv_01"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="平面"
                     android:layout_centerVertical="true"
-                    android:textSize="28px"
+                    android:layout_marginRight="53px"
+                    android:layout_toLeftOf="@+id/iv_01"
+                    android:layout_toRightOf="@+id/iv_02"
+                    android:text="平面"
                     android:textColor="@color/app_text_color"
-                    />
+                    android:textSize="28px" />
+
                 <ImageView
-                    android:layout_marginRight="18px"
-                    android:layout_toLeftOf="@+id/tv_01"
                     android:id="@+id/iv_01"
                     android:layout_width="40px"
-                    app:layout_auto_basewidth="height"
                     android:layout_height="40px"
                     android:layout_centerVertical="true"
+                    android:layout_marginRight="18px"
+                    android:layout_toLeftOf="@+id/tv_01"
                     android:src="@drawable/circle_unselect"
-                    />
+                    app:layout_auto_basewidth="height" />
+
                 <TextView
                     android:id="@+id/tv_01"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="其他"
-                    android:layout_marginRight="53px"
-                    android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
-                    android:textSize="28px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="40px"
+                    android:text="其他"
                     android:textColor="@color/app_text_color"
-                    />
+                    android:textSize="28px" />
+
                 <TextView
+                    android:id="@+id/type_03"
                     android:layout_width="130px"
                     android:layout_height="match_parent"
-                    android:id="@+id/type_03"
-                    android:layout_marginRight="380px"
+
                     android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:textSize="28px"
+                    android:layout_marginRight="380px"
                     android:textColor="@color/app_text_color"
-                    />
+                    android:textSize="28px" />
+
                 <TextView
-                    android:layout_marginLeft="30px"
+                    android:id="@+id/type_02"
                     android:layout_width="140px"
                     android:layout_height="match_parent"
-                    android:text=""
-                    android:id="@+id/type_02"
-                    android:layout_marginRight="215px"
+
+
                     android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:textSize="28px"
+                    android:layout_marginLeft="280px"
+                    android:text=""
                     android:textColor="@color/app_text_color"
-                    />
+                    android:textSize="28px" />
+
                 <TextView
-                    android:layout_marginLeft="30px"
+                    android:id="@+id/type_01"
                     android:layout_width="130px"
                     android:layout_height="match_parent"
-                    android:text=""
-                    android:id="@+id/type_01"
-                    android:layout_marginRight="50px"
-                    android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
-                    android:textSize="28px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="50px"
+                    android:text=""
                     android:textColor="@color/app_text_color"
-                    />
+                    android:textSize="28px" />
 
             </com.zhy.autolayout.AutoRelativeLayout>
-            <com.zhy.autolayout.AutoLinearLayout
-                android:background="@color/gray_f778"
-                android:layout_marginTop="20px"
-                android:layout_marginLeft="30px"
-                android:layout_height="106px"
-                android:layout_width="690px">
-                <TextView
-                    android:layout_marginLeft="30px"
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:layout_marginTop="36px"
+                android:background="#eaeaea" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="154px"
+                android:layout_marginLeft="40px"
+
+                >
+
+                <com.nacity.college.base.utils.PingFangTextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="车位区域："
-                    android:textSize="28px"
-                    android:textColor="@color/app_text_color"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40px"
                     android:gravity="center"
-                    />
+                    android:text="车位区域："
+                    android:textColor="@color/black_3"
+                    android:textSize="30px" />
 
                 <EditText
                     android:id="@+id/park_area"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="10dp"
                     android:background="@color/transparent"
                     android:focusableInTouchMode="true"
                     android:hint="20位汉字以内"
                     android:maxLength="20"
                     android:singleLine="true"
                     android:textColor="@color/app_text_color"
-                    android:textColorHint="@color/gray_b4"
-                    android:textSize="28px"
-                    />
-            </com.zhy.autolayout.AutoLinearLayout>
-            <com.zhy.autolayout.AutoLinearLayout
-                android:background="@color/gray_f778"
-                android:layout_marginTop="20px"
-                android:layout_marginLeft="30px"
-                android:layout_height="106px"
-                android:layout_width="690px">
-                <TextView
-                    android:layout_marginLeft="30px"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="申请期限："
-                    android:textSize="28px"
-                    android:textColor="@color/app_text_color"
-                    android:gravity="center"
-                    />
-                <EditText
-                    android:singleLine="true"
-                    android:focusableInTouchMode="true"
-                    android:layout_gravity="center_vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:maxLength="20"
-                    android:hint="例：一个月"
-                    android:textSize="28px"
-                    android:textColor="@color/app_text_color"
-                    android:textColorHint="@color/gray_b4"
-                    android:id="@+id/term"
-                    android:background="@color/transparent"
-                    />
-            </com.zhy.autolayout.AutoLinearLayout>
+                    android:textColorHint="@color/gray_9"
+                    android:textSize="28px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="#eaeaea" />
 
             <com.zhy.autolayout.AutoRelativeLayout
-                android:background="@color/gray_f778"
-                android:layout_marginTop="20px"
-                android:layout_height="320px"
-                android:layout_width="match_parent">
-                <TextView
-                    android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="106px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px">
+
+                <com.nacity.college.base.utils.PingFangTextView
                     android:layout_width="wrap_content"
-                    android:textSize="24px"
-                    android:text="其他："
-                    android:textColor="@color/app_text_color"
-                    android:paddingTop="25px"
-                    android:paddingLeft="40px"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="match_parent"
+
+                    android:gravity="center"
+                    android:text="申请期限："
+                    android:textColor="@color/black_3"
+                    android:textSize="30px" />
+
                 <EditText
-                    android:layout_toRightOf="@+id/tv"
+                    android:id="@+id/term"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/transparent"
+                    android:focusableInTouchMode="true"
+                    android:hint="例：一个月"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="@color/app_text_color"
+                    android:textColorHint="@color/gray_9"
+                    android:textSize="28px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="#eaeaea" />
+
+            <com.nacity.college.base.utils.PingFangTextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40px"
+                android:text="其他："
+                android:layout_marginTop="36px"
+                android:layout_marginBottom="36px"
+                android:textColor="@color/black_3"
+                android:textSize="30px" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="@drawable/parking_apply_input_bg">
+
+
+                <EditText
                     android:id="@+id/other"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tv"
+                    android:background="@color/transparent"
                     android:gravity="top"
                     android:maxLength="200"
-                    android:background="@color/transparent"
-                    android:layout_width="match_parent"
-                    android:textSize="24px"
-                    android:paddingTop="25px"
                     android:paddingRight="35px"
+                    android:paddingTop="25px"
                     android:textColor="@color/gray_96"
                     android:textColorHint="@color/app_text_color"
-                    android:layout_height="match_parent"
-                    />
+                    android:textSize="24px" />
+
                 <TextView
                     android:id="@+id/tip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:textSize="20px"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="20px"
                     android:layout_marginRight="26px"
                     android:text="还可以输入200字"
-                    android:layout_marginBottom="20px"
-                    android:textColor="#cccccc" />
+                    android:textColor="#cccccc"
+                    android:textSize="20px" />
             </com.zhy.autolayout.AutoRelativeLayout>
+
             <View
                 android:layout_width="match_parent"
-                android:layout_height="150px"/>
+                android:layout_height="150px" />
         </com.zhy.autolayout.AutoLinearLayout>
 
     </ScrollView>
 
     <TextView
 
-        android:textSize="36px"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/manual_input"
         android:layout_width="match_parent"
         android:layout_height="100px"
-        android:textColor="@color/white"
-        android:text="申请"
-        android:gravity="center"
+        android:layout_alignParentBottom="true"
         android:background="@color/app_color"
-        android:id="@+id/manual_input"
+        android:gravity="center"
+        android:text="申请"
+        android:textColor="@color/white"
+        android:textSize="36px"
 
         />
+
     <android.inputmethodservice.KeyboardView
         android:id="@+id/keyboard_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
         android:layout_alignParentBottom="true"
+        android:background="#999999"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:background="#999999"
         android:keyBackground="@drawable/btn_keyboard_key"
-        android:keyTextSize="16sp"
         android:keyTextColor="#353535"
+        android:keyTextSize="16sp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
         android:visibility="gone" />
 
 </com.zhy.autolayout.AutoRelativeLayout>

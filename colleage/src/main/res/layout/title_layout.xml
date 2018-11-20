@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:fitsSystemWindows="true"
     android:clipToPadding="true"
+    android:background="@color/white"
     android:layout_height="128px">
 <com.zhy.autolayout.AutoRelativeLayout
     android:layout_width="100px"

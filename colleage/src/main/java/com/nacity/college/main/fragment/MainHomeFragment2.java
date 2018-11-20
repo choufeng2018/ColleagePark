@@ -93,6 +93,7 @@ public class MainHomeFragment2 extends BaseFragment implements MainHomeView {
         View rootView = inflater.inflate(R.layout.fragment_main_home, container, false);
         unbinder = ButterKnife.bind(this, rootView);
         model.getApartmentAd(apartmentInfo.getSid());
+        model.getParkService();
         location.setText(apartmentInfo.getGardenName());
 
         return rootView;
@@ -104,7 +105,7 @@ public class MainHomeFragment2 extends BaseFragment implements MainHomeView {
         Log.i("5555", "onResume1: " + ApartmentInfoHelper.getInstance(MainApp.mContext).getGardenName());
         Log.i("5555", "onResume2-: " + apartmentInfo.getGardenName());
         location.setText(ApartmentInfoHelper.getInstance(MainApp.mContext).getGardenName());
-        model.getParkService();
+//        model.getParkService();
     }
 
     @Override
