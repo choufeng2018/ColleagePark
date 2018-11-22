@@ -7,6 +7,7 @@ import com.college.common_libs.api.LoginApi;
 import com.college.common_libs.api.UserApi;
 import com.college.common_libs.domain.MessageTo;
 import com.college.common_libs.domain.login.DeviceParam;
+import com.college.common_libs.domain.user.UserFansTo;
 import com.college.common_libs.domain.user.UserIdParam;
 import com.college.common_libs.domain.user.UserInfoTo;
 import com.nacity.college.base.BasePresenter;
@@ -30,6 +31,7 @@ public class UserInfoPresenter extends BasePresenter implements UserInfoModel {
 
     @Override
     public void getUserInfo() {
+        getUserFans(userInfo.getSid());
         UserIdParam param = new UserIdParam();
         param.setUserId(userInfo.getSid());
         UserApi api = ApiClient.create(UserApi.class);
@@ -87,6 +89,33 @@ public class UserInfoPresenter extends BasePresenter implements UserInfoModel {
 //                            Log.i("3333", "onNext:下线设备成功4 ");
 
 //                        loginView.showErrorMessage(msg.getMessage());
+                    }
+                }
+        );
+    }
+
+    @Override
+    public void getUserFans(String userId) {
+        UserIdParam param = new UserIdParam();
+        param.setUserId(userInfo.getSid());
+        UserApi api = ApiClient.create(UserApi.class);
+        api.getfansCount(param).observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.newThread()).subscribe(
+                new Observer<MessageTo<UserFansTo>>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onNext(MessageTo<UserFansTo> msg) {
+
+                          userView.submitDataSuccess(msg.getData());
+
                     }
                 }
         );

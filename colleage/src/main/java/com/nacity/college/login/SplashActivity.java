@@ -93,7 +93,7 @@ public class SplashActivity extends BaseActivity implements SplashView {
                     intent = new Intent(appContext, MainActivity.class);
 
             } else
-                intent = new Intent(appContext, LoginOrRegisterActivity.class);
+                intent = new Intent(appContext, LoginActivity.class);
 
             startActivity(intent);
             goToAnimation(1);

@@ -324,7 +324,30 @@ public class MainHomeFragment2 extends BaseFragment implements MainHomeView {
     @Override
     public void getServiceListSuccess(List<MainMenuTo> data) {
         serviceLayout.removeAllViews();
-        Observable.from(data).subscribe(mainMenuTo -> {
+        View newsView = View.inflate(appContext, R.layout.main_service_grid_item, null);
+        Observable.from(data).filter(mainMenuTo ->("0001".equals(mainMenuTo.getCode()))).subscribe(mainMenuTo -> {
+
+            View mView = View.inflate(appContext, R.layout.main_service_grid_child_item, null);
+            Glide.with(appContext).load(mainMenuTo.getPicUrl1()).into((ImageView) mView.findViewById(R.id.image));
+            ((TextView)mView.findViewById(R.id.service_title)).setText(mainMenuTo.getTitle());
+            ((TextView)mView.findViewById(R.id.service_content)).setText(mainMenuTo.getSummary());
+            ((GridLayout)newsView.findViewById(R.id.grid_view)).addView(mView);
+
+        });
+        serviceLayout.addView(newsView);
+        View innovateView = View.inflate(appContext, R.layout.main_service_grid_item, null);
+        Observable.from(data).filter(mainMenuTo ->("0001".equals(mainMenuTo.getCode()))).subscribe(mainMenuTo -> {
+
+            View mView = View.inflate(appContext, R.layout.main_service_grid_innovate_item, null);
+            Glide.with(appContext).load(mainMenuTo.getPicUrl1()).into((ImageView) mView.findViewById(R.id.image));
+//            ((TextView)mView.findViewById(R.id.service_title)).setText(mainMenuTo.getTitle());
+            ((TextView)mView.findViewById(R.id.service_title)).setText("标题");
+            ((TextView)mView.findViewById(R.id.service_content)).setText(mainMenuTo.getSummary());
+            ((GridLayout)innovateView.findViewById(R.id.grid_view)).addView(mView);
+
+        });
+        serviceLayout.addView(innovateView);
+        Observable.from(data).filter(mainMenuTo ->(!"0001".equals(mainMenuTo.getCode())&& !"0007".equals(mainMenuTo.getCode()))).subscribe(mainMenuTo -> {
             View mView = View.inflate(appContext, R.layout.main_service_item, null);
             MainServiceItemBinding bind = DataBindingUtil.bind(mView);
             bind.setMode(mainMenuTo);
@@ -346,23 +369,11 @@ public class MainHomeFragment2 extends BaseFragment implements MainHomeView {
                 intent.putExtra("type", "7");
                 intent.putExtra("typeOther", (String) v.getTag(R.id.park_service_type));
                 intent.putExtra("title", (String) v.getTag(R.id.park_service_title));
-//                Log.i("2222", "getServiceListSuccess: "+(String)v.getTag(R.id.park_service_type));
-
-//                intent.putExtra("Url",MainApp.DefaultValue.NEWS_DETAIL_URI+ v.getTag());
-//                intent.putExtra("Title",(String)v.getTag(R.id.park_service_name));
                 startActivity(intent);
             });
         });
     }
-//            mView.setTag(mainMenuTo.getArticleId());
-//            mView.setTag(R.id.park_service_name, mainMenuTo.getTitle());
-//            mView.setOnClickListener(v -> {
-//                Intent intent = new Intent(getActivity(), AdWebActivity.class);
-//                intent.putExtra("Url", MainApp.DefaultValue.NEWS_DETAIL_URI + v.getTag());
-//                intent.putExtra("Title", (String) v.getTag(R.id.park_service_name));
-//                startActivity(intent);
-//            });
-//
+
 
     @Override
     public void onDestroy() {

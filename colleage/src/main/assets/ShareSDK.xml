@@ -3,7 +3,7 @@
 
     
     <ShareSDK 
-        AppKey = "199668d340d01"/>
+        AppKey = "28e33df7dbba4"/>
 
 	<Wechat
 		Id="4"

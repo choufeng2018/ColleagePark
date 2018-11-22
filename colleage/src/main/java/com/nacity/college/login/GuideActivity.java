@@ -74,7 +74,7 @@ public class GuideActivity extends BaseActivity {
 
             } else if (currentPage == 3) {
                 SpUtil.put("SecondEnter", true);
-                Intent intent = new Intent(appContext, LoginOrRegisterActivity.class);
+                Intent intent = new Intent(appContext, LoginActivity.class);
                 startActivity(intent);
                 goToAnimation(1);
                 finish();

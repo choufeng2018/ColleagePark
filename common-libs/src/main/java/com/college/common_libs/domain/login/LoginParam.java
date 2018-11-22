@@ -26,5 +26,6 @@ public class LoginParam {
     private String validCode;
     private String deviceType="android";
     private String deviceApp="10";
+    private String appVersion;
     private String registrationId;
 }

@@ -101,6 +101,7 @@
                 android:textColor="@color/app_color"
                 android:textSize="26px"
                 android:text="0"
+                android:id="@+id/care_num"
                android:layout_gravity="center_horizontal"
                 />
             <TextView
@@ -125,6 +126,7 @@
                 android:textColor="@color/app_color"
                 android:textSize="26px"
                 android:text="0"
+                android:id="@+id/join_num"
                 android:layout_gravity="center_horizontal"
                 />
             <TextView
@@ -151,6 +153,7 @@
                 android:textColor="@color/app_color"
                 android:textSize="26px"
                 android:text="0"
+                android:id="@+id/fans_num"
                 android:layout_gravity="center_horizontal"
                 />
             <TextView

@@ -23,7 +23,8 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="20px"
+                android:layout_height="1px"
+                android:layout_marginTop="20px"
                 android:background="@color/app_bg_color" />
 
             <com.zhy.autolayout.AutoRelativeLayout
@@ -36,10 +37,11 @@
                     android:layout_height="57px"
                     android:layout_marginLeft="25px"
                     android:layout_marginTop="25px"
+                    android:visibility="gone"
                     android:background="@drawable/park_news2"
                     android:contentDescription="@string/app_name" />
 
-                <TextView
+                <com.nacity.college.base.utils.PingFangTextView
                     android:id="@+id/service_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -47,8 +49,15 @@
                     android:layout_marginTop="42px"
                     android:layout_toRightOf="@+id/service_icon"
                     android:text="@{mode.showName}"
-                    android:textColor="#969696"
-                    android:textSize="26px" />
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+                <View
+                    android:layout_width="13px"
+                    android:layout_height="24px"
+                    android:layout_marginTop="42px"
+                    android:layout_marginRight="40px"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/back_right_icon" />
 
                 <TextView
                     android:id="@+id/service_title"

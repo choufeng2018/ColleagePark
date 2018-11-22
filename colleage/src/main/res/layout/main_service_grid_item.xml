@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.nacity.college.base.utils.DateUtil" />
+
+        <variable
+            name="mode"
+            type="com.college.common_libs.domain.user.MainMenuTo" />
+    </data>
+
+    <com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_f3"
+            android:layout_marginBottom="50px"
+            android:layout_marginTop="24px"
+            />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:layout_marginBottom="10px"
+            android:layout_marginRight="40px">
+
+            <com.nacity.college.base.utils.PingFangTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="园区新闻"
+                android:textColor="@color/black"
+                android:textSize="30px" />
+
+            <View
+                android:layout_width="13px"
+                android:layout_height="24px"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/back_right_icon" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            >
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/grid_view"
+            android:layout_marginLeft="4px"
+            >
+
+        </GridLayout>
+        </HorizontalScrollView>
+    </com.zhy.autolayout.AutoLinearLayout>
+</layout>

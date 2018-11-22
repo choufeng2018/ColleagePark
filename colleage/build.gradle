@@ -20,7 +20,7 @@ android {
 
         manifestPlaceholders = [
                 JPUSH_PKGNAME : "com.nacity.college",
-                JPUSH_APPKEY : "00ad7cb0ae42a05dea8723b5",
+                JPUSH_APPKEY : "58298b3da19efba991f7bdbd",
                 JPUSH_CHANNEL : "developer-default",
         ]
 

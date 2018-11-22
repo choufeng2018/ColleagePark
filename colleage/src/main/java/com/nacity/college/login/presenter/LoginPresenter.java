@@ -16,6 +16,7 @@ import com.college.common_libs.domain.user.UserInfoTo;
 import com.nacity.college.MainApp;
 import com.nacity.college.base.BasePresenter;
 import com.nacity.college.base.Constant;
+import com.nacity.college.base.utils.AppUtil;
 import com.nacity.college.base.utils.CheckPhoneUtil;
 import com.nacity.college.login.model.LoginModel;
 import com.nacity.college.login.view.LoginView;
@@ -182,6 +183,7 @@ public class LoginPresenter extends BasePresenter implements LoginModel {
         param.setRegistrationId(JPushInterface.getRegistrationID(MainApp.mContext));
         param.setValidCode(verificationCode);
         param.setUserMobile(phoneNumber);
+        param.setAppVersion(AppUtil.getVersionName(MainApp.mContext));
         api.login(param).observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.newThread()).subscribe(
                 new Observer<MessageTo<UserInfoTo>>() {
                     @Override

@@ -328,19 +328,6 @@
             android:name=".property.ReadEvaluateActivity"
             android:screenOrientation="portrait" />
 
-        <activity
-            android:name=".door.MyDoorActivity"
-            android:screenOrientation="portrait" />
-
-
-        <activity
-            android:name=".door.ApplyDoorActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".door.ApplyDoorDetailActivity"
-            android:screenOrientation="portrait" />
-
         <service
             android:name="cn.jpush.android.service.PushService"
             android:process=":multiprocess"
@@ -350,9 +337,6 @@
         </service>
 
 
-        <service android:name="com.hzblzx.miaodou.sdk.core.bluetooth.NRFUartService" />
-        <service android:name="com.hzblzx.miaodou.sdk.core.bluetooth.CSRUartService" />
-        <meta-data android:name="MIAODOU_APP_KEY" android:value="b586b0870cff4c50b28763d7c73aea94"> </meta-data>
 
         <receiver
             android:name=".push.JPushReceiver"

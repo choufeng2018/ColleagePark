@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.nacity.college.base.utils.DateUtil" />
+
+        <variable
+            name="mode"
+            type="com.college.common_libs.domain.user.MainMenuTo" />
+    </data>
+    <com.zhy.autolayout.AutoRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="360px"
+        android:layout_marginLeft="36px"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+
+  <com.makeramen.roundedimageview.RoundedImageView
+      android:layout_width="260px"
+      android:layout_height="350px"
+      android:id="@+id/image"
+      />
+        <TextView
+            android:id="@+id/service_title"
+            android:layout_width="450px"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/service_name"
+            android:layout_marginLeft="98px"
+            android:layout_marginRight="62px"
+            android:layout_marginTop="28px"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@{mode.title}"
+            android:textColor="#454545"
+            android:textSize="36px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/service_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/service_title"
+            android:layout_marginLeft="98px"
+            android:layout_marginRight="62px"
+            android:layout_marginTop="14px"
+            android:layout_toLeftOf="@+id/service_image"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLines="1"
+            android:layout_marginBottom="20px"
+            android:text="@{mode.summary}"
+            android:textColor="@color/gray_6"
+            android:textSize="28px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</layout>

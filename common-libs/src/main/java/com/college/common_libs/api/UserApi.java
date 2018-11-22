@@ -6,6 +6,7 @@ import com.college.common_libs.domain.property.FeedbackTo;
 import com.college.common_libs.domain.user.MainMenuParam;
 import com.college.common_libs.domain.user.MainMenuTo;
 import com.college.common_libs.domain.user.UpdateUserParam;
+import com.college.common_libs.domain.user.UserFansTo;
 import com.college.common_libs.domain.user.UserIdParam;
 import com.college.common_libs.domain.user.UserInfoTo;
 
@@ -49,5 +50,12 @@ public interface UserApi {
      */
     @POST("api/gardenUser/getUserInfoById")
     Observable<MessageTo<UserInfoTo>> getUserInfo(@Body UserIdParam param);
+
+    /***
+     *获取粉丝用户
+     *
+     */
+    @POST("api/gardenUser/followParticFans")
+    Observable<MessageTo<UserFansTo>> getfansCount(@Body UserIdParam param);
 
 }

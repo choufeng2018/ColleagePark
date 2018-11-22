@@ -8,4 +8,6 @@ public interface UserInfoModel {
 
     void getUserInfo();
     void logOut(String userId);
+
+    void getUserFans(String userId);
 }

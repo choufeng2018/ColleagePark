@@ -105,9 +105,9 @@ public class PersonCenterActivity extends BaseActivity<UserInfoTo> implements Pe
                 selectSexDialog();
                 break;
             case R.id.apartment_layout:
-                Intent intent = new Intent(appContext, SelectCityActivity.class);
-                startActivity(intent);
-                goToAnimation(1);
+//                Intent intent = new Intent(appContext, SelectCityActivity.class);
+//                startActivity(intent);
+//                goToAnimation(1);
                 break;
             case R.id.birthday_layout:
                 showBirthday();

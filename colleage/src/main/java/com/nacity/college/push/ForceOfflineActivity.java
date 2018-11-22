@@ -11,7 +11,7 @@ import com.nacity.college.base.info.UserInfoHelper;
 import com.nacity.college.base.utils.PublicWay;
 import com.nacity.college.base.utils.SpUtil;
 import com.nacity.college.base.utils.StatuBarUtil;
-import com.nacity.college.login.LoginOrRegisterActivity;
+import com.nacity.college.login.LoginActivity;
 
 
 import cn.jpush.android.api.JPushInterface;
@@ -46,7 +46,7 @@ public class ForceOfflineActivity extends BaseActivity {
                 mUserHelper.updateUser(null);
             SpUtil.put( "IsOffLine", false);
                 alertDialog.dismiss();
-                Intent intent_01 = new Intent(this, LoginOrRegisterActivity.class);
+                Intent intent_01 = new Intent(this, LoginActivity.class);
                 intent_01.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 SpUtil.put(MainApp.KeyValue.KEY_HOME_DATA, "");
 
