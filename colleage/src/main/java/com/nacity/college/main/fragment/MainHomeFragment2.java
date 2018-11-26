@@ -272,7 +272,6 @@ public class MainHomeFragment2 extends BaseFragment implements MainHomeView {
         if (data.size() == 0)
             return;
 
-
         List<List<MainMenuTo>> localImages = new ArrayList<>();
         for (int i = 0; i < (data.size() % 8 == 0 ? data.size() / 8 : data.size() / 8 + 1); i++) {
             List<MainMenuTo> mainMenuTos = new ArrayList<>();
@@ -328,24 +327,44 @@ public class MainHomeFragment2 extends BaseFragment implements MainHomeView {
         Observable.from(data).filter(mainMenuTo ->("0001".equals(mainMenuTo.getCode()))).subscribe(mainMenuTo -> {
 
             View mView = View.inflate(appContext, R.layout.main_service_grid_child_item, null);
-            Glide.with(appContext).load(mainMenuTo.getPicUrl1()).into((ImageView) mView.findViewById(R.id.image));
+            Glide.with(appContext).load(mainMenuTo.getPicUrl()).into((ImageView) mView.findViewById(R.id.image));
             ((TextView)mView.findViewById(R.id.service_title)).setText(mainMenuTo.getTitle());
             ((TextView)mView.findViewById(R.id.service_content)).setText(mainMenuTo.getSummary());
             ((GridLayout)newsView.findViewById(R.id.grid_view)).addView(mView);
+            mView.setOnClickListener(view -> {
+                Intent intent = new Intent(getActivity(), NewsDetailActivity.class);
+                intent.putExtra("id", mainMenuTo.getArticleId());
+                intent.putExtra("phone", mainMenuTo.getPhone());
+                intent.putExtra("type", "7");
+                intent.putExtra("typeOther", mainMenuTo.getArticleType());
+                intent.putExtra("title", mainMenuTo.getTitle());
+                startActivity(intent);
+            });
 
         });
+        if (((GridLayout)newsView.findViewById(R.id.grid_view)).getChildCount()>0)
         serviceLayout.addView(newsView);
         View innovateView = View.inflate(appContext, R.layout.main_service_grid_item, null);
-        Observable.from(data).filter(mainMenuTo ->("0001".equals(mainMenuTo.getCode()))).subscribe(mainMenuTo -> {
-
+        ((TextView)innovateView.findViewById(R.id.title_name)).setText("园区创新");
+        Observable.from(data).filter(mainMenuTo ->("0007".equals(mainMenuTo.getCode()))).subscribe(mainMenuTo -> {
             View mView = View.inflate(appContext, R.layout.main_service_grid_innovate_item, null);
-            Glide.with(appContext).load(mainMenuTo.getPicUrl1()).into((ImageView) mView.findViewById(R.id.image));
+            Glide.with(appContext).load(mainMenuTo.getPicUrl()).into((ImageView) mView.findViewById(R.id.image));
 //            ((TextView)mView.findViewById(R.id.service_title)).setText(mainMenuTo.getTitle());
-            ((TextView)mView.findViewById(R.id.service_title)).setText("标题");
+            ((TextView)mView.findViewById(R.id.service_title)).setText(mainMenuTo.getTitle());
             ((TextView)mView.findViewById(R.id.service_content)).setText(mainMenuTo.getSummary());
             ((GridLayout)innovateView.findViewById(R.id.grid_view)).addView(mView);
+            mView.setOnClickListener(view -> {
+                Intent intent = new Intent(getActivity(), NewsDetailActivity.class);
+                intent.putExtra("id", mainMenuTo.getArticleId());
+                intent.putExtra("phone", mainMenuTo.getPhone());
+                intent.putExtra("type", "2");
+                intent.putExtra("typeOther", mainMenuTo.getArticleType());
+                intent.putExtra("title", mainMenuTo.getTitle());
+                startActivity(intent);
+            });
 
         });
+        if ( ((GridLayout)innovateView.findViewById(R.id.grid_view)).getChildCount()>0)
         serviceLayout.addView(innovateView);
         Observable.from(data).filter(mainMenuTo ->(!"0001".equals(mainMenuTo.getCode())&& !"0007".equals(mainMenuTo.getCode()))).subscribe(mainMenuTo -> {
             View mView = View.inflate(appContext, R.layout.main_service_item, null);

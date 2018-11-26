@@ -142,7 +142,7 @@ public class ParkGuideActivity extends BaseActivity<EnterpriseTo> implements Par
                     view2.setTag(introduceList.get(position).getId());
                     view2.setOnClickListener(v -> {
                         Intent intent = new Intent(appContext, AdWebActivity.class);
-                        intent.putExtra("Url", "http://progarden.joyhomenet.com:8081/garden/api/introduce/showArticle/" + v.getTag());
+                        intent.putExtra("Url", "http://tdatacenter.joyhomenet.com:8081/tech/api/introduce/showArticle/" + v.getTag());
                         intent.putExtra("Title", Constant.PARK_INTRODUCE);
                         startActivity(intent);
                         goToAnimation(1);
@@ -208,7 +208,7 @@ public class ParkGuideActivity extends BaseActivity<EnterpriseTo> implements Par
             view.setTag(introduceTo.getId());
             view.setOnClickListener(v -> {
                 Intent intent = new Intent(appContext, AdWebActivity.class);
-                intent.putExtra("Url", "http://progarden.joyhomenet.com:8081/garden/api/introduce/showArticle/" + v.getTag());
+                intent.putExtra("Url", "http://tdatacenter.joyhomenet.com:8081/tech/api/introduce/showArticle/" + v.getTag());
                 intent.putExtra("Title", Constant.PARK_INTRODUCE);
                 startActivity(intent);
 

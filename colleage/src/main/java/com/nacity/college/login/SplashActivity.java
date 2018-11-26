@@ -83,9 +83,10 @@ public class SplashActivity extends BaseActivity implements SplashView {
 
         handler.postDelayed(() -> {
             Intent intent;
-            if (!SpUtil.getBoolean("SecondEnter"))
-                intent = new Intent(appContext, GuideActivity.class);
-            else if (userInfo.isLogin()&&userInfo.getUserInfoTo()!=null) {
+//            if (!SpUtil.getBoolean("SecondEnter"))
+//                intent = new Intent(appContext, GuideActivity.class);
+//            else
+                if (userInfo.isLogin()&&userInfo.getUserInfoTo()!=null) {
 
                 if (TextUtils.isEmpty(userInfo.getUserInfoTo().getNickname()))
                     intent = new Intent(appContext, FinishDataActivity.class);

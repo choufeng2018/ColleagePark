@@ -1,6 +1,11 @@
 package com.nacity.college.main.presenter;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
+import android.support.v4.content.FileProvider;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -32,7 +37,7 @@ public class UpdatePresenter extends BasePresenter implements UpdateModel {
     @Override
     public void getUpdateInfo() {
         HttpUtils httpUtils=new HttpUtils();
-        httpUtils.send(GET, "http://joyhomenet.com/appUpdate/park/android-update.html", new RequestCallBack<String>() {
+        httpUtils.send(GET, "http://joyhomenet.com/appUpdate/colleage/android-update.html", new RequestCallBack<String>() {
             @Override
             public void onSuccess(ResponseInfo<String> msg) {
                 UpdateTo updateTo=  JSON.parseObject(msg.result,UpdateTo.class);
@@ -75,5 +80,7 @@ public class UpdatePresenter extends BasePresenter implements UpdateModel {
             }
         });
     }
+
+
     }
 

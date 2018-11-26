@@ -30,7 +30,7 @@ public class ParkingApplyTo {
      * createUserId : 359023884197953536
      * userMobile : 18300675657
      * modUserId : null
-     * driverImgs : http://ownrrncih.bkt.clouddn.com/Fv1L5c9fuepLgbEhsJ9CnOhTii56,http://ownrrncih.bkt.clouddn.com/Fv5_JLptKwvv3Sd-8QC0pv8Ch0sd
+     * driverImgs : http://picjoy.joyhomenet.com/Fv1L5c9fuepLgbEhsJ9CnOhTii56,http://picjoy.joyhomenet.com/Fv5_JLptKwvv3Sd-8QC0pv8Ch0sd
      * driverImgList : null
      */
     private String parkId;

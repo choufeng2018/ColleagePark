@@ -10,11 +10,13 @@ import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.FileProvider;
 import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
 import android.util.Log;
@@ -103,6 +105,7 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
         message();
         isOffLian();
     }
+
     @SuppressWarnings("deprecation")
     private boolean isRunningForeground() {
         ActivityManager am = (ActivityManager) this.getSystemService(Context.ACTIVITY_SERVICE);
@@ -114,7 +117,7 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
     @SuppressWarnings("deprecation")
     private void message() {
         String data = SpUtil.getString(MainApp.KeyValue.KEY_HOME_DATA);
-        Log.i("99999", "data: "+data);
+        Log.i("99999", "data: " + data);
         if (!TextUtils.isEmpty(data)) {
 
             int type = Integer.parseInt(JSONObject.parseObject(data).getString("type"));
@@ -135,11 +138,12 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
             }
         }
     }
+
     private void jumpActivity(Context context, int type, String data) {
         Intent i;
         String sid = JSONObject.parseObject(data).getString("sid");
 //        String sid = JSONObject.parseObject(data).getString("goodsId");
-        System.out.println(type+"type"+sid);
+        System.out.println(type + "type" + sid);
         switch (type) {
 //            1：圈子关注
             case 1:
@@ -153,8 +157,8 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
             case 2:
                 i = new Intent(context, NewsDetailActivity.class);
                 i.putExtra("id", sid);
-                i.putExtra("type","1");
-                i.putExtra("noticeType",JSONObject.parseObject(data).getString("noticeType"));
+                i.putExtra("type", "1");
+                i.putExtra("noticeType", JSONObject.parseObject(data).getString("noticeType"));
                 startActivity(i);
                 SpUtil.put(MainApp.KeyValue.KEY_HOME_DATA, "");
                 finish();
@@ -162,7 +166,7 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
 //            车位申请回复
             case 3:
                 i = new Intent(context, ParkingApplyDetailActivity.class);
-                i.putExtra("ParkingId",sid);
+                i.putExtra("ParkingId", sid);
                 startActivity(i);
                 SpUtil.put(MainApp.KeyValue.KEY_HOME_DATA, "");
                 goToAnimation(1);
@@ -171,8 +175,8 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
                 break;
 //            装修申请回复
             case 4:
-                i=new Intent(appContext, ApplyDetailActivity.class);
-                i.putExtra("DecorateId",sid);
+                i = new Intent(appContext, ApplyDetailActivity.class);
+                i.putExtra("DecorateId", sid);
                 startActivity(i);
                 SpUtil.put(MainApp.KeyValue.KEY_HOME_DATA, "");
                 goToAnimation(1);
@@ -192,11 +196,11 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
 //            服务工单被响应
             case 5:
 
-                i=new Intent(appContext, ServiceDetailActivity.class);
-                i.putExtra("ServiceId",sid);
-                Log.i("2222", "jumpActivity1: "+JSONObject.parseObject(data).getString("serviceType"));
-                Log.i("2222", "jumpActivity2: "+Integer.parseInt(JSONObject.parseObject(data).getString("serviceType")));
-                i.putExtra("Type",serviceType[Integer.parseInt(JSONObject.parseObject(data).getString("serviceType"))-1] );
+                i = new Intent(appContext, ServiceDetailActivity.class);
+                i.putExtra("ServiceId", sid);
+                Log.i("2222", "jumpActivity1: " + JSONObject.parseObject(data).getString("serviceType"));
+                Log.i("2222", "jumpActivity2: " + Integer.parseInt(JSONObject.parseObject(data).getString("serviceType")));
+                i.putExtra("Type", serviceType[Integer.parseInt(JSONObject.parseObject(data).getString("serviceType")) - 1]);
                 startActivity(i);
                 SpUtil.put(MainApp.KeyValue.KEY_HOME_DATA, "");
                 goToAnimation(1);
@@ -216,9 +220,9 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
 //                 break;
 //          服务工单处理完成
             case 7:
-                i=new Intent(appContext, ServiceDetailActivity.class);
-                i.putExtra("ServiceId",sid);
-                i.putExtra("Type",serviceType[Integer.parseInt(JSONObject.parseObject(data).getString("serviceType"))-1] );
+                i = new Intent(appContext, ServiceDetailActivity.class);
+                i.putExtra("ServiceId", sid);
+                i.putExtra("Type", serviceType[Integer.parseInt(JSONObject.parseObject(data).getString("serviceType")) - 1]);
                 startActivity(i);
                 SpUtil.put(MainApp.KeyValue.KEY_HOME_DATA, "");
                 goToAnimation(1);
@@ -227,8 +231,8 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
                 break;
 //            建议
             case 8:
-                i=new Intent(appContext, PraiseDetailActivity.class);
-                i.putExtra("FeedbackId",sid);
+                i = new Intent(appContext, PraiseDetailActivity.class);
+                i.putExtra("FeedbackId", sid);
                 i.putExtra("Title", Constant.SUGGEST_DETAIL);
                 startActivity(i);
                 SpUtil.put(MainApp.KeyValue.KEY_HOME_DATA, "");
@@ -238,8 +242,8 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
                 break;
 //            表扬
             case 9:
-                i=new Intent(appContext, PraiseDetailActivity.class);
-                i.putExtra("FeedbackId",sid);
+                i = new Intent(appContext, PraiseDetailActivity.class);
+                i.putExtra("FeedbackId", sid);
                 i.putExtra("Title", Constant.PRAISE_DETAIL);
                 startActivity(i);
                 SpUtil.put(MainApp.KeyValue.KEY_HOME_DATA, "");
@@ -248,9 +252,9 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
                 break;
 //            园区活动
             case 10:
-                i=  new Intent(appContext,ParkActivitiesDetailAcitivity.class);
-                i.putExtra("id",sid);
-                Log.i("2222", "setRecycleView: "+sid);
+                i = new Intent(appContext, ParkActivitiesDetailAcitivity.class);
+                i.putExtra("id", sid);
+                Log.i("2222", "setRecycleView: " + sid);
                 startActivity(i);
                 SpUtil.put(MainApp.KeyValue.KEY_HOME_DATA, "");
                 goToAnimation(1);
@@ -258,12 +262,14 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
                 break;
             default:
         }
-        }
-    private  String[] serviceType={"4","0","1","3","2"};
+    }
+
+    private String[] serviceType = {"4", "0", "1", "3", "2"};
+
     private void isOffLian() {
 
-        if (SpUtil.getBoolean("IsOffLine")){
-            if (PublicWay.forceOfflineActivity==null) {
+        if (SpUtil.getBoolean("IsOffLine")) {
+            if (PublicWay.forceOfflineActivity == null) {
                 Intent intent1 = new Intent(this, ForceOfflineActivity.class);
                 intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent1);
@@ -271,6 +277,7 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
             }
         }
     }
+
     private void initFragment() {
         fragmentList.add(new MainHomeFragment2());
         fragmentList.add(new CircleFragment());
@@ -287,12 +294,12 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
             @Override
             public void onPageSelected(int position) {
                 setMenuLayout(position);
-                if (position==2)
-                    ((MyselfFragment)fragmentList.get(2)).getUserInfo();
-                else if (position==1)
-                    ((CircleFragment)fragmentList.get(1)).setUserInfo();
-                else if (position==0) {
-                 handler.postDelayed(() -> ((MainHomeFragment2) fragmentList.get(0)).getData(),500);
+                if (position == 2)
+                    ((MyselfFragment) fragmentList.get(2)).getUserInfo();
+                else if (position == 1)
+                    ((CircleFragment) fragmentList.get(1)).setUserInfo();
+                else if (position == 0) {
+                    handler.postDelayed(() -> ((MainHomeFragment2) fragmentList.get(0)).getData(), 500);
                 }
             }
 
@@ -301,7 +308,7 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
 
             }
         });
-        viewPager.setCurrentItem(getIntent().getIntExtra("Index",0));
+        viewPager.setCurrentItem(getIntent().getIntExtra("Index", 0));
     }
 
     FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
@@ -316,7 +323,7 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
         }
     };
 
-    @OnClick({R.id.main_home_layout, R.id.main_circle_layout,  R.id.main_myself_layout})
+    @OnClick({R.id.main_home_layout, R.id.main_circle_layout, R.id.main_myself_layout})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.main_home_layout:
@@ -352,8 +359,7 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
                 handler.postDelayed(() -> canClose = false, 5000);
                 return true;
             }
-            }
-
+        }
 
 
         return super.onKeyDown(keyCode, event);
@@ -362,10 +368,10 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
     @Override
     public void showUpdateDialog(UpdateTo updateTo) {
         NiftyDialogBuilder dialog = NiftyDialogBuilder.getInstance(appContext);
-        View mView=View.inflate(appContext,R.layout.update_layout,null);
+        View mView = View.inflate(appContext, R.layout.update_layout, null);
         dialog.setContentView(mView);
         UpdateLayoutBinding bind = DataBindingUtil.bind(mView);
-        if (updateTo.getVerCode()> AppUtil.getVersionCode(appContext)){
+        if (updateTo.getVerCode() > AppUtil.getVersionCode(appContext)) {
 //            bind.updateTitle.setText("是否升级到"+updateTo.getAppVersion()+"版本");
 //            bind.updateSize.setText("大小："+updateTo.getAppSize());
             bind.noUpdateLayout.setVisibility(View.GONE);
@@ -373,10 +379,10 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
             bind.updateContent.setText(updateTo.getUpdateDesc());
             bind.confirm.setOnClickListener(v -> {
                 dialog.dismiss();
-                getPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE,this);
+                getPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, this);
             });
             bind.cancel.setOnClickListener(v -> dialog.dismiss());
-            downLoadUrl=updateTo.getDownloadUrl();
+            downLoadUrl = updateTo.getDownloadUrl();
             dialog.setCanceledOnTouchOutside(true);
             dialog.show();
         }
@@ -385,23 +391,37 @@ public class MainActivity extends BaseActivity implements UpdateView, Permission
     }
 
 
-    private void showDownloadApp(String url){
+    private void showDownloadApp(String url) {
         NiftyDialogBuilder dialog = NiftyDialogBuilder.getInstance(this);
         dialog.setContentView(R.layout.update_download_view);
         dialog.show();
         dialog.setCanceledOnTouchOutside(false);
         dialog.setCancelable(false);
-        ProgressBar progressBar= (ProgressBar) dialog.findViewById(R.id.progress_bar);
+        ProgressBar progressBar = (ProgressBar) dialog.findViewById(R.id.progress_bar);
         TextView updateProgress = (TextView) dialog.findViewById(R
                 .id.update_progress);
-        model.downloadApp(url,progressBar,updateProgress);
+        model.downloadApp(url, progressBar, updateProgress);
     }
 
     @Override
     public void installApk() {
+        File file = new File(
+                Environment.getExternalStorageDirectory()
+                , "park.apk");
         Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory(),
-                "park.apk")), "application/vnd.android.package-archive");
+        // 由于没有在Activity环境下启动Activity,设置下面的标签
+
+
+        if (Build.VERSION.SDK_INT >= 24) { //判读版本是否在7.0以上
+            //参数1 上下文, 参数2 Provider主机地址 和配置文件中保持一致   参数3  共享的文件
+            Uri apkUri = FileProvider.getUriForFile(appContext, "com.nacity.college.fileprovider", file);
+            //添加这一句表示对目标应用临时授权该Uri所代表的文件
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            intent.setDataAndType(apkUri, "application/vnd.android.package-archive");
+        } else {
+            intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
+        }
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();
     }

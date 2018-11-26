@@ -20,7 +20,7 @@ import cn.jpush.android.api.JPushInterface;
 public class MainApp extends Application {
     public static Context mContext;
     public static MainApp mInstance = null;
-    public static final String MAIN_IMAGE_URI = "http://ownrrncih.bkt.clouddn.com/";
+    public static final String MAIN_IMAGE_URI = "http://picjoy.joyhomenet.com/";
 
     //private RefWatcher refWatcher;
 
@@ -54,9 +54,9 @@ public class MainApp extends Application {
     }
 
     public static class DefaultValue {
-        public static final String IMAGE_URI = "http://ownrrncih.bkt.clouddn.com/";
-        public static final String NEWS_DETAIL_URI = "http://progarden.joyhomenet.com:8081/garden/api/article/showArticle/";
-        public static final String ACTIVITY_DETAIL_URI = "http://progarden.joyhomenet.com:8081/garden/api/salon/showArticle/";
+        public static final String IMAGE_URI = "http://picjoy.joyhomenet.com/";
+        public static final String NEWS_DETAIL_URI = "http://tdatacenter.joyhomenet.com:8081/tech/api/article/showArticle/";
+        public static final String ACTIVITY_DETAIL_URI = "http://tdatacenter.joyhomenet.com:8081/tech/api/salon/showArticle/";
 
     }
 

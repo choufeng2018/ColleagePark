@@ -20,7 +20,7 @@ public class WaterTo implements Serializable {
      * content : 大华矿泉水
      * idStr : a5819235589292032
      * pid : 4
-     * img : http://ownrrncih.bkt.clouddn.com/FuwD_HkdZJgxiQadPnPzO1e4vS-X
+     * img : http://picjoy.joyhomenet.com/FuwD_HkdZJgxiQadPnPzO1e4vS-X
      * ispay : 1
      * unitPrice : 30
      * qtyTitle :  瓶

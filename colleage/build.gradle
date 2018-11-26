@@ -9,8 +9,8 @@ android {
         applicationId "com.nacity.college"
         minSdkVersion 21
         targetSdkVersion 25
-        versionCode 13
-        versionName "2.0.5"
+        versionCode 1
+        versionName "1.0.0"
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 

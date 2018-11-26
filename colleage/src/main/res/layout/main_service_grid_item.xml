@@ -35,8 +35,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:text="园区新闻"
+                android:id="@+id/title_name"
                 android:textColor="@color/black"
-                android:textSize="30px" />
+                android:textSize="38px" />
 
             <View
                 android:layout_width="13px"
