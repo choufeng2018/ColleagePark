@@ -304,6 +304,7 @@ public class MainHomeFragment2 extends BaseFragment implements MainHomeView {
             propertyServiceBanner.setVisibility(View.GONE);
             return;
         }
+        propertyServiceBanner.removeAllViews();
                 Observable.from(data).subscribe(mainMenuTo -> {
                     View mView = View.inflate(appContext, R.layout.main_property_service_item, null);
                     mView.setTag(mainMenuTo.getCode() + "");
@@ -370,8 +371,7 @@ public class MainHomeFragment2 extends BaseFragment implements MainHomeView {
             View mView = View.inflate(appContext, R.layout.main_service_item, null);
             MainServiceItemBinding bind = DataBindingUtil.bind(mView);
             bind.setMode(mainMenuTo);
-            if (TextUtils.isEmpty(mainMenuTo.getPicUrl()))
-                bind.serviceImage.setVisibility(View.GONE);
+
             Glide.with(MainApp.mContext).load(MainApp.getImagePath(mainMenuTo.getPicUrl3())).into(bind.serviceIcon);
             Glide.with(MainApp.mContext).load(MainApp.getImagePath(mainMenuTo.getPicUrl())).into(bind.serviceImage);
             if (!TextUtils.isEmpty(mainMenuTo.getLastModTime()))

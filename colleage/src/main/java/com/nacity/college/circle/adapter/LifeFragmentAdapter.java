@@ -1,7 +1,9 @@
 package com.nacity.college.circle.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.graphics.Bitmap;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
@@ -12,13 +14,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bm.library.PhotoView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.college.common_libs.domain.circle.NeighborPostTo;
 import com.college.common_libs.domain.user.UserInfoTo;
 import com.nacity.college.R;
+import com.nacity.college.base.PostImageDetailActivity;
 import com.nacity.college.databinding.LifePostItemBinding;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.nacity.college.MainApp;
@@ -103,7 +109,7 @@ public class LifeFragmentAdapter extends BaseAdapter<NeighborPostTo, LifePostIte
 
                                 if (deletePostListener != null) {
 
-                                    deletePostListener.deletePostClick(mode.getId(),position);
+                                    deletePostListener.deletePostClick(mode.getId(), position);
                                 }
                             });
                         } else
@@ -173,41 +179,74 @@ public class LifeFragmentAdapter extends BaseAdapter<NeighborPostTo, LifePostIte
      * 设置贴子的图片
      */
     private void setPostImage(String pathList, GridLayout gridLayout) {
-        gridLayout.removeAllViews();
-        if (!TextUtils.isEmpty(pathList)) {
-            String[] paths = pathList.split(";");
-            Observable.from(paths).subscribe(s -> {
-                View postImageView = View.inflate(mContext, R.layout.life_post_image_item, null);
+        if (TextUtils.isEmpty(pathList))
+            gridLayout.setVisibility(View.GONE);
+        else {
+            gridLayout.setVisibility(View.VISIBLE);
+            gridLayout.removeAllViews();
+
+            for (int i = 0; i < pathList.split(";").length; i++) {
+
+                RoundedImageView imageView = new RoundedImageView(mContext);
+
+//
+
+                imageView.setBackgroundResource(R.drawable.post_list_item_bg);
+                imageView.setCornerRadius(12, 12, 12, 12);
                 GridLayout.LayoutParams layoutParams = new GridLayout.LayoutParams();
-                if (paths.length == 1) {
-                    gridLayout.setColumnCount(1);
-                    layoutParams.width = (int) (getScreenWidthPixels(mContext) * 0.4023);
-                    layoutParams.height = (int) (getScreenWidthPixels(mContext) * 0.4023);
-                } else if (paths.length == 2 || paths.length == 4) {
+                if (pathList.split(";").length == 2 || pathList.split(";").length == 4) {
+                    imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                    layoutParams.width = (int) (250.0 / 750 * getScreenWidthPixels(mContext));
+                    layoutParams.height = (int) (150.0 / 750 * getScreenWidthPixels(mContext));
+                    layoutParams.setMarginStart((int) (20.0 / 750 * getScreenWidthPixels(mContext)));
+                    layoutParams.bottomMargin = (int) (20.0 / 750 * getScreenWidthPixels(mContext));
                     gridLayout.setColumnCount(2);
-                    layoutParams.width = (int) (getScreenWidthPixels(mContext) * 0.31);
-                    layoutParams.height = (int) (getScreenWidthPixels(mContext) * 0.31);
+
+                    disPlayImage(imageView, pathList.split(";")[i]);
+                } else if (pathList.split(";").length == 1) {
+
+                    Glide.with(mContext).load(pathList.split(";")[i]).asBitmap().into(new SimpleTarget<Bitmap>() {
+                        @Override
+                        public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+
+                            if (resource.getHeight() / resource.getWidth() >= 1) {
+                                layoutParams.width = (int) (400.0 * resource.getWidth() / (resource.getHeight() * 750) * getScreenWidthPixels(mContext));
+                                layoutParams.height = (int) (400.0 / 750 * getScreenWidthPixels(mContext));
+                            } else {
+                                layoutParams.width = (int) (400.0 / 750 * getScreenWidthPixels(mContext));
+                                layoutParams.height = (int) (400.0 * resource.getHeight() / (resource.getWidth() * 750) * getScreenWidthPixels(mContext));
+                            }
+                            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+                            imageView.setMaxWidth(400);
+                            imageView.setMaxHeight((int) (400.0 / 750 * getScreenWidthPixels(mContext)));
+                            imageView.setImageBitmap(resource);
+//
+//
+                        }
+                    });
+                    layoutParams.setMarginStart((int) (22.0 / 750 * getScreenWidthPixels(mContext)));
                 } else {
+
+                    imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                    layoutParams.width = (int) (170.0 / 750 * getScreenWidthPixels(mContext));
+                    layoutParams.height = (int) (100.0 / 750 * getScreenWidthPixels(mContext));
+                    layoutParams.setMarginStart((int) (20.0 / 750 * getScreenWidthPixels(mContext)));
+                    layoutParams.bottomMargin = (int) (20.0 / 750 * getScreenWidthPixels(mContext));
+
                     gridLayout.setColumnCount(3);
-                    layoutParams.width = (int) (getScreenWidthPixels(mContext) * 0.3);
-                    layoutParams.height = (int) (getScreenWidthPixels(mContext) * 0.3);
+                    disPlayImage(imageView, pathList.split(";")[i]);
+
                 }
-
-                layoutParams.setMargins(0, 0, (int) (getScreenWidthPixels(mContext) * 0.0139), (int) (getScreenWidthPixels(mContext) * 0.0139));
-                postImageView.setLayoutParams(layoutParams);
-                PhotoView postImage = (PhotoView) postImageView.findViewById(R.id.post_image);
-                TextView imageType = (TextView) postImageView.findViewById(R.id.image_type);
-
-                // Glide.with(mContext).load(MainApp.getImagePath()).into(postImage);
-                ImageLoadleUtil.getNeighborImageType(mContext, MainApp.getImagePath(s +"?imageMogr2/thumbnail/250x"), postImage, imageType);
-                postImage.setTransitionName("LifeImage");
-
-                postImage.setOnClickListener(v -> {
-                    if (listener != null)
-                        listener.imageClick(s, pathList, postImage);
+                imageView.setTag(i);
+                imageView.setLayoutParams(layoutParams);
+                imageView.setOnClickListener(view -> {
+                    Intent intent = new Intent(mContext, PostImageDetailActivity.class);
+                    intent.putExtra("PathList", pathList);
+                    intent.putExtra("CurrentPath", pathList.split(";")[(int) view.getTag()]);
+                    mContext.startActivity(intent);
                 });
-                gridLayout.addView(postImageView);
-            });
+                gridLayout.addView(imageView);
+            }
         }
     }
 

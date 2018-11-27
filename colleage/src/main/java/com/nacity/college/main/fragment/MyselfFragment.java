@@ -21,7 +21,10 @@ import com.nacity.college.base.Constant;
 import com.nacity.college.base.info.UserInfoHelper;
 import com.nacity.college.base.utils.GlideCacheUtil;
 import com.nacity.college.base.utils.PingFangTextView;
+import com.nacity.college.circle.CareActivity;
 import com.nacity.college.circle.CirclePersonalCenterActivity;
+import com.nacity.college.circle.FansActivity;
+import com.nacity.college.circle.JoinActivity;
 import com.nacity.college.common.model.UserInfoModel;
 import com.nacity.college.common.presenter.UserInfoPresenter;
 import com.nacity.college.login.LoginActivity;
@@ -89,7 +92,7 @@ public class MyselfFragment extends BaseFragment {
         unbinder.unbind();
     }
 
-    @OnClick({R.id.person_center_layout, R.id.main_page_layout, R.id.my_walt_layout, R.id.my_older_layout, R.id.my_service_record_layout, R.id.feedback_layout, R.id.clean_cache_layout, R.id.about_layout, R.id.login_out_layout, R.id.my_door_layout})
+    @OnClick({R.id.person_center_layout, R.id.main_page_layout, R.id.my_walt_layout, R.id.my_older_layout, R.id.my_service_record_layout, R.id.feedback_layout, R.id.clean_cache_layout, R.id.about_layout, R.id.login_out_layout, R.id.my_door_layout,R.id.fans_layout,R.id.care_layout,R.id.join_layout})
     public void onViewClicked(View view) {
         Intent intent;
         switch (view.getId()) {
@@ -141,6 +144,24 @@ public class MyselfFragment extends BaseFragment {
                 break;
             case R.id.login_out_layout:
                 loginOutDialog();
+                break;
+            case R.id.fans_layout:
+                intent = new Intent(appContext, FansActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                goToAnimation(1);
+                break;
+            case R.id.join_layout:
+                 intent = new Intent(appContext, JoinActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                goToAnimation(1);
+                break;
+            case R.id.care_layout:
+                intent = new Intent(appContext, CareActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                goToAnimation(1);
                 break;
         }
     }

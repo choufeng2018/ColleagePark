@@ -46,6 +46,7 @@ public class GreenUnLimitPresenterImpl extends BasePresenter implements GreenUnL
 
     @Override
     public void success(List<HouseRentTo> houseList) {
+        System.out.println(houseList+"houseList");
         unLimitView.refreshRecycleView(houseList);
     }
 

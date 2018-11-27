@@ -32,7 +32,7 @@ public class GreenUnLimitInteractorImpl implements GreenUnLimitInteractor {
 
             @Override
             public void onError(Throwable e) {
-
+                System.out.println(e+"eeeeeeeeee");
             loadingCallback.error(e);
             }
 

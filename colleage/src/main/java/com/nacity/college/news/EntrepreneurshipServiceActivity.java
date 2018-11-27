@@ -28,7 +28,7 @@ import butterknife.ButterKnife;
 public class EntrepreneurshipServiceActivity extends BaseActivity implements NewsFragmentView {
     @BindView(R.id.recycleView)
     LRecyclerView recycleView;
-    private FinancingFragmentAdapter adapter;
+    private NewsFragmentAdapter adapter;
     private int                 pageIndex;
     private List<NewsTo> newsList =new ArrayList<>();
     private NewsModel mNewsModel;
@@ -48,7 +48,7 @@ public class EntrepreneurshipServiceActivity extends BaseActivity implements New
 
     }
     public void setRecycleView(){
-        adapter = new FinancingFragmentAdapter(appContext);
+        adapter = new NewsFragmentAdapter(appContext);
         adapter.setList(newsList);
         recycleView.setLayoutManager(new LinearLayoutManager(this));
         LRecyclerViewAdapter lRecyclerViewAdapter = new LRecyclerViewAdapter(adapter);

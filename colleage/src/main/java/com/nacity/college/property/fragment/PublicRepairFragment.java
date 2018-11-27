@@ -176,6 +176,7 @@ public class PublicRepairFragment extends BaseFragment implements FragmentPermis
                 Glide.with(appContext).load(imagePaths.get(i)).into(photoView);
             photoView.setLayoutParams(layoutParams);
             photoView.setTag(imagePaths.get(i));
+            photoView.setTag(R.id.current,i);
             photoView.setOnClickListener(v -> getPermissionPhoto(Manifest.permission.CAMERA, v, this));
             serviceImage.addView(photoView);
         }
@@ -245,7 +246,8 @@ public class PublicRepairFragment extends BaseFragment implements FragmentPermis
                 startActivityForResult(intent, REQUEST_CAMERA_CODE);
             } else {
                 PhotoPreviewIntent intent = new PhotoPreviewIntent(appContext);
-                intent.setCurrentItem(0);
+
+                intent.setCurrentItem((Integer) view.getTag(R.id.current));
                 intent.setPhotoPaths(imagePaths);
                 if ("000000".equals(imagePaths.get(imagePaths.size() - 1))) {
                     imagePaths.remove(imagePaths.get(imagePaths.size() - 1));

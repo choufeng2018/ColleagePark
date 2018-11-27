@@ -62,9 +62,9 @@ public class ShareActivity extends BaseActivity {
     }
     public void qqShare(){
         QQ.ShareParams qq = new QQ.ShareParams();
-        qq.setTitle("欢迎加入JoyPark");
+        qq.setTitle("欢迎加入紫金众创社区");
         //点击标题跳转的分享网址
-        qq.setTitleUrl("http://joyhomenet.com/pdownload.html");
+        qq.setTitleUrl("http://joyhomenet.com/cdownload.html");
         qq.setText(Constant.APP_SHARE_CONTENT);
         Platform share_qq = ShareSDK.getPlatform( QQ.NAME);
 

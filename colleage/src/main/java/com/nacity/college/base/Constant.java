@@ -130,7 +130,7 @@ public  class  Constant {
     public static final String NEW_MESSAGE = "消息列表";
     public final static int RESULT_CAMERA = 10011;
     public final static int RESULT_SDCARD = 811;
-    public static final String APP_SHARE_CONTENT = "您的家人邀请您注册JoyPark，下载注册了解更多详情 http://joyhomenet.com/pdownload.html";
+    public static final String APP_SHARE_CONTENT = "您的同事邀请您注册【紫金众创社区】APP，下载注册了解更多详情 http://joyhomenet.com/cdownload.html";
     public static final String CURRENT_PROGRESS = "当前进度：";
 //  0室内维修,1公共维修,2 投诉、3装修申请、4车位申请、5园区配送、6表扬、7建议
     public static String[] MY_SERVICE_RECORD={"室内维修","公共维修","投 诉","装修申请","车位申请","园区配送","表 扬","建 议"};

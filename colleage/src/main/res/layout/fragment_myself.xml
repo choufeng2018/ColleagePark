@@ -19,7 +19,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="54px"
             android:layout_marginLeft="60px"
-            android:background="@drawable/ic_launcher"
+            android:background="@drawable/default_head_image"
             android:scaleType="fitXY"
             app:layout_auto_basewidth="height"
             app:riv_border_color="@color/white"
@@ -93,6 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:id="@+id/care_layout"
             android:layout_marginLeft="150px"
             >
             <com.nacity.college.base.utils.PingFangTextView
@@ -118,6 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:id="@+id/join_layout"
      android:layout_centerHorizontal="true"
             >
             <com.nacity.college.base.utils.PingFangTextView
@@ -144,6 +146,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:id="@+id/fans_layout"
             android:layout_alignParentEnd="true"
             android:layout_marginRight="150px"
             >

@@ -62,7 +62,7 @@
         android:background="@color/white"
         android:orientation="horizontal">
 
-        <com.joypark.nacity.base.utils.wheelview.WheelView
+        <com.nacity.college.base.utils.wheelview.WheelView
             android:id="@+id/wheelLeft"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1" />
 
-        <com.joypark.nacity.base.utils.wheelview.WheelView
+        <com.nacity.college.base.utils.wheelview.WheelView
             android:id="@+id/wheelRight"
             android:layout_width="0dp"
             android:layout_gravity="center_vertical"

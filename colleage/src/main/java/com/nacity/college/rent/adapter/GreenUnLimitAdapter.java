@@ -42,10 +42,7 @@ public class GreenUnLimitAdapter extends BaseAdapter<HouseRentTo, RentHouseItemB
         HouseRentTo mode = mList.get(position);
         RentHouseItemBinding binding = holder.getBinding();
         binding.setMode(mode);
-
-
-            Glide.with(MainApp.mContext).load(mode.getHouseImages().split(";")[0]).error(R.drawable.park_rent_house_load).into(binding.houseImage);
-
+        Glide.with(MainApp.mContext).load(mode.getHouseImages().split(";")[0]).error(R.drawable.park_rent_house_load).into(binding.houseImage);
         binding.housePrice.setText(mode.getHousePrice());
 
         binding.houseType.setVisibility(mode.getHouseChosen() ==1 ? View.GONE : View.VISIBLE);

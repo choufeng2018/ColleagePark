@@ -41,7 +41,7 @@ public class HouseListActivity extends BaseActivity implements GreenUnLimitView<
 
     @BindView(R.id.recycleView)
     LRecyclerView recycleView;
-    private List<HouseRentTo> houseList=new ArrayList<>();
+    private List<HouseRentTo> houseList = new ArrayList<>();
     private GreenUnLimitPresenter presenter;
     private int pageIndex;
     private GreenUnLimitAdapter adapter;
@@ -65,35 +65,36 @@ public class HouseListActivity extends BaseActivity implements GreenUnLimitView<
     }
 
     private void addHeadView() {
-        headView = View.inflate(appContext, R.layout.house_banner_head_view,null);
+        headView = View.inflate(appContext, R.layout.house_banner_head_view, null);
         banner = (ConvenientBanner) headView.findViewById(R.id.banner);
         pageTip = (TextView) headView.findViewById(R.id.page_tip);
-
-
 
 
     }
 
 
     public void setRecycleView() {
+        addHeadView();
         adapter = new GreenUnLimitAdapter(appContext);
         adapter.setList(houseList);
         recycleView.setLayoutManager(new LinearLayoutManager(this));
-        lRecyclerViewAdapter = new LRecyclerViewAdapter(adapter);
+
+        LRecyclerViewAdapter lRecyclerViewAdapter = new LRecyclerViewAdapter(adapter);
+        lRecyclerViewAdapter.addHeaderView(headView);
+
         recycleView.setAdapter(lRecyclerViewAdapter);
-        addHeadView();
+
         recycleView.setLoadingMoreProgressStyle(ProgressStyle.BallSpinFadeLoader);
-        recycleView.setFooterViewColor(R.color.app_green,R.color.app_green,R.color.transparent);
 
         adapter.setOnItemClickListener((houseTo, jumpView) -> {
-            ActivityOptionsCompat  aop=ActivityOptionsCompat.makeSceneTransitionAnimation(HouseListActivity.this, jumpView ,"HouseImage");
-            Intent intent=new Intent(getApplicationContext(),HouseDetailActivity.class);
-            intent.putExtra("HouseTo",houseTo);
-            ActivityCompat.startActivity(HouseListActivity.this,intent,aop.toBundle());
+            ActivityOptionsCompat aop = ActivityOptionsCompat.makeSceneTransitionAnimation(HouseListActivity.this, jumpView, "HouseImage");
+            Intent intent = new Intent(getApplicationContext(), HouseDetailActivity.class);
+            intent.putExtra("HouseTo", houseTo);
+            ActivityCompat.startActivity(HouseListActivity.this, intent, aop.toBundle());
         });
 
         recycleView.setOnRefreshListener(() -> {
-            pageIndex=0;
+            pageIndex = 0;
             presenter.getData(pageIndex);
         });
 
@@ -113,6 +114,7 @@ public class HouseListActivity extends BaseActivity implements GreenUnLimitView<
             houseList.addAll(houseListTo);
         if (houseListTo.size() < 20)
             recycleView.setNoMore(true);
+
         adapter.setList(houseList);
         adapter.notifyDataSetChanged();
 
@@ -121,14 +123,14 @@ public class HouseListActivity extends BaseActivity implements GreenUnLimitView<
 
     @Override
     public void showMessage(String message) {
-        Toasty.error(appContext,message).show();
+        Toasty.error(appContext, message).show();
     }
 
     @Override
     public void getAdSuccess(List<AdvertiseTo> advertiseTos) {
-        BannerUtil.setBanner(banner,advertiseTos,R.drawable.park_rent_house_load);
+        BannerUtil.setBanner(banner, advertiseTos, R.drawable.park_rent_house_load);
         banner.startTurning(5000);
-        pageTip.setText("1/"+advertiseTos.size());
+        pageTip.setText("1/" + advertiseTos.size());
         banner.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -137,7 +139,7 @@ public class HouseListActivity extends BaseActivity implements GreenUnLimitView<
 
             @Override
             public void onPageSelected(int position) {
-                pageTip.setText(1+position+"/"+advertiseTos.size());
+                pageTip.setText(1 + position + "/" + advertiseTos.size());
             }
 
             @Override

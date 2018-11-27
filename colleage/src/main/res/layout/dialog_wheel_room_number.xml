@@ -64,7 +64,7 @@
 
 
 
-        <com.joypark.nacity.base.utils.wheelview.WheelView
+        <com.nacity.college.base.utils.wheelview.WheelView
             android:id="@+id/wheel"
             android:layout_width="0dp"
             android:layout_gravity="center_vertical"

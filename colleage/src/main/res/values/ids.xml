@@ -8,4 +8,5 @@
     <item type="id" name="park_service_phone"/>
     <item type="id" name="park_service_id"/>
     <item type="id" name="park_service_title"/>
+    <item type="id" name="current"/>
 </resources>

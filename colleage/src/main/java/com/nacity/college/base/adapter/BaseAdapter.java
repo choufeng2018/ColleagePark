@@ -2,6 +2,7 @@ package com.nacity.college.base.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.nacity.college.MainApp;
+import com.nacity.college.R;
 
 import java.util.List;
 
@@ -71,5 +73,15 @@ public class BaseAdapter<T,H > extends RecyclerView.Adapter<BindingHolder<H>> {
         return metrics.widthPixels;
     }
 
+    protected void disPlayImage(ImageView imageView,String imageUrl) {
+ if (imageUrl.contains("http")) {
 
+            System.out.println(imageUrl + "?imageMogr2/thumbnail/500x");
+            Glide.with(mContext).load(imageUrl + "?imageMogr2/thumbnail/500x").into(imageView);
+        }
+
+        else
+            Glide.with(mContext).load(MainApp.MAIN_IMAGE_URI + imageUrl+"?imageMogr2/thumbnail/500x").into(imageView);
+
+    }
 }

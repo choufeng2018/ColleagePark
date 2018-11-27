@@ -26,6 +26,7 @@
                 android:layout_width="300px"
                 android:layout_height="160px"
                 android:scaleType="fitXY"
+                android:background="@drawable/innovation_default_bg"
                 app:riv_corner_radius="20px" />
 
             <TextView
