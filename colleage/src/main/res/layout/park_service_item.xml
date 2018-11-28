@@ -22,7 +22,7 @@
         android:contentDescription="@string/app_name"
 
         />
-        <com.nacity.college.base.utils.PingFangRegularTextView
+        <com.nacity.college.base.utils.PingFangMediumView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"

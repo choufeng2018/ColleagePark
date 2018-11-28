@@ -118,7 +118,7 @@ public class ApiClient {
         // String baseUrl = "http://thome.joyhomenet.com:89/ihome/";
         // String baseUrl = "https://s1.joyhomenet.com:9043/ihome/";
         //测试
-     String baseUrl = "http://tdatacenter.joyhomenet.com:8081/tech/";
+     String baseUrl = "http://prodatacenter.joyhomenet.com:8081/tech/";
 //        String baseUrl = "http://prodatacenter.joyhomenet.com:8081/tech/";
 //           String baseUrl = "https://prodatacenter.joyhomenet.com:8043/tech/";
 

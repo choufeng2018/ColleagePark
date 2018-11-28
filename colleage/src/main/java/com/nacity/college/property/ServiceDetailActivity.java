@@ -132,6 +132,7 @@ public class ServiceDetailActivity extends BaseActivity implements ServiceDetail
 
                 Intent intent = new Intent(appContext, PropertyEvaluateActivity.class);
                 intent.putExtra("ServiceId", getIntent().getStringExtra("ServiceId"));
+                intent.putExtra("Type",getIntent().getStringExtra("Type"));
                 startActivity(intent);
                 goToAnimation(1);
 

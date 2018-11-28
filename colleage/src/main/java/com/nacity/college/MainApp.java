@@ -55,8 +55,8 @@ public class MainApp extends Application {
 
     public static class DefaultValue {
         public static final String IMAGE_URI = "http://picjoy.joyhomenet.com/";
-        public static final String NEWS_DETAIL_URI = "http://tdatacenter.joyhomenet.com:8081/tech/api/article/showArticle/";
-        public static final String ACTIVITY_DETAIL_URI = "http://tdatacenter.joyhomenet.com:8081/tech/api/salon/showArticle/";
+        public static final String NEWS_DETAIL_URI = "http://prodatacenter.joyhomenet.com:8081/tech/api/article/showArticle/";
+        public static final String ACTIVITY_DETAIL_URI = "http://prodatacenter.joyhomenet.com:8081/tech/api/salon/showArticle/";
 
     }
 

@@ -61,7 +61,7 @@ public class IntroduceListActivity extends BaseActivity<IntroduceTo> implements 
         recycleView.setFooterViewColor(R.color.app_green, R.color.app_green, R.color.transparent);
         lRecyclerViewAdapter.setOnItemClickListener((view, position) -> {
             Intent intent = new Intent(appContext, AdWebActivity.class);
-            intent.putExtra("Url", "http://tdatacenter.joyhomenet.com:8081/tech/api/introduce/showArticle/" +introduceList.get(position).getId());
+            intent.putExtra("Url", "http://prodatacenter.joyhomenet.com:8081/tech/api/introduce/showArticle/" +introduceList.get(position).getId());
             intent.putExtra("Title", Constant.PARK_INTRODUCE);
             startActivity(intent);
         });

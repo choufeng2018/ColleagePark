@@ -8,7 +8,7 @@ android:layout_height="wrap_content">
 <com.bigkoo.convenientbanner.ConvenientBanner
     android:layout_width="match_parent"
     android:layout_height="400px"
-    android:background="@drawable/house_detail_banner_load"
+    android:background="@drawable/park_enterprise_load"
     android:id="@+id/autoRow">
 </com.bigkoo.convenientbanner.ConvenientBanner>
     <View

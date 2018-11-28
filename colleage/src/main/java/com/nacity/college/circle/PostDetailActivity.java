@@ -3,6 +3,7 @@ package com.nacity.college.circle;
 import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -29,6 +30,8 @@ import android.widget.TextView;
 
 import com.bm.library.PhotoView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.college.common_libs.domain.circle.NeighborCommentTo;
 import com.college.common_libs.domain.circle.NeighborLikeTo;
 import com.college.common_libs.domain.circle.NeighborPostTo;
@@ -177,41 +180,74 @@ public class PostDetailActivity extends BaseActivity implements PostDetailView {
      * 设置贴子的图片
      */
     private void setPostImage(String pathList, GridLayout gridLayout) {
-        gridLayout.removeAllViews();
-        if (!TextUtils.isEmpty(pathList)) {
-            String[] paths = pathList.split(";");
-            Observable.from(paths).subscribe(s -> {
-                View postImageView = View.inflate(appContext, R.layout.life_post_image_item, null);
-                GridLayout.LayoutParams layoutParams = new GridLayout.LayoutParams();
-                if (paths.length == 1) {
-                    gridLayout.setColumnCount(1);
-                    layoutParams.width = (int) (getScreenWidth() * 0.4023);
-                    layoutParams.height = (int) (getScreenWidth() * 0.4023);
-                } else if (paths.length == 2 || paths.length == 4) {
-                    gridLayout.setColumnCount(2);
-                    layoutParams.width = (int) (getScreenWidth() * 0.31);
-                    layoutParams.height = (int) (getScreenWidth() * 0.31);
-                } else {
-                    gridLayout.setColumnCount(3);
-                    layoutParams.width = (int) (getScreenWidth() * 0.3);
-                    layoutParams.height = (int) (getScreenWidth() * 0.3);
-                }
+        if (TextUtils.isEmpty(pathList))
+            gridLayout.setVisibility(View.GONE);
+        else {
+            gridLayout.setVisibility(View.VISIBLE);
+            gridLayout.removeAllViews();
 
-                layoutParams.setMargins(0, 0, (int) (getScreenWidth() * 0.0139), (int) (getScreenWidth() * 0.0139));
-                postImageView.setLayoutParams(layoutParams);
-                PhotoView postImage = (PhotoView) postImageView.findViewById(R.id.post_image);
-                TextView imageType = (TextView) postImageView.findViewById(R.id.image_type);
-                //  ImageLoadleUtil.getNeighborImageType(appContext,MainApp.getImagePath(s),postImage,imageType);
-                ImageLoadleUtil.getNeighborImageType(appContext, MainApp.getImagePath(s + "?imageMogr2/thumbnail/500x"), postImage, imageType);
-                postImage.setOnClickListener(v -> {
+            for (int i = 0; i < pathList.split(";").length; i++) {
+
+                RoundedImageView imageView = new RoundedImageView(appContext);
+
+//
+
+                imageView.setBackgroundResource(R.drawable.post_list_item_bg);
+                imageView.setCornerRadius(12, 12, 12, 12);
+                GridLayout.LayoutParams layoutParams = new GridLayout.LayoutParams();
+                if (pathList.split(";").length == 2 || pathList.split(";").length == 4) {
+                    imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                    layoutParams.width = (int) (250.0 / 750 * getScreenWidth());
+                    layoutParams.height = (int) (150.0 / 750 * getScreenWidth());
+                    layoutParams.setMarginStart((int) (20.0 / 750 * getScreenWidth()));
+                    layoutParams.bottomMargin = (int) (20.0 / 750 * getScreenWidth());
+                    gridLayout.setColumnCount(2);
+
+                    disPlayImage(imageView, pathList.split(";")[i]);
+                } else if (pathList.split(";").length == 1) {
+
+                    Glide.with(appContext).load(pathList.split(";")[i]).asBitmap().into(new SimpleTarget<Bitmap>() {
+                        @Override
+                        public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+
+                            if (resource.getHeight() / resource.getWidth() >= 1) {
+                                layoutParams.width = (int) (400.0 * resource.getWidth() / (resource.getHeight() * 750) * getScreenWidth());
+                                layoutParams.height = (int) (400.0 / 750 * getScreenWidth());
+                            } else {
+                                layoutParams.width = (int) (400.0 / 750 * getScreenWidth());
+                                layoutParams.height = (int) (400.0 * resource.getHeight() / (resource.getWidth() * 750) * getScreenWidth());
+                            }
+                            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+                            imageView.setMaxWidth(400);
+                            imageView.setMaxHeight((int) (400.0 / 750 * getScreenWidth()));
+                            imageView.setImageBitmap(resource);
+//
+//
+                        }
+                    });
+                    layoutParams.setMarginStart((int) (22.0 / 750 * getScreenWidth()));
+                } else {
+
+                    imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                    layoutParams.width = (int) (170.0 / 750 * getScreenWidth());
+                    layoutParams.height = (int) (100.0 / 750 * getScreenWidth());
+                    layoutParams.setMarginStart((int) (20.0 / 750 * getScreenWidth()));
+                    layoutParams.bottomMargin = (int) (20.0 / 750 * getScreenWidth());
+
+                    gridLayout.setColumnCount(3);
+                    disPlayImage(imageView, pathList.split(";")[i]);
+
+                }
+                imageView.setTag(i);
+                imageView.setLayoutParams(layoutParams);
+                imageView.setOnClickListener(view -> {
                     Intent intent = new Intent(appContext, PostImageDetailActivity.class);
-                    intent.putExtra("CurrentPath", s);
                     intent.putExtra("PathList", pathList);
-                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(PostDetailActivity.this, postImage, "Image");
-                    ActivityCompat.startActivity(appContext, intent, options.toBundle());
+                    intent.putExtra("CurrentPath", pathList.split(";")[(int) view.getTag()]);
+                  startActivity(intent);
                 });
-                gridLayout.addView(postImageView);
-            });
+                gridLayout.addView(imageView);
+            }
         }
     }
 
