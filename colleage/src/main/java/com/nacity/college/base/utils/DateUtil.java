@@ -478,13 +478,15 @@ public class DateUtil {
 	public static String passTime(String postTime){
 		String mPassTime="0分钟前";
 		long passTime=cureentMillis()-DateMillislalal(postTime,mDateTimeFormatString);
-
+         if (passTime<0)
+         	passTime=0;
 		if (passTime/60<60)
 			mPassTime=passTime/60+"分钟前";
 		else if(passTime/3600<24)
 		mPassTime=passTime/60/60+"小时前";
 		else if(passTime/3600/24/365<10)
 			mPassTime=passTime/60/60/24+"天前";
+
 		return mPassTime;
 	}
 

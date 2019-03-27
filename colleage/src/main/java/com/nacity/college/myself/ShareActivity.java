@@ -1,5 +1,6 @@
 package com.nacity.college.myself;
 
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -61,15 +62,27 @@ public class ShareActivity extends BaseActivity {
         weChatApp.share(shareParams);
     }
     public void qqShare(){
-        QQ.ShareParams qq = new QQ.ShareParams();
-        qq.setTitle("欢迎加入紫金众创社区");
-        //点击标题跳转的分享网址
-        qq.setTitleUrl("http://joyhomenet.com/cdownload.html");
-        qq.setText(Constant.APP_SHARE_CONTENT);
-        Platform share_qq = ShareSDK.getPlatform( QQ.NAME);
+//        QQ.ShareParams qq = new QQ.ShareParams();
+//        qq.setTitle("欢迎加入紫金众创社区");
+//        //点击标题跳转的分享网址
+//        qq.setTitleUrl("http://joyhomenet.com/cdownload.html");
+//        qq.setText(Constant.APP_SHARE_CONTENT);
+//        qq.setImageData(BitmapFactory.decodeResource(getResources(), R.drawable.share_ic));
+//        Platform share_qq = ShareSDK.getPlatform( QQ.NAME);
+//
+//
+//        share_qq.share(qq);
 
+        QQ.ShareParams shareParams = new QQ.ShareParams();
+        shareParams.setShareType(Platform.SHARE_TEXT);
+        shareParams.setTitleUrl("http://joyhomenet.com/cdownload.html");
+        shareParams.setTitle("欢迎加入紫金众创社区");
+        shareParams.setText(Constant.APP_SHARE_CONTENT);
+        shareParams.setImageUrl("http://7xk6y7.com2.z0.glb.qiniucdn.com/colleage_share_ic.png");
 
-        share_qq.share(qq);
+        Platform mQQApp = ShareSDK.getPlatform(QQ.NAME);
+        mQQApp.share(shareParams);
+
 
     }
     public void messageShare(){

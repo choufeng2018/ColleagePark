@@ -67,7 +67,7 @@ public class AboutActivity extends BaseActivity implements UpdateView, Permissio
         switch (view.getId()) {
             case R.id.service_agreement:
                 intent=new Intent(appContext, AdWebActivity.class);
-                intent.putExtra("Url","http://joyhomenet.com/park_protocol.html");
+                intent.putExtra("Url","http://joyhomenet.com/tech_protocol.html");
                 intent.putExtra("Title", Constant.SERVICE_AGREEMENT);
                 startActivity(intent);
                 goToAnimation(1);

@@ -346,8 +346,9 @@ public class MainHomeFragment2 extends BaseFragment implements MainHomeView {
         if (((GridLayout)newsView.findViewById(R.id.grid_view)).getChildCount()>0)
         serviceLayout.addView(newsView);
         View innovateView = View.inflate(appContext, R.layout.main_service_grid_item, null);
-        ((TextView)innovateView.findViewById(R.id.title_name)).setText("浙大创新");
+
         Observable.from(data).filter(mainMenuTo ->("0007".equals(mainMenuTo.getCode()))).subscribe(mainMenuTo -> {
+            ((TextView)innovateView.findViewById(R.id.title_name)).setText(mainMenuTo.getShowName());
             View mView = View.inflate(appContext, R.layout.main_service_grid_innovate_item, null);
             Glide.with(appContext).load(mainMenuTo.getPicUrl()).into((ImageView) mView.findViewById(R.id.image));
 //            ((TextView)mView.findViewById(R.id.service_title)).setText(mainMenuTo.getTitle());

@@ -25,6 +25,7 @@ import com.college.common_libs.domain.circle.NeighborPostTo;
 import com.college.common_libs.domain.user.UserInfoTo;
 import com.nacity.college.R;
 import com.nacity.college.base.PostImageDetailActivity;
+import com.nacity.college.circle.PostDetailActivity;
 import com.nacity.college.databinding.LifePostItemBinding;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.nacity.college.MainApp;
@@ -126,6 +127,12 @@ public class LifeFragmentAdapter extends BaseAdapter<NeighborPostTo, LifePostIte
      */
     private void setContent(NeighborPostTo mode, LifePostItemBinding bindingView) {
         bindingView.postContent.setText(mode.getSubPostContent());
+        bindingView.postContent.setOnClickListener(view -> {
+            Intent intent=new Intent(mContext, PostDetailActivity.class);
+            intent.putExtra("PostSid",mode.getId());
+            mContext.startActivity(intent);
+
+        });
         if ((mode.getContent().length() + (mode.getUrlTitle() == null ? 0 : mode.getUrlTitle().length())) > mode.getSubPostContent().length()) {
             bindingView.allContent.setVisibility(View.VISIBLE);
         } else
